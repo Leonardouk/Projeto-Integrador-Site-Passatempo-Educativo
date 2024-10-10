@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:"Poppins", sans-serif;
+}
+
+/* Estilos para a barra de navegação */
+.navbar {
+    background-color: pink; /* Cor de fundo */
+    padding: 5px; /* Espaçamento interno */
+    text-align: center; /* Centraliza os itens */
+}
+
+.navbar a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #000; /* Cor do texto */
+    font-size: 18px; /* Tamanho da fonte */
+    padding: 10px 10px; /* Espaçamento em volta dos links */
+    margin: 0 10px; /* Espaçamento lateral entre os links */
+    display: inline-block; /* Faz os links se comportarem como blocos inline */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.navbar a:hover {
+    background-color: palevioletred; /* Cor de fundo ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas */
+}
