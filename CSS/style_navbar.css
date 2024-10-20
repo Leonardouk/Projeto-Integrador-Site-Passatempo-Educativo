@@ -21,8 +21,11 @@
     transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
 }
 
-.navbar a:hover {
+.navbar li:hover {
     background-color: #EB6D0B; /* Cor de fundo ao passar o mouse */
     border-radius: 5px; /* Bordas arredondadas */
 }
 
+.offcanvas{
+    background-color: #FFBD57 !important;
+}
