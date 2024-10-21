@@ -10,6 +10,7 @@ const Admin = mongoose.model ("Admin", mongoose.Schema({
     senha: {type: String}
 }))
 const Texto = mongoose.model("Texto", mongoose.Schema({
+    ordem: {type: Number},
     pagina: {type: String},
     texto: {type: String}
 }))
@@ -20,13 +21,12 @@ async function conectarAoMongoDB() {
 }
 
 app.get("/teste", async (req, res) => {
-    const admins = await Admin.find()
-    res.json(admins)
+    const textos = await Texto.find()
+    res.json(textos)
 })
 
 app.post("/teste", async (req, res) => {
     const textos = await Texto.find()
-    console.log(textos)
     res.json(textos)
 })
 
