@@ -15,6 +15,12 @@ const Texto = mongoose.model("Texto", mongoose.Schema({
     texto: {type: String}
 }))
 
+const Imagem = mongoose.model("Imagen", mongoose.Schema({
+    ordem: {type: Number},
+    pagina: {type: String},
+    linkImagem: {type: String}
+}))
+
 async function conectarAoMongoDB() {
     await
     mongoose.connect('mongodb+srv://Leonardo:SENHAPI@cluster0.xt0db.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
@@ -22,12 +28,16 @@ async function conectarAoMongoDB() {
 
 app.get("/teste", async (req, res) => {
     const textos = await Texto.find()
-    res.json(textos)
+    const imagens = await Imagem.find()
+    let arrayElementos = [textos, imagens]
+    res.json(arrayElementos)
 })
 
 app.post("/teste", async (req, res) => {
     const textos = await Texto.find()
-    res.json(textos)
+    const imagens = await Imagem.find()
+    let arrayElementos = [textos, imagens]
+    res.json(arrayElementos)
 })
 
 app.listen(3000, () => {
