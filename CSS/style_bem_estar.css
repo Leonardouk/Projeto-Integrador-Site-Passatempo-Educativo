@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:"Luckiest Guy", sans-serif;
+}
+
+/* Estilos para a barra de navegação */
+.navbar {
+    background-color: #FFBD57; /* Cor de fundo */
+    text-align: center; /* Centraliza os itens */
+    padding: 0;
+    margin: 0;
+}
+
+.navbar a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #ffffff; /* Cor do texto */
+    font-size: 18px; /* Tamanho da fonte */
+    padding: 10px 20px; /* Espaçamento em volta dos links */
+    margin: 0 10px; /* Espaçamento lateral entre os links */
+    display: inline-block; /* Faz os links se comportarem como blocos inline */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.navbar a:hover {
+    background-color: #EB6D0B; /* Cor de fundo ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+#principal {
+    background-color: #8DA5ED;
+
+}
+
+.saude {
+    font-size: 53px;
+    color: white;
+    border-bottom: solid white 3px;   
+}
+#texto1 {
+    background-color: #6787E7;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100px;
+    text-align: center;
+}
+
+#card1 {
+    background-color: #F9E85F;
+    border-radius: 20px;
+}
+
+#card2 {
+    background-color: #FFBD57;
+    border-radius: 20px;
+}
+
+.card-titulo {
+    text-align: center;
+}
+
+.card-body1 {
+    background-color: #F9E85F;
+}
+
+.card-body2 {
+    background-color: #FFBD57;
+}
+
+#cardBorda1 {
+    border: #F9E85F;
+}
+
+#cardBorda2 {
+    border: #FFBD57;
+}
+
+p {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#cardBorda1{
+    width: 85%;
+    height: 85%;
+    object-fit: cover;
+    background-color: #F9E85F;
+}
+
+#cardBorda2{
+    width: 85%;
+    height: 85%;
+    object-fit: cover;
+    background-color:#FFBD57;
+}
+
+#principal {
+    background-image: url('Image/purpurina1.png');
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+}
+
+#principal {
+    background-image: url('Image/purpurina2.png');
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+}
