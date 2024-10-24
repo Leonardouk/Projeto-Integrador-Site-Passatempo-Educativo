@@ -1,0 +1,29 @@
+.redes{
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+.contate{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.botao_contate{
+    background-color: #6787E7;
+    width: 270px;
+    color: white;
+    font-family:"Luckiest Guy", sans-serif;
+    font-size: 25px;
+}
+.direitos{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+.footer{
+    background-color: #3E4096;
+}
+a{
+    color: white;
+}

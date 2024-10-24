@@ -1,0 +1,23 @@
+.nav-pills{
+    justify-content: center;
+}
+*{
+    background-color: #6787E7;
+
+}
+.texto{
+    background-color: #F6CC3A;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid #EB6D0B;
+}
+
+.nav-link{
+    font-family:"Luckiest Guy", sans-serif;
+    background-color: #EB6D0B;
+
+}
+
+.nav-link .active{
+    background-color: #EB6D0B;
+}
