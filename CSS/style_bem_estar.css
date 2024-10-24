@@ -36,75 +36,50 @@
     color: white;
     border-bottom: solid white 3px;   
 }
-#texto1 {
-    background-color: #6787E7;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    height: 100px;
-    text-align: center;
-}
-
-#card1 {
-    background-color: #F9E85F;
-    border-radius: 20px;
-}
-
-#card2 {
-    background-color: #FFBD57;
-    border-radius: 20px;
-}
-
-.card-titulo {
-    text-align: center;
-}
-
-.card-body1 {
-    background-color: #F9E85F;
-}
-
-.card-body2 {
-    background-color: #FFBD57;
-}
-
-#cardBorda1 {
-    border: #F9E85F;
-}
-
-#cardBorda2 {
-    border: #FFBD57;
-}
 
 p {
     font-family: 'Ubuntu', sans-serif;
 }
 
-#cardBorda1{
-    width: 85%;
-    height: 85%;
-    object-fit: cover;
-    background-color: #F9E85F;
+#saude_col {
+    margin-left: 93px;
 }
 
-#cardBorda2{
-    width: 85%;
-    height: 85%;
-    object-fit: cover;
-    background-color:#FFBD57;
+#container_amarelo {
+    background-color: #F6CC3A;
 }
 
-#principal {
-    background-image: url('Image/purpurina1.png');
-    background-repeat: no-repeat; /* Impede a repetição da imagem */
-    background-size: cover; /* Faz a imagem cobrir toda a área */
-    background-position: center; /* Centraliza a imagem */
+#texto61, #texto3 {
+    font-size: 30px;
 }
 
-#principal {
-    background-image: url('Image/purpurina2.png');
-    background-repeat: no-repeat; /* Impede a repetição da imagem */
-    background-size: cover; /* Faz a imagem cobrir toda a área */
-    background-position: center; /* Centraliza a imagem */
+#texto2, #texto4 {
+    font-size: 20px;
+}
+
+#imagem3 {
+    transform: rotate(2.92deg);
+    width: 468.65px;
+    height: 302.8px;
+}
+
+#imagem4 {
+    transform: rotate(-9.82deg);
+    width: 457.23px;
+    height: 302.42px;
+}
+
+#purpurina_azul {
+    width: 105px;
+    height: 106px;
+}
+
+#purpurina_laranja {
+    width: 155px;
+    height: 134px;
+}
+
+#purpurina_amarela {
+    width: 247px;
+    height: 243px;
 }
