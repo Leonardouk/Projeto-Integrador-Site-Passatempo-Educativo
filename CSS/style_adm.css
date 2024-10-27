@@ -1,22 +1,73 @@
-/* form{
-    width: 24%;
-    background-color: pink;
-    padding: 50px;
-    border-radius: 20px;
-    margin-top: 150px;
+/* style_adm.css */
+
+/* body {
+    background-color: #87A6D5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-.btn-primary{
-    width: 100%;
-    border: none;
-    border-radius: 50%;
+.container-fluid {
+    background-color: #7AA1E1;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.form-control{
+.form-label {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
     color: black;
-    border-bottom-color: black;
-    box-shadow: none !important;
+    text-align: left;
+}
+
+input.form-control {
+    border-radius: 20px;
+    background-color: #D3D3D3;
     border: none;
-    border-bottom: 1px solid;
-    border-radius: 4px 4px 0 0 ;
+    padding: 10px;
+}
+
+button.btn-primary {
+    width: 100%;
+    background-color: #82E595;
+    border: none;
+    border-radius: 15px;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 1em;
+}
+
+button.btn-primary:hover {
+    background-color: #70D384;
+}
+
+#login {
+    margin-top: 20px;
+}
+
+#senha_login {
+    margin-top: 10px;
+}
+
+#fazer-cadastro {
+    background-color: #D3D3D3;
+    border-radius: 15px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1em;
+    color: black;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+#fazer-cadastro:hover {
+    background-color: #C0C0C0;
 } */
