@@ -26,6 +26,11 @@ async function conectarAoMongoDB() {
     mongoose.connect('mongodb+srv://Leonardo:SENHAPI@cluster0.xt0db.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 }
 
+async function cadastrar(ordemElemento, textoElemento) {
+    await Texto.updateOne({ordem: ordemElemento}, {texto: textoElemento})
+    console.log(await Texto.findOne({ordem: ordemElemento}))
+}
+
 app.get("/teste", async (req, res) => {
     const textos = await Texto.find()
     const imagens = await Imagem.find()
@@ -34,14 +39,15 @@ app.get("/teste", async (req, res) => {
 })
 
 app.post("/teste", async (req, res) => {
-    const arrayTextos = req.body.array
+    const arrayTodosTextos = req.body
+
     try{
-        await arrayTextos.forEach(element => {
-            Texto.updateOne({_id: element._id}, {texto: element.texto})    
+        arrayTodosTextos.forEach(element => {
+            cadastrar(element.ordem, element.texto)
         });
     }
     catch {
-        console.log(arrayTextos)
+        console.log("Não rolou irmão")
     }
 
     const textos = await Texto.find()

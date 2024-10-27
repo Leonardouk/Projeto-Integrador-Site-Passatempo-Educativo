@@ -74,6 +74,7 @@ async function cadastrarTextos() {
     arrayTodosTextos.forEach(element => {
         let paragrafo = document.querySelector(`#texto${element.ordem}`)
         let texto = paragrafo.value
+        element.texto = paragrafo.value
 
         if (!texto) {
             stringVazia = true
@@ -81,7 +82,8 @@ async function cadastrarTextos() {
     });
 
     if (!stringVazia) {
-        const array = (await axios.post(URLCompleta, {texto: "arrayTodosTextos"}).data)
+        console.log(arrayTodosTextos)
+        await axios.post(URLCompleta, arrayTodosTextos).data
     }
     else {
         console.log("Nenhum texto pode estar em branco")
