@@ -28,4 +28,15 @@
 
 .offcanvas{
     background-color: #FFBD57 !important;
+    
+}
+div .offcanvas-body{
+    padding: 0;
+}
+.offcanvas-header{
+    color: #000000;
+
+}
+a.nav-link{
+    padding-left: 10px;
 }
