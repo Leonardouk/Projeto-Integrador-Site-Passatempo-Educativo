@@ -34,6 +34,16 @@ app.get("/teste", async (req, res) => {
 })
 
 app.post("/teste", async (req, res) => {
+    const arrayTextos = req.body.array
+    try{
+        await arrayTextos.forEach(element => {
+            Texto.updateOne({_id: element._id}, {texto: element.texto})    
+        });
+    }
+    catch {
+        console.log(arrayTextos)
+    }
+
     const textos = await Texto.find()
     const imagens = await Imagem.find()
     let arrayElementos = [textos, imagens]
