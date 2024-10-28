@@ -9,6 +9,7 @@ async function obterTexto() {
     const arrayElementos = ((await axios.get(URLCompleta)).data)
     const arrayTodosTextos = arrayElementos[0]
     // const arrayTodasImagens = arrayElementos[1]
+
     arrayTodosTextos.forEach(element => { 
         if (element.pagina == "teste") {
             let paragrafo = document.querySelector(`#texto${element.ordem}`)
@@ -19,6 +20,7 @@ async function obterTexto() {
     //     if (element.pagina == "teste") {
     //         let imagem = document.querySelector(`#img${element.ordem}`)
     //         imagem.src = element.linkImagem
+    //         console.log(imagem.src)
     //     }
     // })
 }
@@ -36,7 +38,7 @@ async function trocarModoAdmin() {
     //Caso o modo admin esteja ativo, todos os elementos são buscados no array e colocados em seus respectivos espaços no arquivo html e os torna editáveis
     if (modoAdmin == true) {
         let botaoCadastro = document.querySelector("#botaoCadastro")
-        botaoCadastro.classList.remove("d-none")
+        botaoCadastro.classList.remove("d-none") //Torna o botão de cadastro visível
 
         arrayTodosTextos.forEach(element => {
             if (element.pagina == "teste") {
@@ -51,7 +53,7 @@ async function trocarModoAdmin() {
     //Caso o modo admin seja desativado, todos os elementos são buscados no array e colocados em seus respectivos espaços no arquivo html, salvando seu conteúdo no DB
     else {
         let botaoCadastro = document.querySelector("#botaoCadastro")
-        botaoCadastro.classList.add("d-none")
+        botaoCadastro.classList.add("d-none") ////Torna o botão de cadastro invisível
 
         arrayTodosTextos.forEach(element => {
             if (element.pagina == "teste") {
@@ -82,8 +84,13 @@ async function cadastrarTextos() {
     });
 
     if (!stringVazia) {
-        console.log(arrayTodosTextos)
+        let botaoCadastro = document.querySelector("#botaoCadastro")
+        botaoCadastro.outerHTML = "<button class=\"btn btn-outline-success w-100 \" id=\"botaoCadastro\" onclick=\"cadastrarTextos()\" disabled=\"\">Salvar Mudanças</button>"
         await axios.post(URLCompleta, arrayTodosTextos).data
+        setTimeout(() => {
+            botaoCadastro = document.querySelector("#botaoCadastro")
+            botaoCadastro.outerHTML = "<button class=\"btn btn-outline-success w-100 \" id=\"botaoCadastro\" onclick=\"cadastrarTextos()\">Salvar Mudanças</button>"
+        }, 2000)
     }
     else {
         console.log("Nenhum texto pode estar em branco")
