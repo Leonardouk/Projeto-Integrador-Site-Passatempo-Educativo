@@ -85,8 +85,10 @@ async function cadastrarTextos() {
 
     if (!stringVazia) {
         let botaoCadastro = document.querySelector("#botaoCadastro")
-        botaoCadastro.outerHTML = "<button class=\"btn btn-outline-success w-100 \" id=\"botaoCadastro\" onclick=\"cadastrarTextos()\" disabled=\"\">Salvar Mudanças</button>"
+        botaoCadastro.outerHTML = "<button class=\"btn btn-success w-100 \" id=\"botaoCadastro\" onclick=\"cadastrarTextos()\" disabled=\"\"><div class=\"spinner-border spinner-border-sm text-light\"></div></button>"
+
         await axios.post(URLCompleta, arrayTodosTextos).data
+        
         setTimeout(() => {
             botaoCadastro = document.querySelector("#botaoCadastro")
             botaoCadastro.outerHTML = "<button class=\"btn btn-outline-success w-100 \" id=\"botaoCadastro\" onclick=\"cadastrarTextos()\">Salvar Mudanças</button>"
