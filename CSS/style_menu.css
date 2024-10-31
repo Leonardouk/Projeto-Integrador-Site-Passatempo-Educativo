@@ -4,29 +4,51 @@
     font-family:"Luckiest Guy", sans-serif;
 }
 
+body{
+    background-color: #8DA5ED !important;
+    font-family: 'Luckiest Guy', cursive; /* Aplica a fonte ao corpo do site */
+}
+
 /* Estilos para a barra de navegação */
+
 .navbar {
     background-color: #FFBD57; /* Cor de fundo */
-    padding: 10px; /* Espaçamento interno */
-    text-align: center; /* Centraliza os itens */
-    margin-bottom: 30px;
+    padding: 0;
+    margin: 0;
 }
 
 .navbar a {
     text-decoration: none; /* Remove o sublinhado */
-    color: #ffffff; /* Cor do texto */
+    color: #000000; /* Cor do texto */
     font-size: 18px; /* Tamanho da fonte */
     padding: 10px 20px; /* Espaçamento em volta dos links */
     margin: 0 10px; /* Espaçamento lateral entre os links */
-    display: inline-block; /* Faz os links se comportarem como blocos inline */
     transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
 }
 
-.navbar a:hover {
+.navbar li:hover {
     background-color: #EB6D0B; /* Cor de fundo ao passar o mouse */
     border-radius: 5px; /* Bordas arredondadas */
 }
-.row_titulo{
+
+.offcanvas{
+    background-color: #FFBD57 !important;
+    
+}
+div .offcanvas-body{
+    padding: 0;
+}
+.offcanvas-header{
+    color: #000000;
+
+}
+a.nav-link{
+    padding-left: 10px;
+
+    /* titulo */
+
+}
+.titulo{
     padding-top: 15px;
     background-color: #6787E7;
     text-align: center;
@@ -34,13 +56,11 @@
     border-radius: 20px;
     margin-bottom: 20px;
     color: white;
-    font-size: 50px;
-    
+    font-size: 90px;
 }
-body{
-    background-color: #8DA5ED;;
-    font-family: 'Luckiest Guy', cursive; /* Aplica a fonte ao corpo do site */
-}
+
+/* subtitulo */
+
 .row_subtitulo{
     text-align: center;
     padding-top: 6px;
@@ -48,8 +68,12 @@ body{
     border-radius: 20px;
     background-color: #3E4096;
     color: white;
+    font-family: "Ubuntu", serif;
 }
-.ubuntu-font{
+
+/* descrição */
+
+.descricao{
     background-color: #F6CC3A;
     margin-top: 80px;
     padding-top: 18px;
@@ -59,38 +83,58 @@ body{
     border-radius: 20px;
     font-family: 'Ubuntu', sans-serif !important; /* Aplica a fonte Ubuntu apenas a este container */
 }
+
+/* carrosel */
+
 #carouselExampleCaptions{
     margin-top: 20px;
     margin-left: 140px;
     margin-right: 140px;
 }
-.rodape{
-    margin-top: 20px;
-    background-color: #6787E7;
-    border-radius: 15px;
-    margin-left: 140px;
-    margin-right: 140px;
-    height: 45px;
+
+/* rodape */
+
+.redes{
+    align-items: center;
     text-align: center;
-}
-.redes_sociais{
-    padding-top: 10px;
-    background-color: #3E4096;
+    justify-content: center;
+    background-color: #6787E7;
     border-radius: 20px;
-    color: white;
-    height: 45px;
 }
-.contatenos{
-    padding-top: 10px;
-    background-color: #3E4096;
+.contate{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #6787E7;
     border-radius: 20px;
-    margin-top: 5px;
-    color: white;
-    height: 45px;
 }
-.copyright{
-    padding-top: 10px;
+.botao_contate{
+    background-color: #6787E7;
+    width: 270px;
     color: white;
-    font-family: 'Ubuntu', sans-serif !important;
-    
+    font-family:"Luckiest Guy", sans-serif;
+    font-size: 25px;
+    border: 2px solid transparent;
+}
+.direitos{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+.footer{
+    background-color: #3E4096;
+}
+
+
+.btn.rede{
+    background-color: #6787E7;
+    border:1px solid transparent;
+    color: white;
+}
+.rede:hover{
+    color: black;
+}
+.botao_contate:hover{
+    color: black;
 }
