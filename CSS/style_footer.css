@@ -1,3 +1,9 @@
+.rodape{
+    padding: 20px 20px;
+}
+.caixa{
+    border-radius: 20px;
+}
 .redes{
     align-items: center;
     text-align: center;

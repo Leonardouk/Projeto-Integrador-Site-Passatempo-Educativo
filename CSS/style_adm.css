@@ -1,73 +1,87 @@
-/* style_adm.css */
+*{
+    margin: 0;
+    padding: 0;
+    font-family:"Luckiest Guy", sans-serif;
+}
 
-/* body {
-    background-color: #87A6D5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+
+/* Estilos para a barra de navegação */
+.navbar {
+    background-color: #FFBD57; /* Cor de fundo */
+    padding: 0;
     margin: 0;
 }
 
-.container-fluid {
-    background-color: #7AA1E1;
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.navbar a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #000000; /* Cor do texto */
+    font-size: 18px; /* Tamanho da fonte */
+    padding: 10px 20px; /* Espaçamento em volta dos links */
+    margin: 0 10px; /* Espaçamento lateral entre os links */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
 }
 
-.form-label {
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    font-size: 1.2em;
-    color: black;
-    text-align: left;
+.navbar li:hover {
+    background-color: #EB6D0B; /* Cor de fundo ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas */
 }
 
-input.form-control {
-    border-radius: 20px;
-    background-color: #D3D3D3;
-    border: none;
-    padding: 10px;
+.offcanvas{
+    background-color: #FFBD57 !important;
 }
 
-button.btn-primary {
-    width: 100%;
-    background-color: #82E595;
-    border: none;
-    border-radius: 15px;
-    color: black;
-    font-weight: bold;
-    padding: 10px;
-    font-size: 1em;
+body{
+    background-color: #8DA5ED !important;
+}
+.tudo{
+    background-color: #6787E7;
+    align-items: center;
+    margin-top: 8%;
+}
+.btn{
+    background-color: #31c30d !important;
+    border: 1px solid rgb(21, 120, 3) !important;
+}
+.logo{
+    width: 150px;
 }
 
-button.btn-primary:hover {
-    background-color: #70D384;
+
+@media (min-width: 576px) { 
+    .container-fluid.tudo{
+        width: 100%;
+        padding: 3%;
+    }
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .container-fluid.tudo{
+        width: 50%;
+        padding:3%;
+    }
 }
 
-#login {
-    margin-top: 20px;
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .container-fluid.tudo{
+        width: 40%;
+        padding:3%;
+    }
+ }
+
+ /* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .container-fluid.tudo{
+        width: 40%;
+        padding:3%;
+    }
 }
 
-#senha_login {
-    margin-top: 10px;
+ /* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+    .container-fluid.tudo{
+        width: 30%;
+        padding:3%;
+    }
 }
-
-#fazer-cadastro {
-    background-color: #D3D3D3;
-    border-radius: 15px;
-    padding: 10px;
-    font-weight: bold;
-    font-size: 1em;
-    color: black;
-    display: inline-block;
-    text-decoration: none;
-    margin-top: 10px;
-}
-
-#fazer-cadastro:hover {
-    background-color: #C0C0C0;
-} */
