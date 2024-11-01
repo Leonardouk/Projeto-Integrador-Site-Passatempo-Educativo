@@ -47,7 +47,7 @@ body{
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 20px;
-    /* font-family: 'Ubuntu', sans-serif !important;  */
+    font-family: 'Ubuntu', sans-serif !important; 
     /* Aplica a fonte Ubuntu apenas a este container */
 }
 

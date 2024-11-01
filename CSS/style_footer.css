@@ -1,53 +1,66 @@
+footer{
+    margin: 20px 20px;
+}
+
+/* container fluido */
 .rodape{
     padding: 20px 20px;
-}
-.caixa{
-    border-radius: 20px;
-}
-.redes{
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-    background-color: #6787E7;
-    padding: 10px;
-    margin: 10px;
-    border: 2px solid #6787E7;
-    border-radius: 20px;
-}
-.contate{
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    background-color: #6787E7;
-    border-radius: 20px;
-}
-.botao_contate{
-    background-color: #6787E7;
-    width: 270px;
-    color: white;
-    font-family:"Luckiest Guy", sans-serif;
-    font-size: 25px;
-    border: 2px solid transparent;
-}
-.direitos{
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    color: white;
-}
-.footer{
     background-color: #3E4096;
+    border-radius: 20px;
 }
 
 
-.btn.rede{
-    background-color: #6787E7;
-    border:1px solid transparent;
-    color: white;
+
+/* container redes */
+.redes{
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: space-between !important;
+    border-radius: 20px !important;
+}
+/* icones redes */
+.rede{
+    color: white!important;
 }
 .rede:hover{
-    color: black;
+    color: black!important;
 }
-.botao_contate:hover{
-    color: black;
+
+
+
+/* container botao contate */
+.botao_contate{
+    background-color: #6787E7 !important;
+    font-family:"Luckiest Guy", sans-serif !important;
+    border: 1px solid transparent!important;
+    padding: 4px!important;
+    border-radius: 20px!important;
+    align-items: center!important;
+    text-align: center!important;
+    justify-content: center!important;
+
 }
+/* tag <a> com o contate*/
+.contate-nos{
+    color: white !important;
+    text-decoration: none !important;
+}
+.contate-nos:hover{
+    color: black !important;
+}
+
+
+
+/* container direitos autorais */
+.direitos{
+    text-align: center !important;
+    border-radius: 20px!important;
+    color: white !important;
+    align-items: center!important;
+}
+div.direitos{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+
+}
+
+
