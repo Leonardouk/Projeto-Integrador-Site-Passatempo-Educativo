@@ -1,65 +1,113 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family:"Luckiest Guy", sans-serif;
-}
+/* style navbar */
+
+
 
 /* Estilos para a barra de navegação */
 .navbar {
     background-color: #FFBD57; /* Cor de fundo */
-    padding: 10px; /* Espaçamento interno */
-    text-align: center; /* Centraliza os itens */
-    margin-bottom: 30px;
+    padding: 0;
+    margin: 0;
+    font-family:"Luckiest Guy", sans-serif !important;
+
 }
 
 .navbar a {
     text-decoration: none; /* Remove o sublinhado */
-    color: #ffffff; /* Cor do texto */
+    color: #000000; /* Cor do texto */
     font-size: 18px; /* Tamanho da fonte */
     padding: 10px 20px; /* Espaçamento em volta dos links */
     margin: 0 10px; /* Espaçamento lateral entre os links */
-    display: inline-block; /* Faz os links se comportarem como blocos inline */
     transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
 }
 
-.navbar a:hover {
+.navbar li:hover {
     background-color: #EB6D0B; /* Cor de fundo ao passar o mouse */
     border-radius: 5px; /* Bordas arredondadas */
 }
-.row_titulo{
-    padding-top: 15px;
-    background-color: #6787E7;
-    text-align: center;
-    height: 200px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    color: white;
-    font-size: 50px;
+
+.offcanvas{
+    background-color: #FFBD57 !important;
     
+}
+div .offcanvas-body{
+    padding: 0;
+}
+.offcanvas-header{
+    color: #000000;
+
+}
+a.nav-link{
+    padding-left: 10px;
+}
+
+
+/* style pagina contato*/
+
+.tel{
+    width: 50%;
+}
+.idade{
+    width: 50%;
+}
+.data{
+    width: 50%;
+}
+.pessoas{
+    width: 50%;
+}
+.formulario{
+    background-color: #6787E7;
+    border-radius: 20px;
 }
 body{
     background-color: #8DA5ED !important;
-    font-family: 'Luckiest Guy', cursive; /* Aplica a fonte ao corpo do site */
 }
-.row_subtitulo{
-    text-align: center;
-    padding-top: 6px;
-    height: 55px;
-    border-radius: 20px;
-    background-color: #3E4096;
-    color: white;
+.enviar{
+    background-color: green !important;
+    border: 1px solid green !important;
 }
-.ubuntu-font{
-    background-color: #F6CC3A;
-    margin-top: 80px;
-    padding-top: 18px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 20px;
-    font-family: 'Ubuntu', sans-serif !important; /* Aplica a fonte Ubuntu apenas a este container */
+.insta{
+    background-color: rgb(168, 16, 214) !important;
+    border:1px solid rgb(168, 16, 214) !important;
+
 }
 
-.teste{
-    background-color: #6787E7;
+@media (min-width: 576px) { 
+    .container-fluid.formulario{
+        width: 100%;
+        padding: 3%;
+    }
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .container-fluid.formulario{
+        width: 50%;
+        padding:3%;
+    }
 }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .container-fluid.formulario{
+        width: 40%;
+        padding:3%;
+    }
+ }
+
+ /* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .container-fluid.formulario{
+        width: 40%;
+        padding:3%;
+    }
+}
+
+ /* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+    .container-fluid.formulario{
+        width: 40%;
+        padding:3%;
+    }
+}
+ 

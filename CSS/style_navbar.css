@@ -4,12 +4,16 @@
     font-family:"Luckiest Guy", sans-serif;
 }
 
-
+.home_logo{
+    height: 70px;
+    margin: 5px 10px 10px 65px;
+}
 /* Estilos para a barra de navegação */
 .navbar {
-    background-color: #FFBD57; /* Cor de fundo */
+    background-color: #F6CC3A; /* Cor de fundo */
     padding: 0;
-    margin: 0;
+    margin: 20px 20px ;
+    border-radius: 20px;
 }
 
 .navbar a {
@@ -27,12 +31,18 @@
 }
 
 .offcanvas{
-    background-color: #FFBD57 !important;
+    background-color: #F6CC3A !important;
     
 }
 div .offcanvas-body{
     padding: 0;
+
 }
+.offcanvas-body{
+    margin-right: 7px;
+
+}
+    
 .offcanvas-header{
     color: #000000;
 

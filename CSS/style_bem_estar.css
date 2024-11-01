@@ -4,28 +4,6 @@
     font-family:"Luckiest Guy", sans-serif;
 }
 
-/* Estilos para a barra de navegação */
-.navbar {
-    background-color: #FFBD57; /* Cor de fundo */
-    text-align: center; /* Centraliza os itens */
-    padding: 0;
-    margin: 0;
-}
-
-.navbar a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: #ffffff; /* Cor do texto */
-    font-size: 18px; /* Tamanho da fonte */
-    padding: 10px 20px; /* Espaçamento em volta dos links */
-    margin: 0 10px; /* Espaçamento lateral entre os links */
-    display: inline-block; /* Faz os links se comportarem como blocos inline */
-    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
-}
-
-.navbar a:hover {
-    background-color: #EB6D0B; /* Cor de fundo ao passar o mouse */
-    border-radius: 5px; /* Bordas arredondadas */
-}
 #principal {
     background-color: #8DA5ED;
 
@@ -57,27 +35,28 @@ p {
     font-size: 20px;
 }
 
-#imagem3 {
+#imagem1, #imagem5 {
     transform: rotate(2.92deg);
     width: 468.65px;
     height: 302.8px;
 }
 
-#imagem4 {
+#imagem3, #imagem7 {
     transform: rotate(-9.82deg);
     width: 457.23px;
     height: 302.42px;
 }
 
-#purpurina_azul {
+#imagem4, #imagem8{
     width: 105px;
     height: 106px;
 }
 
-#purpurina_laranja {
+#imagem2, #imagem6 {
     width: 155px;
     height: 134px;
 }
+
 
 #purpurina_amarela {
     width: 247px;
