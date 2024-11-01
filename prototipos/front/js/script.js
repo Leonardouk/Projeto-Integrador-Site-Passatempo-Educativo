@@ -8,7 +8,7 @@ async function obterTexto() {
     const URLCompleta = `${protocolo}${baseURL}${testeEndpoint}`
     const arrayElementos = ((await axios.get(URLCompleta)).data)
     const arrayTodosTextos = arrayElementos[0]
-    // const arrayTodasImagens = arrayElementos[1]
+    const arrayTodasImagens = arrayElementos[1]
 
     arrayTodosTextos.forEach(element => { 
         if (element.pagina == "teste") {
@@ -16,13 +16,19 @@ async function obterTexto() {
             paragrafo.innerHTML = element.texto
         }
     })
-    // arrayTodasImagens.forEach(element => {
-    //     if (element.pagina == "teste") {
-    //         let imagem = document.querySelector(`#img${element.ordem}`)
-    //         imagem.src = element.linkImagem
-    //         console.log(imagem.src)
-    //     }
-    // })
+    arrayTodasImagens.forEach(element => {
+        if (element.pagina == "teste") {
+            if (element.linkImagem) {
+                div = document.createElement('div')
+                document.querySelector(`#linha${element.ordem}`).insertAdjacentElement("beforeend", div)
+                div.outerHTML = `<div class=\"col-4\" id=ordem${element.ordem}>`
+
+                img = document.createElement('img')
+                document.querySelector(`#ordem${element.ordem}`).insertAdjacentElement('beforeend', img)
+                img.outerHTML = `<img src=\"https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp\">`
+            }
+        }
+    })
 }
 
 async function trocarModoAdmin() {
