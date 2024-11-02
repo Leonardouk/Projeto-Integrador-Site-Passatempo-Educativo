@@ -15,11 +15,7 @@ const Texto = mongoose.model("Texto", mongoose.Schema({
     texto: {type: String}
 }))
 
-const Imagem = mongoose.model("Imagen", mongoose.Schema({
-    ordem: {type: Number},
-    pagina: {type: String},
-    linkImagem: {type: String}
-}))
+const imagens = require('./img.json')
 
 async function conectarAoMongoDB() {
     await
@@ -33,7 +29,6 @@ async function cadastrar(ordemElemento, textoElemento) {
 
 app.get("/teste", async (req, res) => {
     const textos = await Texto.find()
-    const imagens = await Imagem.find()
     let arrayElementos = [textos, imagens]
     res.json(arrayElementos)
 })
@@ -51,7 +46,6 @@ app.post("/teste", async (req, res) => {
     }
 
     const textos = await Texto.find()
-    const imagens = await Imagem.find()
     let arrayElementos = [textos, imagens]
     res.json(arrayElementos)
 })
