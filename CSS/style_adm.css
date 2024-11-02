@@ -1,22 +1,87 @@
-/* form{
-    width: 24%;
-    background-color: pink;
-    padding: 50px;
-    border-radius: 20px;
-    margin-top: 150px;
+*{
+    margin: 0;
+    padding: 0;
+    font-family:"Luckiest Guy", sans-serif;
 }
 
-.btn-primary{
-    width: 100%;
-    border: none;
-    border-radius: 50%;
+
+/* Estilos para a barra de navegação */
+.navbar {
+    background-color: #FFBD57; /* Cor de fundo */
+    padding: 0;
+    margin: 0;
 }
 
-.form-control{
-    color: black;
-    border-bottom-color: black;
-    box-shadow: none !important;
-    border: none;
-    border-bottom: 1px solid;
-    border-radius: 4px 4px 0 0 ;
-} */
+.navbar a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #000000; /* Cor do texto */
+    font-size: 18px; /* Tamanho da fonte */
+    padding: 10px 20px; /* Espaçamento em volta dos links */
+    margin: 0 10px; /* Espaçamento lateral entre os links */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.navbar li:hover {
+    background-color: #EB6D0B; /* Cor de fundo ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.offcanvas{
+    background-color: #FFBD57 !important;
+}
+
+body{
+    background-color: #8DA5ED !important;
+}
+.tudo{
+    background-color: #6787E7;
+    align-items: center;
+    margin-top: 8%;
+}
+.btn{
+    background-color: #31c30d !important;
+    border: 1px solid rgb(21, 120, 3) !important;
+}
+.logo{
+    width: 150px;
+}
+
+
+@media (min-width: 576px) { 
+    .container-fluid.tudo{
+        width: 100%;
+        padding: 3%;
+    }
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .container-fluid.tudo{
+        width: 50%;
+        padding:3%;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .container-fluid.tudo{
+        width: 40%;
+        padding:3%;
+    }
+ }
+
+ /* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .container-fluid.tudo{
+        width: 40%;
+        padding:3%;
+    }
+}
+
+ /* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+    .container-fluid.tudo{
+        width: 30%;
+        padding:3%;
+    }
+}

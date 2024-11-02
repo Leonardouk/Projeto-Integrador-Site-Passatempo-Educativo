@@ -1,62 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #8DA5ED !important;
+}
+
+/* fonte */
+
 *{
     margin: 0;
     padding: 0;
     font-family:"Luckiest Guy", sans-serif;
 }
 
-/* Estilos para a barra de navegação */
-.navbar {
-    background-color: #FFBD57; /* Cor de fundo */
-    text-align: center; /* Centraliza os itens */
-    padding: 0;
-    margin: 0;
-}
 
-.navbar a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: #ffffff; /* Cor do texto */
-    font-size: 18px; /* Tamanho da fonte */
-    padding: 10px 20px; /* Espaçamento em volta dos links */
-    margin: 0 10px; /* Espaçamento lateral entre os links */
-    display: inline-block; /* Faz os links se comportarem como blocos inline */
-    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
-}
 
-.navbar a:hover {
-    background-color: #EB6D0B; /* Cor de fundo ao passar o mouse */
-    border-radius: 5px; /* Bordas arredondadas */
-}
+/* titulo */
 
-.container-fluid {
-    background-color: #8DA5ED;
-}
-
-.oficina {
-    font-size: 60px;
+.titulo{
+    border-bottom: 30px;
+    border-top: 30px;
+    border-left: 30px;
+    padding-left: 150px;
+    font-size: 70px;
     color: white;
-    border-bottom: solid white 5px;   
 }
 
-.header {
-    padding: 0;
+.row_titulo{
+    padding-top: 15px;
+    background-color: #6787E7;
+    text-align: center;
+    height: 200px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 50px;
+    
+}
+
+/* logo */
+
+.logo{
+    height: 90px;
+    width: auto;
+}
+
+/* descrição */
+
+.descricao{
+    padding-top: 6px;
+    height: 400px;
+    background-color: #6787E7;
+    color: white;
+    font-size: 25px;
+}
+.imagem_descricao{
+    padding-top: 40px;
+    padding-left: 40px;
+}
+
+/* carrossel */
+
+.carousel{
+    background-color: #FFBD57;
+    height: 500px;
+    border: 40px;
+}
+.carousel-item {
+    display: flex;
+    align-items: center;
   }
-
-#container_azulEscuro {
-    background-color: #6787E7 ;
-}
-
-#imagem2 {
-    background-color: gray;
-    color: white;    
-    text-align: center; /* Centraliza o texto horizontalmente */
+  .carousel-text{
+    padding-top: 60px;
+    padding-left: 30px;
+  }
+  .carousel-img img {
+    margin: 68px; /* Espaçamento ao redor da imagem */
+    display: block;
+    max-width: 100%;
+    height: 350px;
+  }
+  .carousel-img {
     display: flex;
     justify-content: center;
-    align-items: center; /* Centraliza o texto verticalmente */
-    height: 500px;
-    width: 500px;
+    align-items: center;
+  }
+
+/* rodape */
+
+.redes{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #6787E7;
+    border-radius: 20px;
+    justify-content: space-between;
+}
+.contate{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #6787E7;
+    border-radius: 20px;
+}
+.botao_contate{
+    background-color: #6787E7;
+    width: 270px;
+    color: white;
+    font-family:"Luckiest Guy", sans-serif;
+    font-size: 25px;
+    border: 2px solid transparent;
+}
+.direitos{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+.footer{
+    background-color: #3E4096;
 }
 
-p {
+
+.btn.rede{
+    background-color: #6787E7;
+    border:1px solid transparent;
     color: white;
-    font-size: 23px;
+}
+.rede:hover{
+    color: black;
+}
+.botao_contate:hover{
+    color: black;
 }

@@ -1,0 +1,96 @@
+body{
+    background-color: #8DA5ED !important;
+  
+}
+
+/* Estilos para a barra de navegação */
+
+section{
+    padding: 20px 20px;
+}
+.titulo{
+    background-color: #6787E7;
+    text-align: center;
+    width: 80% !important;
+    border-radius: 20px;
+    color: white;
+    padding: 10px;
+    font-family: "Luckiest Guy";
+    margin-top: 2%;
+}
+.texto-titulo{
+    font-size: 50px;
+    padding: 50px;
+}
+.img-titulo{
+    width: 130px;
+}
+
+/* subtitulo */
+.subtitulo{
+    background-color: #3E4096;
+    width: 40% !important;
+    border-radius: 20px;
+    color: white;
+    padding: 10px;
+    font-family:"Luckiest Guy", sans-serif;
+
+}
+
+.descricao-subtitulo{
+    background-color: #F6CC3A;
+    width: 80% !important;
+    padding: 30px;
+    border-radius: 20px;
+    font-family: 'Ubuntu', sans-serif !important; 
+    /* Aplica a fonte Ubuntu apenas a este container */
+}
+
+
+/* carrosel */
+
+
+@media (min-width: 576px) { 
+    #carouselExampleCaptions{
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #carouselExampleCaptions{
+        margin-top: 20px;
+        margin-left: 140px;
+        margin-right: 140px;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    #carouselExampleCaptions{
+        margin-top: 20px;
+        margin-left: 140px;
+        margin-right: 140px;
+    }
+ }
+
+ /* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    #carouselExampleCaptions{
+        margin-top: 20px;
+        margin-left: 140px;
+        margin-right: 140px;
+    }
+}
+
+ /* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+    #carouselExampleCaptions{
+        margin-top: 20px;
+        margin-left: 140px;
+        margin-right: 140px;
+    }
+}
+ 

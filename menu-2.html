@@ -5,25 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
-    <link rel="stylesheet" href="CSS/style_menu.css">
+    <link rel="stylesheet" href="CSS/teste.css">
     <link rel="stylesheet" href="CSS/style_navbar.css">
     <link rel="stylesheet" href="CSS/style_footer.css">
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    <!-- fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-md fixed-top ">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-md fixed ">
           <div class="container-fluid  ">
             <div>
               <img src="Image/Logo Passatempo.png" class="home_logo ">
@@ -64,74 +66,69 @@
             </div>
           </div>
         </nav>
-      
-        <!-- espaçamento -->
-        <br>
-        <br>
-
-        <br>
-        <br>
-        <br>
-        <br>
+ 
 
         <!-- Título do Site -->
 
-        <div class="container py-3 titulo">
-            <div class="row align-items-center">
-                <div class="col text-center">
-                    <h1 class="h4 mb-0 texto" style="font-size: 60px;">Eventos - Passatempo Educativo</h1>
+        <div class="container-fluid titulo">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-auto ">
+                    <h1 class="texto-titulo">Eventos - Passatempo Educativo</h1>
                 </div>
                 <div class="col-auto">
-
-                    <!-- Logo -->
-
-                    <img src="Image/Logo Passatempo.png" alt="Logo do Site" class="img-fluid"
-                        style="max-width: 130px; max-height: 130px; ">
+                    <img src="Image/Logo Passatempo.png" style="width: 100px;">
                 </div>
-                <div class="col-auto"></div> <!-- Coluna vazia para ocupar espaço à direita -->
             </div>
         </div>
+
     </header>
+
+
+    <br>
     <br>
 
-    <!-- quem somos -->
+    
+<!-- quem somos -->
 
-    <div class="container-fluid col-6">
-        <div class="row_subtitulo">
+    <div class="container-fluid subtitulo">
+        <div class="row text-center">
             <h1>Quem Somos</h1>
         </div>
     </div>
-    <div class="container-fluid col-10">
-        <div class="container descricao" id="00">
+    <br>
+    <br>
+    <div class="container-fluid descricao-subtitulo">
+        <div class="row text-center m-2 p-2">
             <p>A Passatempo Eventos é composta por profissionais qualificados e dedicados. Essa diversidade de
                 conhecimentos e habilidades nos permite oferecer um atendimento personalizado e eficiente. </p>
-
-            <p>Além disso, a constante troca de experiências e a colaboração entre os membros da equipe enriquecem
-                nosso ambiente de trabalho, garantindo um ambiente acolhedor e propício ao aprendizado.</p>
-
-            <p>Muitos profissionais fizeram parte de um curso Recreatur que oferecemos em São Paulo, incentivando a
-                liderança nos jovens e expandindo suas perspectivas de trabalho.</p>
+                
+                <p>Além disso, a constante troca de experiências e a colaboração entre os membros da equipe enriquecem
+                    nosso ambiente de trabalho, garantindo um ambiente acolhedor e propício ao aprendizado.</p>
+                    
+                    <p>Muitos profissionais fizeram parte de um curso Recreatur que oferecemos em São Paulo, incentivando a
+                        liderança nos jovens e expandindo suas perspectivas de trabalho.</p>
         </div>
     </div>
+            
 
-    <!-- espaçamento -->
+    
+<!-- espaçamento -->
 
-    <br>
-    <br>
-    <br>
+<br>
+<br>
 
     <!-- carrosel  -->
-
+    
     <div id="carouselExampleCaptions" class="carousel slide">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
+            aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
+            aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
+            aria-label="Slide 3"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
-                aria-label="Slide 4"></button>
+            aria-label="Slide 4"></button>
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -141,14 +138,14 @@
                     <title>Placeholder</title>
                     <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em"
                         id="01">Primeira foto</text>
-                </svg>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 id="02">Oficinas</h5>
-                    <p id="03">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia est animi totam optio
-                        omnis
+                    </svg>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 id="02">Oficinas</h5>
+                        <p id="03">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia est animi totam optio
+                            omnis
                         laborum perferendis iste quibusdam dolores laboriosam sapiente, voluptate nemo aut earum,
                         incidunt hic eveniet non officia?</p>
-                </div>
+                    </div>
             </div>
             <div class="carousel-item">
                 <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
@@ -157,14 +154,14 @@
                     <title>Placeholder</title>
                     <rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em"
                         id="04">Segunda foto</text>
-                </svg>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 id="05">Eventos Sociais</h5>
+                    </svg>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 id="05">Eventos Sociais</h5>
                     <p id="06">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas reprehenderit nulla eos
                         saepe
                         consectetur non porro, facilis dolores laboriosam alias veritatis qui maiores ipsam eum corrupti
                         corporis pariatur possimus. Possimus!</p>
-                </div>
+                    </div>
             </div>
             <div class="carousel-item">
                 <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
@@ -173,56 +170,67 @@
                     <title>Placeholder</title>
                     <rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em"
                         id="07">Terceira foto</text>
-                </svg>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 id="08">Eventos Corporativos</h5>
-                    <p id="09">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit libero, non minus
-                        voluptates
-                        molestiae quaerat illum necessitatibus vitae deleniti, sunt qui perspiciatis corrupti nihil vero
-                        nulla reprehenderit dolore consectetur ut!</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
+                    </svg>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 id="08">Eventos Corporativos</h5>
+                        <p id="09">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit libero, non minus
+                            voluptates
+                            molestiae quaerat illum necessitatibus vitae deleniti, sunt qui perspiciatis corrupti nihil vero
+                            nulla reprehenderit dolore consectetur ut!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
                     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide"
                     preserveAspectRatio="xMidYMid slice" focusable="false" id="imagem3">
                     <title>Placeholder</title>
                     <rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em"
                         id="10">Quarta foto</text>
-                </svg>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 id="11">Saúde e Bem-Estar</h5>
-                    <p id="12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit libero, non minus
-                        voluptates
+                    </svg>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 id="11">Saúde e Bem-Estar</h5>
+                        <p id="12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit libero, non minus
+                            voluptates
                         molestiae quaerat illum necessitatibus vitae deleniti, sunt qui perspiciatis corrupti nihil vero
                         nulla reprehenderit dolore consectetur ut!</p>
                 </div>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+    data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+</button>
+</div>
+   <!-- espaçamento -->
+    
+   <br>
+   <br>
+   <br>
+   
 
-    <!-- espaçamento -->
+<!-- footer -->
 
-    <br>
-    <br>
-    <br>
-
-    <!-- rodape -->
-    <footer>
+<footer>
         <div class="container-fluid rodape">
-            <div class="row footer justify-content-between align-items-center caixa">
-                <div class="col-sm-12 col-md-3 redes p-3">
-                    
+            <div class="row justify-content-around align-items-center  g-3">
+                <!-- container com o botao de contate -->
+                <!-- <div class="col-sm-12 col-md-3 btn botao_contate " role= "button" aria-pressed="true">
+                    <a href="contato.html" class="contate-nos">Contate-nos</a>
+                </div> -->
+
+                <div class="col-8 col-md-3 botao_contate ">
+                    <a href="contato.html" class="btn contate-nos" role= "button" aria-pressed="true">Contate-nos</a>
+                    <!-- <button type="submit" class="btn botao_contate">Contate-nos</button> -->
+                </div>
+                
+                <!-- container com as redes sociais -->
+                <div class="col-12 col-md-3 redes">
                     <a href="https://www.facebook.com/Passatempoedu/" class="btn rede" role= "button" aria-pressed="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16" alt="Facebook">
                             <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
@@ -248,18 +256,17 @@
                             <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
                         </svg>
                     </a>
-
                 </div>
-                <div class="col-sm-12 col-md-3 contate align-items-center p-3">
-                    <a href="contato.html" class="btn botao_contate" role= "button" aria-pressed="true">Contate-nos</a>
-                    <!-- <button type="submit" class="btn botao_contate">Contate-nos</button> -->
-                </div>
-                <div class="col-sm-12 col-md-3 direitos p-3">
-                    <p>&copy; 2024 passatempoeducativo.org.br </p>
+                        
+                <!-- container com os direitos autorais -->
+                <div class="col-sm-12 col-md-3 direitos " >
+                    <div>&copy; 2024 passatempoeducativo.org.br </div>
                 </div>
             </div>
         </div>
     </footer>
+
+   
 
    
 
