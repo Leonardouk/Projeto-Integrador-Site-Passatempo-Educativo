@@ -1,10 +1,24 @@
+.titulo_cabecalho{
+    font-family:"Luckiest Guy", sans-serif;
+    font-size: 70px;
+    color: black;
+}
+/* ul{
+    background-color: #6787E7;
+    width: 25%;
+    justify-self: center;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+} */
 .nav-pills{
     justify-content: center;
 }
-*{
-    background-color: #6787E7;
 
+body{
+    background-color: #8DA5ED  !important;
 }
+
 .texto{
     background-color: #F6CC3A;
     text-align: center;
@@ -14,10 +28,12 @@
 
 .nav-link{
     font-family:"Luckiest Guy", sans-serif;
-    background-color: #EB6D0B;
-
+    color: black !important;
 }
 
-.nav-link .active{
-    background-color: #EB6D0B;
+.nav-link.active{
+    background-color: #EB6D0B !important;
+}
+.nav-link:hover{
+    background-color: white !important;
 }
