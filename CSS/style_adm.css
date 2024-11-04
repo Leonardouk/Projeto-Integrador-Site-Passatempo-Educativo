@@ -1,5 +1,9 @@
 
-
+.titulo_cabecalho{
+    font-family:"Luckiest Guy", sans-serif;
+    font-size: 70px;
+    color: black;
+}
 body{
     background-color: #8DA5ED !important;
 }

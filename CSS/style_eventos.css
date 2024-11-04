@@ -6,11 +6,11 @@
 /* ul{
     background-color: #6787E7;
     width: 25%;
-    justify-self: center;
     border-radius: 20px;
     padding: 20px;
     text-align: center;
 } */
+
 .nav-pills{
     justify-content: center;
 }

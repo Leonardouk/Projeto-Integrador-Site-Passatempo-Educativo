@@ -1,5 +1,9 @@
 
-
+.titulo_cabecalho{
+    font-family:"Luckiest Guy", sans-serif;
+    font-size: 70px;
+    color: black;
+}
 /* style pagina contato*/
 
 .tel{

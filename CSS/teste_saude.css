@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:"Luckiest Guy", sans-serif;
+}
+
+#principal {
+    background-color: #8DA5ED;
+
+}
+
+.saude {
+    font-size: 53px;
+    color: white;
+    border-bottom: solid white 3px;   
+}
+
+p {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#saude_col {
+    margin-left: 93px;
+}
+
+#container_amarelo {
+    background-color: #F6CC3A;
+}
+
+#texto61, #texto3 {
+    font-size: 30px;
+}
+
+#texto2, #texto4 {
+    font-size: 20px;
+}
+
+#imagem1, #imagem5 {
+    transform: rotate(2.92deg);
+    width: 468.65px;
+    height: 302.8px;
+}
+
+#imagem3, #imagem7 {
+    transform: rotate(-9.82deg);
+    width: 457.23px;
+    height: 302.42px;
+}
+
+#imagem4, #imagem8{
+    width: 105px;
+    height: 106px;
+}
+
+#imagem2, #imagem6 {
+    width: 155px;
+    height: 134px;
+}
+
+
+#purpurina_amarela {
+    width: 247px;
+    height: 243px;
+}
