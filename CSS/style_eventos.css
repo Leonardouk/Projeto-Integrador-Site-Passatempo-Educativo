@@ -32,8 +32,10 @@ body{
 }
 
 .nav-link.active{
-    background-color: #EB6D0B !important;
+    text-decoration: underline solid  #EB6D0B 3px;
+    background-color: transparent !important;
 }
 .nav-link:hover{
-    background-color: white !important;
+    color:white !important;
+
 }

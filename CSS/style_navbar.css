@@ -26,6 +26,9 @@
     background-color: #EB6D0B; /* Cor de fundo ao passar o mouse */
     border-radius: 5px; /* Bordas arredondadas */
 }
+.navbar li.active{
+    background-color: #EB6D0B !important;
+}
 
 .offcanvas{
     background-color: #F6CC3A !important;
