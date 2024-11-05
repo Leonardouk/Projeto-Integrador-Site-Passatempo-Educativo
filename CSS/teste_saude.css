@@ -36,15 +36,15 @@ p {
 }
 
 #imagem1, #imagem5 {
-    transform: rotate(2.92deg);
-    width: 468.65px;
-    height: 302.8px;
+    /* transform: rotate(2.92deg); */
+    width: 368.65px;
+    height: 230.8px;
 }
 
 #imagem3, #imagem7 {
-    transform: rotate(-9.82deg);
-    width: 457.23px;
-    height: 302.42px;
+    /* transform: rotate(-9.82deg); */
+    width: 368.65px;
+    height: 230.8px;
 }
 
 #imagem4, #imagem8{
