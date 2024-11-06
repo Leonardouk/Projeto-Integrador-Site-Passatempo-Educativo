@@ -63,12 +63,13 @@ async function escolherImagem() {
     }
 }
 
+//Confere se alguma imagem já foi clicada, caso seja este o caso, substitui o elemento svg por imagem
 async function selecionarImagem() {
     if (!elementoClicado) {
         console.log("clica em uma imagem primeiro")
     }
     else {
-        imagem = document.querySelector('#imagem0')
+        const imagem = document.querySelector('#imagem0')
 
         const cloneElementoClicado = elementoClicado.cloneNode(true)
         cloneElementoClicado.classList.remove("border", "border-primary", "border-3", "imagemModal")
@@ -78,5 +79,6 @@ async function selecionarImagem() {
         cloneElementoClicado.setAttribute('data-bs-target', '#modalFotos')
         imagem.outerHTML = cloneElementoClicado.outerHTML
     }
+    dropImagens()
 }
-//Falta tornar a imagem selecionada definitva e fazer com que ao selecionar o modal feche
+//Falta tornar a imagem selecionada definitva

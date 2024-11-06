@@ -17,7 +17,7 @@
 
 </head>
 
-<body>
+<body onload="checarStatusLogin()">
   <header>
     <nav class="navbar navbar-expand-md fixed">
       <div class="container-fluid">
@@ -76,6 +76,10 @@
         <div class="col-12 align-self-center text-center mt-4">
             <h1 class="titulo_cabecalho">Login</h1>
         </div>
+    <div class="d-none alert alert-danger alert-dismissible fade alert-login" role="alert">
+      Preencha todos os campos corretamente
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+    </div>
     </div>
         <br>
         <form>
@@ -95,7 +99,7 @@
             <br>
             <div class="row justify-content-center">
                 <div class="col text-center ">
-                    <button type="submit" class="btn btn-primary botao">Login</button>
+                    <button type="button" class="btn btn-primary botao" onclick="validarLogin()">Login</button>
                 </div>
             </div>
         </form>
@@ -138,6 +142,8 @@
     </article> -->
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/adm.js"></script>
 
     <body>
 

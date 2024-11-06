@@ -15,7 +15,7 @@ const Texto = mongoose.model("Texto", mongoose.Schema({
     texto: {type: String}
 }))
 
-const imagens = require('./img.json')
+const imagens = require('./json/img.json')
 
 async function conectarAoMongoDB() {
     await
