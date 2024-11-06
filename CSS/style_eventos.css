@@ -3,13 +3,17 @@
     font-size: 70px;
     color: black;
 }
-/* ul{
+
+ul{
     background-color: #6787E7;
-    width: 25%;
     border-radius: 20px;
     padding: 20px;
+    margin: 10px;
+    width: 25%;
+    justify-content: center !important;
+    align-items: center !important;
     text-align: center;
-} */
+} 
 
 .nav-pills{
     justify-content: center;
@@ -32,8 +36,9 @@ body{
 }
 
 .nav-link.active{
-    text-decoration: underline solid  #EB6D0B 3px;
-    background-color: transparent !important;
+    /* text-decoration: underline solid  #EB6D0B 3px; */
+    background-color: #EB6D0B !important;
+
 }
 .nav-link:hover{
     color:white !important;
