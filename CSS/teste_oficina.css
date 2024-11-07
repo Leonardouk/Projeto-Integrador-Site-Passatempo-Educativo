@@ -4,25 +4,16 @@ body{
 
 .titulo_cabecalho{
     font-family:"Luckiest Guy", sans-serif;
-    font-size: 70px;
+    font-size: 90px;
     color: black;
 }
 
-.container_descricao{
-    background-color:#6787E7 ;
-    padding: 30px;
-}
-.texto_descricao{
-    text-align: justify;
-    padding: 10px;
-    margin: 30px;
-}
-
-/* img.descricao{
-
-} */
 
 
+
+.row_descricao{
+  background-color: #F6CC3A !important;
+ }
 
 /* carrosel */
 .carousel{

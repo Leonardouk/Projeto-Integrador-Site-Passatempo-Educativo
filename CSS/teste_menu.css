@@ -5,12 +5,13 @@ body{
     background-color: #6787E7;
     border-radius: 20px;
     margin:0 10% !important;
+    padding: 2.5%;
 }
-.titulo_cabecalho{
+.col_titulo_cabecalho{
     color: black;
 }
 .t1_cabecalho{
-    font-size: 70px;
+    font-size: 700%;
     font-family:"Luckiest Guy", sans-serif;
 }
 .t2_cabecalho{
@@ -22,10 +23,12 @@ body{
     padding: 0 !important;
     margin: 0 !important;
 }
-.imagem_cabecalho{
-    width: 160px;
-}
 
+.t1_descricao{
+    font-size: 40px;
+    margin-top: 3%;
+    font-family:"Luckiest Guy", sans-serif;
+}
 /* .teste{
     background-color: #F6CC3A;
 } */
@@ -33,11 +36,16 @@ body{
 
 /* subtitulo */
 
-
+.titulo_descricao{
+    background-color: #3E4096;
+    border-radius: 20px;
+    color: white;
+}
 .texto_descricao{
     background-color: #F6CC3A;
     padding: 30px;
     border-radius: 20px;
+    font-size: 140%;
     font-family: 'Ubuntu', sans-serif !important; 
     /* Aplica a fonte Ubuntu apenas a este container */
 }
@@ -87,6 +95,72 @@ body{
         margin-top: 20px;
         margin-left: 140px;
         margin-right: 140px;
+    }
+}
+ 
+
+
+
+
+
+
+
+/* ajuste imagem do titulo */
+@media (max-width: 575px) { 
+    .imagem_cabecalho{
+        max-width: 100%; 
+        max-height: 100%; 
+        height: 160px; 
+        width: 160px;
+    }
+ }
+
+@media (min-width: 576px) { 
+    .imagem_cabecalho{
+        max-width: 100%; 
+        max-height: 100%; 
+        height: 160px; 
+        width: 160px;
+    }
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .imagem_cabecalho{
+        max-width: 100%; 
+        max-height: 100%; 
+        height: 160px; 
+        width: 160px;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .imagem_cabecalho{
+        max-width: 100%; 
+        max-height: 100%; 
+        height: 160px; 
+        width: 160px;
+    }
+ }
+
+ /* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .imagem_cabecalho{
+        max-width: 100%; 
+        max-height: 100%; 
+        height: 160px; 
+        width: 160px;
+    }
+}
+
+ /* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+    .imagem_cabecalho{
+        max-width: 100%; 
+        max-height: 100%; 
+        height: 160px; 
+        width: 160px;
     }
 }
  
