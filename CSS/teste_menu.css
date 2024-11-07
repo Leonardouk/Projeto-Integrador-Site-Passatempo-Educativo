@@ -1,25 +1,29 @@
 body{
     background-color: #8DA5ED !important;
 }
-.container_cabecalho{
-    width: 90% !important;
+.row_cabecalho{
     background-color: #6787E7;
     border-radius: 20px;
-    padding: 50px;
+    margin:0 10% !important;
 }
 .titulo_cabecalho{
     color: black;
 }
-.h1_cabecalho{
-    font-size: 60px;
+.t1_cabecalho{
+    font-size: 70px;
     font-family:"Luckiest Guy", sans-serif;
 }
-
-.h1_cabecalho1{
+.t2_cabecalho{
     font-size: 40px;
     font-family:"Luckiest Guy", sans-serif;
+
+}
+.col_imagem_cabecalho{
+    padding: 0 !important;
+    margin: 0 !important;
 }
 .imagem_cabecalho{
+    width: 160px;
 }
 
 /* .teste{
@@ -28,19 +32,10 @@ body{
 
 
 /* subtitulo */
-.titulo_descricao{
-    background-color: #3E4096;
-    width: 40% !important;
-    border-radius: 20px;
-    color: white;
-    padding: 10px;
-    font-family:"Luckiest Guy", sans-serif;
 
-}
 
 .texto_descricao{
     background-color: #F6CC3A;
-    width: 80% !important;
     padding: 30px;
     border-radius: 20px;
     font-family: 'Ubuntu', sans-serif !important; 
