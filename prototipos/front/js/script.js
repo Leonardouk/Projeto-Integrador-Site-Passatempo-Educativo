@@ -1,41 +1,52 @@
-const protocolo = 'http://'
-const baseURL = 'localhost:3000'
-const testeEndpoint = '/teste'
-let modoAdmin = false
+function conectarEndpoint(endpoint) {
+    const Protocolo = "http://"
+    const baseURL = "localhost:3000"
+    const URLCompleta = `${Protocolo}${baseURL}${endpoint}` 
+
+    return URLCompleta
+}
 
 async function obterTexto() {
     //Define o arrayTodosTextos e arrayTodasImagens por meio da comunicação com o DB
-    const URLCompleta = `${protocolo}${baseURL}${testeEndpoint}`
+    const URLCompleta = conectarEndpoint('/teste')
     const arrayElementos = ((await axios.get(URLCompleta)).data)
     const arrayTodosTextos = arrayElementos[0]
     const arrayTodasImagens = arrayElementos[1]
-
+    
+    //Posiciona todos os textos ao seu lado e cria espaços para as imagens que podem os acompanhar
     arrayTodosTextos.forEach(element => { 
         if (element.pagina == "teste") {
             let paragrafo = document.querySelector(`#texto${element.ordem}`)
             paragrafo.innerHTML = element.texto
+            const qtdElementos = arrayTodosTextos.length
+            
+            div = document.createElement('div')
+            document.querySelector(`#linha${element.ordem}`).insertAdjacentElement("beforeend", div)
+            div.outerHTML = `<div class=\"col-4\" id=ordem${element.ordem}>`            
         }
     })
     arrayTodasImagens.forEach(element => {
         if (element.pagina == "teste") {
-            if (element.linkImagem) {
+            if (element.ordem != 999) {
                 div = document.createElement('div')
                 document.querySelector(`#linha${element.ordem}`).insertAdjacentElement("beforeend", div)
                 div.outerHTML = `<div class=\"col-4\" id=ordem${element.ordem}>`
 
                 img = document.createElement('img')
                 document.querySelector(`#ordem${element.ordem}`).insertAdjacentElement('beforeend', img)
-                img.outerHTML = `<img src=\"https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp\">`
+                img.outerHTML = `<img class="imagemPagina" src="${element.src}" alt="${element.alt}" id="imagem${element.ordem}">`
             }
         }
     })
 }
 
+let modoAdmin = false
 async function trocarModoAdmin() {
     //Define o arrayTodosTextos por meio da comunicação com o DB
-    const URLCompleta = `${protocolo}${baseURL}${testeEndpoint}`
+    const URLCompleta = conectarEndpoint('/teste')
     const arrayElementos = ((await axios.get(URLCompleta)).data)
     const arrayTodosTextos = arrayElementos[0]
+    const arrayTodasImagens = arrayElementos[1]
 
     //Confore em qual estado se encontra o Modo Admin e troca para o oposto ao apertar do botão
     modoAdmin ? modoAdmin = false : modoAdmin = true;
@@ -53,8 +64,22 @@ async function trocarModoAdmin() {
                 paragrafo.outerHTML = `<textarea class=\"form-control\" name=\"test\" id=\"texto${element.ordem}\" style=\"height: 300px;\"></textarea>`
                 paragrafo = document.querySelector(`#texto${element.ordem}`)
                 paragrafo.innerHTML = texto
+                
+                div = document.querySelector(`#ordem${element.ordem}`)
+                svg = document.createElement('svg')
+                div.insertAdjacentElement('beforeend', svg)
+                svg.outerHTML = `<svg onclick=\"obterImagens()\" xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" fill=\"currentColor\" class=\"bi bi-camera-fill btn btn-light border-dark\" viewBox=\"0 0 16 16\" data-bs-toggle=\"modal\" data-bs-target=\"#modalFotos\" id=\"imagem${element.ordem}\"><path d=\"M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0\"/><path d=\"M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0\"/></svg>`
             }
         });
+        arrayTodasImagens.forEach(element => {
+            if (element.ordem != 999) {
+                img = document.querySelector(`#imagem${element.ordem}`)
+                img.classList.add("btn", "btn-link")
+                img.setAttribute("onclick", "obterImagens()")
+                img.setAttribute("data-bs-toggle", "modal")
+                img.setAttribute("data-bs-target", "#modalFotos")
+            }
+        })
     }
     //Caso o modo admin seja desativado, todos os elementos são buscados no array e colocados em seus respectivos espaços no arquivo html, salvando seu conteúdo no DB
     else {
@@ -68,18 +93,29 @@ async function trocarModoAdmin() {
                 paragrafo.outerHTML = `<p style=\"text-indent: 1em;\" id=\"texto${element.ordem}\"></p>`
                 paragrafo = document.querySelector(`#texto${element.ordem}`)
                 paragrafo.innerHTML = texto
+
+                img = document.querySelector(`#imagem${element.ordem}`)
+                if (img.nodeName == 'svg') {
+                    img.remove()
+                }
             }
         });
     }
 }
 
-async function cadastrarTextos() {
-    const URLCompleta = `${protocolo}${baseURL}${testeEndpoint}`
+//Tem função de enviar todas as mudanças feitas em relação a imagens e textos na página para o backend
+//com o objetivo que sejam gravadas
+async function salvarMudancas() {
+    const URLCompleta = conectarEndpoint('/teste')
     const arrayElementos = ((await axios.get(URLCompleta)).data)
     const arrayTodosTextos = arrayElementos[0]
+    const arrayTodasImagens = arrayElementos[1]
+    const arrayImagensParaSalvar = []
     let stringVazia = false
 
     arrayTodosTextos.forEach(element => {
+        let imagem = document.querySelector(`#imagem${element.ordem}`)
+        let id = ""
         let paragrafo = document.querySelector(`#texto${element.ordem}`)
         let texto = paragrafo.value
         element.texto = paragrafo.value
@@ -87,20 +123,139 @@ async function cadastrarTextos() {
         if (!texto) {
             stringVazia = true
         }
+        
+        arrayTodasImagens.forEach(element => {
+            if (element.pagina == "teste" && element.src == imagem.getAttribute('src')) {
+                id = element._id
+            }
+        })
+        console.log(imagem, id)
+        if (imagem.nodeName == 'IMG') {
+            arrayImagensParaSalvar.push({_id: id, ordem: element.ordem})
+        }
     });
 
     if (!stringVazia) {
         let botaoCadastro = document.querySelector("#botaoCadastro")
-        botaoCadastro.outerHTML = "<button class=\"btn btn-success w-100 \" id=\"botaoCadastro\" onclick=\"cadastrarTextos()\" disabled=\"\"><div class=\"spinner-border spinner-border-sm text-light\"></div></button>"
-
-        await axios.post(URLCompleta, arrayTodosTextos).data
+        botaoCadastro.outerHTML = "<button class=\"btn btn-success w-100 \" id=\"botaoCadastro\" onclick=\"salvarMudancas()\" disabled=\"\"><div class=\"spinner-border spinner-border-sm text-light\"></div></button>"
+        console.log(arrayImagensParaSalvar)
+        await axios.post(URLCompleta, [arrayTodosTextos, arrayImagensParaSalvar]).data
         
         setTimeout(() => {
             botaoCadastro = document.querySelector("#botaoCadastro")
-            botaoCadastro.outerHTML = "<button class=\"btn btn-outline-success w-100 \" id=\"botaoCadastro\" onclick=\"cadastrarTextos()\">Salvar Mudanças</button>"
+            botaoCadastro.outerHTML = "<button class=\"btn btn-outline-success w-100 \" id=\"botaoCadastro\" onclick=\"salvarMudancas()\">Salvar Mudanças</button>"
         }, 2000)
     }
     else {
         console.log("Nenhum texto pode estar em branco")
     }
 }
+
+//Todos os códigos a partir de aqui são voltados a configurar a seleção de imagens que ocorre durante a edição da página 
+
+//Define de qual ordem é o elemento svg clicado para mais tarde ser usado para gravar posição de imagem
+let idImagemSelecionada = 0
+function definirIDParaAlterar() {
+    return new Promise((resolve) => {
+        window.addEventListener('click', event => {
+            const idClicado = event.target
+            if (idClicado.nodeName == 'svg')
+                resolve(idClicado)
+            else if (idClicado.nodeName == 'path') {
+                resolve(idClicado.viewportElement)
+            }
+            else if (idClicado.nodeName == 'IMG') {
+                resolve(idClicado)
+            }
+        })
+    })
+}
+
+async function obterImagens() {
+    //Define idImagemSelecionada a partir de elemento svg clicado
+    definirIDParaAlterar().then((elemento) => {
+        idImagemSelecionada = elemento.id
+    })
+    
+    //Puxa o array de elementos de texto e imagem do back, define a variável de imagens e um contador
+    const URLCompleta = conectarEndpoint('/teste')
+    const arrayElementos = ((await axios.get(URLCompleta)).data)
+    const imagens = arrayElementos[1]
+
+    //Busca o elemento de modal-body, cria uma row e a insere dentro dele.
+    const modalBody = document.querySelector('#corpoModalFotos')
+    divRow = document.createElement('div')
+    modalBody.insertAdjacentElement("beforeend", divRow)
+    divRow.outerHTML = "<div class=\"row\"></div>"
+    
+    //Para cada elemento de imagem, cria e insere uma coluna com o elemento,
+    //já preenchendo todos os atributos necessários.
+    await imagens.forEach(element => {
+        divCol = document.createElement('div')
+        document.querySelector(`.row`).insertAdjacentElement("beforeend", divCol)
+        divCol.outerHTML = `<div class=\"col-3 mx-4 my-2\"><img class=\"imagemModal btn btn-link\" src=\"${element.src}\" alt=\"${element.alt}\" onclick=\"escolherImagem()\"></div>`
+    });
+}
+
+//Esvazia o modal-body removendo todos os nós.
+function dropImagens() {
+    const modalBody = document.querySelector('#corpoModalFotos')
+    setTimeout(() => {
+        modalBody.innerHTML = ""
+        elementoClicado = ""
+    }, 500)
+}
+
+//Identifica qual das imagens está sendo clicada, coloca uma borda ao seu redor e usa
+//Promise e Resolve para devolver o valor dessa imagem
+function definirImagem() {
+    return new Promise((resolve) => {
+        window.addEventListener('click', event => {
+            const elementoClicado = event.target
+            if (elementoClicado.classList.contains("imagemModal")) {
+                elementoClicado.classList.add("border", "border-primary", "border-3")
+                resolve(elementoClicado)
+            }
+        })
+    })
+}
+//Confere se alguma imagem já foi clicada usando a função definirImagem() e atribui o
+//valor da imagem à variável elementoClicado
+let elementoClicado = ""
+async function escolherImagem() {
+    if (!elementoClicado) {
+        await definirImagem().then((elemento) => {
+            elementoClicado = elemento
+        })
+    }
+    else {
+        elementoClicado.classList.remove("border", "border-primary", "border-3")
+        await definirImagem().then((elemento) => {
+            elementoClicado = elemento
+        })
+    }
+}
+
+//Confere se alguma imagem já foi clicada, caso seja este o caso, substitui o elemento svg por imagem
+async function selecionarImagem() {
+    if (!elementoClicado) {
+        console.log("clica em uma imagem primeiro")
+    }
+    else {
+        const imagem = document.querySelector(`#${idImagemSelecionada}`)
+        const cloneElementoClicado = elementoClicado.cloneNode(true)
+        
+        cloneElementoClicado.classList.remove("border", "border-primary", "border-3", "imagemModal")
+        cloneElementoClicado.classList.add("imagemPagina")
+        cloneElementoClicado.setAttribute('id', `${idImagemSelecionada}`)
+        cloneElementoClicado.setAttribute('onclick', 'obterImagens()')
+        cloneElementoClicado.setAttribute('data-bs-toggle', 'modal')
+        cloneElementoClicado.setAttribute('data-bs-target', '#modalFotos')
+        imagem.outerHTML = cloneElementoClicado.outerHTML
+        
+        let modal = bootstrap.Modal.getInstance(document.querySelector('#modalFotos'))
+        modal.hide()
+    }
+    dropImagens()
+}
+//Falta tornar a imagem selecionada definitva
