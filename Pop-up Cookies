@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consentimento de Cookies</title>
+    <style>
+        /* Estilo para o pop-up */
+        .cookie-popup {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.85);
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        .cookie-popup p {
+            margin: 0;
+            flex: 1;
+        }
+        .cookie-popup button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-left: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .cookie-popup button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="cookiePopup" class="cookie-popup">
+        <p>Usamos cookies para melhorar a experiência do usuário. Para mais informações, veja nossos <a href="#termos" style="color: #FFD700;">Termos de Uso</a>.</p>
+        <button onclick="acceptCookies()">Concordo</button>
+        <button onclick="declineCookies()">Recusar</button>
+    </div>
+
+    <script>
+        // Função para aceitar cookies
+        function acceptCookies() {
+            document.getElementById("cookiePopup").style.display = "none";
+            localStorage.setItem("cookiesAccepted", "true");
+        }
+
+        // Função para recusar cookies
+        function declineCookies() {
+            document.getElementById("cookiePopup").style.display = "none";
+            localStorage.setItem("cookiesAccepted", "false");
+        }
+
+        // Verificação de preferência armazenada
+        window.onload = function() {
+            if (localStorage.getItem("cookiesAccepted") === "true" || localStorage.getItem("cookiesAccepted") === "false") {
+                document.getElementById("cookiePopup").style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
