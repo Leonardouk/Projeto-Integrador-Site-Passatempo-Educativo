@@ -4,17 +4,6 @@
     color: black;
 }
 
-ul{
-    background-color: #6787E7;
-    border-radius: 20px;
-    padding: 20px;
-    margin: 10px;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center;
-   
-} 
-
 .row_descricao{
     background-color: #F6CC3A !important;
    }
@@ -27,6 +16,11 @@ body{
     background-color: #8DA5ED  !important;
 }
 
+ul.caixa{
+    margin: 0 35%;
+    border-radius: 20px;
+    background-color: #6787E7;
+}
 
 .img_descricao{
     max-width: 100%; 

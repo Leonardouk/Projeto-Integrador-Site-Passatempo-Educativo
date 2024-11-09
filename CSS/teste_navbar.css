@@ -13,7 +13,7 @@
 
 }
 
-.navbar a {
+.navbar a{
     text-decoration: none; /* Remove o sublinhado */
     color: #000000; /* Cor do texto */
     font-size: 18px; /* Tamanho da fonte */
@@ -47,6 +47,6 @@ div .offcanvas-body{
     color: #000000;
 
 }
-a.nav-link{
+a.navecacao_link{
     padding-left: 10px;
 }
