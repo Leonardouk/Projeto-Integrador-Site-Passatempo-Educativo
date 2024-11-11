@@ -1,0 +1,42 @@
+body{
+    background-color: #8DA5ED !important;
+}
+
+.titulo_cabecalho{
+    font-family:"Luckiest Guy", sans-serif;
+    font-size: 90px;
+    color: black;
+}
+
+
+
+
+.row_descricao{
+  background-color: #F6CC3A !important;
+ }
+
+/* carrosel */
+.carousel{
+    background-color: #FFBD57;
+    height: 500px;
+    border: 40px;
+}
+.carousel-item {
+    display: flex;
+    align-items: center;
+  }
+  .carousel-text{
+    padding-top: 60px;
+    padding-left: 30px;
+  }
+  .carousel-img img {
+    margin: 68px; /* Espaçamento ao redor da imagem */
+    display: block;
+    max-width: 100%;
+    height: 350px;
+  }
+  .carousel-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

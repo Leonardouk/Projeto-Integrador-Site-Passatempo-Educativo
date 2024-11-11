@@ -1,0 +1,50 @@
+
+.passatempo_logo{
+    height: 70px;
+    margin: 5px 10px 10px 65px;
+}
+/* Estilos para a barra de navegação */
+.navbar {
+    background-color: #F6CC3A; /* Cor de fundo */
+    padding: 0;
+    font-family:"Luckiest Guy", sans-serif;
+}
+
+.navbar a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #000000; /* Cor do texto */
+    font-size: 18px; /* Tamanho da fonte */
+    padding: 10px 20px; /* Espaçamento em volta dos links */
+    margin: 0 10px; /* Espaçamento lateral entre os links */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.navbar li:hover {
+    background-color: #EB6D0B; /* Cor de fundo ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.navbar li.active {
+    background-color: #EB6D0B !important;
+}
+
+.offcanvas {
+    background-color: #F6CC3A !important;
+}
+
+div .offcanvas-body {
+    padding: 0;
+}
+
+.offcanvas-body {
+    margin-right: 7px;
+}
+
+.offcanvas-header {
+    color: #000000;
+}
+
+a.navecacao_link {
+    padding-left: 10px;
+}
+

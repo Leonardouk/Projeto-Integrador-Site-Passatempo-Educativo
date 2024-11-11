@@ -1,0 +1,62 @@
+
+.titulo_cabecalho{
+    font-family:"Luckiest Guy", sans-serif;
+    font-size: 70px;
+    color: black;
+}
+body{
+    background-color: #8DA5ED !important;
+}
+.tudo{
+    background-color: #6787E7;
+    align-items: center;
+    margin-top: 5%;
+    border-radius: 20px;
+}
+.btn{
+    background-color: #31c30d !important;
+    border: 1px solid rgb(21, 120, 3) !important;
+}
+.logo{
+    width: 150px;
+}
+
+
+@media (min-width: 576px) { 
+    .container-fluid.tudo{
+        width: 100%;
+        padding: 3%;
+    }
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .container-fluid.tudo{
+        width: 50%;
+        padding:3%;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .container-fluid.tudo{
+        width: 40%;
+        padding:3%;
+    }
+ }
+
+ /* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .container-fluid.tudo{
+        width: 40%;
+        padding:3%;
+    }
+}
+
+ /* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+    .container-fluid.tudo{
+        width: 30%;
+        padding:3%;
+    }
+}
