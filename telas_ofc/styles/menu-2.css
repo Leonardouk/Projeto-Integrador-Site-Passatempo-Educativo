@@ -11,11 +11,13 @@ body{
     color: black;
 }
 .t1_cabecalho{
-    font-size: 700%;
+    font-size: 80px;
+    width: 100%;
     font-family:"Luckiest Guy", sans-serif;
 }
 .t2_cabecalho{
     font-size: 40px;
+    width: 100%;
     font-family:"Luckiest Guy", sans-serif;
 
 }
