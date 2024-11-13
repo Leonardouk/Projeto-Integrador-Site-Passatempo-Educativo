@@ -4,9 +4,29 @@
     color: black;
 }
 
-.row_descricao{
+
+
+
+.row_card_descricao{
     background-color: #F6CC3A !important;
-   }
+    border: 5px solid #EB6D0B !important;
+    border-radius: 20px;
+    height: 100% !important;
+}
+
+.titulo_descricao{
+    font-family:"Luckiest Guy", sans-serif;
+    color: black;
+    font-size: 2rem;
+}
+
+.texto_descricao{
+    font-family: 'Ubuntu', sans-serif;
+    color: black;
+    font-size: 1.1rem;
+    
+
+}
 
 .nav-pills{
     justify-content: center;
@@ -35,7 +55,6 @@ ul.caixa{
 }
 
 .nav-link.active{
-    /* text-decoration: underline solid  #EB6D0B 3px; */
     background-color: #EB6D0B !important;
 
 }
@@ -43,4 +62,3 @@ ul.caixa{
     color:white !important;
 
 }
-

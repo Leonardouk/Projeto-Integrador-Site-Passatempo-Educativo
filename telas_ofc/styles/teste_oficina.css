@@ -1,0 +1,20 @@
+body{
+    background-color: #8DA5ED !important;
+}
+
+.titulo_cabecalho{
+    font-family:"Luckiest Guy", sans-serif;
+    font-size: 5.5rem;
+    color: black;
+
+}
+
+.row_descricao{
+  background-color: #F6CC3A !important;
+ }
+ 
+.texto_descricao{
+  font-family: 'Ubuntu', sans-serif !important;
+  font-size: 1.2rem;
+}
+

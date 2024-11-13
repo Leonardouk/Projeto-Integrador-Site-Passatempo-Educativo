@@ -1,4 +1,10 @@
 
+/*
+    6787E7 
+    8DA5ED
+
+*/
+
 .passatempo_logo{
     height: 70px;
     margin: 5px 10px 10px 65px;
@@ -16,16 +22,19 @@
     font-size: 18px; /* Tamanho da fonte */
     padding: 10px 20px; /* Espaçamento em volta dos links */
     margin: 0 10px; /* Espaçamento lateral entre os links */
-    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+    /* transition: background-color 0.3s ease; */
+     /* Transição suave ao passar o mouse */
 }
 
 .navbar li:hover {
-    background-color: #EB6D0B; /* Cor de fundo ao passar o mouse */
+    /* background-color: #EB6D0B;  */
+    /* Cor de fundo ao passar o mouse */
     border-radius: 5px; /* Bordas arredondadas */
+    color: #000000 !important;
 }
 
-.navbar li.active {
-    background-color: #EB6D0B !important;
+.navegacao_link:hover{
+    color: #0d00ff !important;
 }
 
 .offcanvas {
@@ -44,7 +53,12 @@ div .offcanvas-body {
     color: #000000;
 }
 
-a.navecacao_link {
+a.navegacao_link {
     padding-left: 10px;
 }
 
+.navegacao_link.active{
+    /* text-decoration: underline solid  #EB6D0B 3px; */
+    background-color: #EB6D0B !important;
+    border-radius: 5px;
+}

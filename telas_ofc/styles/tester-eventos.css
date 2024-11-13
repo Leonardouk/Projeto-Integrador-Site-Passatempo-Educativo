@@ -1,4 +1,4 @@
-.titulo_cabecalho{
+/* .titulo_cabecalho{
     font-family:"Luckiest Guy", sans-serif;
     font-size: 70px;
     color: black;
@@ -35,12 +35,10 @@ ul.caixa{
 }
 
 .nav-link.active{
-    /* text-decoration: underline solid  #EB6D0B 3px; */
     background-color: #EB6D0B !important;
 
 }
 .nav-link:hover{
     color:white !important;
 
-}
-
+} */

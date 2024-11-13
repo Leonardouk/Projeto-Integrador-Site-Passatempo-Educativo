@@ -1,0 +1,369 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="styles/tester-eventos.css">
+    <link rel="stylesheet" href="styles/navbar-2.css">
+    <link rel="stylesheet" href="styles/footer.css">
+
+ 
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- fonte guy -->
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+    <!-- fonte ubuntu -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+      .carousel-inner {
+  padding: 1em;
+}
+.card {
+  margin: 0 0.5em;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #e1e1e1;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (min-width: 768px) {
+  .carousel-item {
+    margin-right: 0;
+    flex: 0 0 33.333333%;
+    display: block;
+  }
+  .carousel-inner {
+    display: flex;
+  }
+}
+.card .img-wrapper {
+    max-width: 100%;
+    height: 13em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card img {
+    max-height: 100%;
+}
+@media (max-width: 767px) {
+  .card .img-wrapper {
+    height: 17em;
+  }
+}
+    </style>
+
+
+
+  
+</head>
+<body>
+
+    <!-- navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg fixed">
+        <div class="container-fluid">
+          <div>
+            <img src="img/Logo Passatempo.png" class="passatempo_logo ">
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end justify-content-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h2 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>  
+            <div class="offcanvas-body">
+              <ul class="navbar-nav barra_navegacao justify-content-around flex-grow-1">
+                <li class="nav-item text-top ">
+                  <a class="nav-link navegacao_link" aria-current="page" href="home-2.html">Home</a>
+                </li>
+                <li class="nav-item navegaçao_item">
+                  <a class="nav-link  navegacao_link" href="oficinas-2.html">Oficinas</a>
+                </li>
+                <li class="nav-item navegaçao_item">
+                  <a class="nav-link  navegacao_link active" href="eventos-2.html">Eventos Sociais</a>
+                </li>
+                <li class="nav-item navegaçao_item">
+                  <a class="nav-link  navegacao_link" href="eventos-2.html">Eventos Corporativos</a>
+                </li>
+                <li class="nav-item navegaçao_item">
+                  <a class="nav-link  navegacao_link" href="saudeBemEstar-2.html">Saude e Bem-Estar</a>
+                </li>
+                <li class="nav-item navegaçao_item">
+                  <a class="nav-link  navegacao_link" href="contato-2.html">Contato</a>
+                </li>
+                <li class="nav-item navegaçao_item">
+                  <a class="nav-link  navegacao_link" href="admin-2.html">Admin</a>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+
+      <br>
+      <br>
+
+    <!-- cabecalho -->
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-end ">
+            <div class="col-12 text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="black" class="bi bi-calendar-event" viewBox="0 0 16 16">
+                <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
+                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+              </svg>
+                <!-- <img src="Image/Logo Passatempo.png" alt="logo" class="img-fluid" style="max-height: 100px;"> -->
+            </div>
+            <div class="col-12 align-self-center text-center mt-4">
+                <h1 class="titulo_cabecalho">Eventos</h1>
+            </div>
+        </div>
+    </div>
+    <br>
+   
+
+    <!--tab de navegação -->
+    <ul class="nav nav-pills justify-content-center text-center align-items-around caixa nav-justified" role="tablist">
+      <li class="nav-item m-4">
+        <a class="nav-link active" id="pill-tab-0" data-bs-toggle="pill" href="#pill-tabpanel-0" role="tab" aria-controls="pill-tabpanel-0" aria-selected="true"> Eventos   Sociais</a>
+      </li>
+      <li class="nav-item m-4">
+        <a class="nav-link" id="pill-tab-1" data-bs-toggle="pill" href="#pill-tabpanel-1" role="tab" aria-controls="pill-tabpanel-1" aria-selected="false">Eventos Corporativos</a>
+      </li>
+    </ul>
+
+    <!-- colocar os conteudos -->
+
+      <div class="tab-content py-3 mt-2">
+        
+        <!-- conteudo tab social -->
+        <div class="tab-pane active" id="pill-tabpanel-0" role="tabpanel" aria-labelledby="pill-tab-0">
+          <div class="container-fluid container_descricao border border-dark">
+            <div class="row align-items-center justify-content-around row_descricao border border-primary p-4">
+              <div id="carouselExampleControls" class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card">
+                            <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title 1</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title 2</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title 3</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title 4</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title 5</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title 6</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title 7</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title 8</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title 9</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <!-- conteudo tab corporativo -->
+        <!-- <div class="tab-pane" id="pill-tabpanel-1" role="tabpanel" aria-labelledby="pill-tab-1">
+          <div class="container-fluid container_descricao border border-dark">
+
+            <div class="row align-items-center justify-content-around row_descricao p-4">
+              <div class="col-sm-12 col-md-12 col-lg-6 text-center col_texto_descricao">
+                <h1 class="titulo_descricao p-3">SIPAT</h1>
+                <p class="texto_descricao p-4">Focado na conscientização dos colaboradores sobre a importância da saúde e segurança no ambiente de trabalho, a SIPAT envolve uma série de atividades como palestras, workshops, dinâmicas, treinamentos práticos, e apresentações sobre prevenção de acidentes, ergonomia, saúde mental, primeiros socorros, e bem-estar geral. O objetivo é promover um ambiente de trabalho seguro e saudável, incentivando a cultura da prevenção e do cuidado entre todos os colaboradores.
+
+                </p>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-4 col_imagem_descricao text-center">
+                <img src="https://via.placeholder.com/400x300" alt="imagem descrição" class="img_descricao" id="imagem0">
+              </div>
+            </div>
+            <br>
+            <div class="row align-items-center justify-content-around row_descricao p-4">
+              <div class="col-sm-12 col-md-12 col-lg-6 text-center col_texto_descricao">
+                <h1 class="titulo_descricao p-3">Teatro</h1>
+                <p class="texto_descricao p-4">Ferramenta criativa e interativa utilizada para melhorar a comunicação, o trabalho em equipe, e o desenvolvimento pessoal dos colaboradores. Por meio de apresentações teatrais, oficinas de improvisação, e encenações de situações do cotidiano empresarial, os colaboradores podem explorar temas como liderança, relacionamento interpessoal, gestão de conflitos, e empatia. 
+
+
+                </p>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-4 col_imagem_descricao text-center">
+                <img src="https://via.placeholder.com/400x300" alt="imagem descrição" class="img_descricao" id="imagem0">
+              </div>
+            </div>
+            <br>
+          </div>
+          <br>      
+        </div> -->
+      </div>
+    
+
+
+<br>
+<br>
+
+    <br>
+    <br>
+
+
+
+    <!-- footer -->
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        let multipleCardCarousel = document.querySelector("#carouselExampleControls");
+    
+    
+        if (window.matchMedia("(min-width: 768px)").matches) {
+          let carousel = new bootstrap.Carousel(multipleCardCarousel, {
+            interval: false, // Disable automatic sliding
+            wrap: false, // Prevent wrapping at the end
+          });
+    
+    
+          let carouselWidth = document.querySelector(".carousel-inner").scrollWidth;
+          let cardWidth = document.querySelector(".carousel-item").offsetWidth;
+          let scrollPosition = 0;
+    
+    
+          document.querySelector("#carouselExampleControls .carousel-control-next").addEventListener("click", function () {
+            if (scrollPosition < carouselWidth - cardWidth * 4) {
+              scrollPosition += cardWidth;
+              document.querySelector("#carouselExampleControls .carousel-inner").scroll({ left: scrollPosition, behavior: 'smooth' });
+            }
+          });
+    
+    
+          document.querySelector("#carouselExampleControls .carousel-control-prev").addEventListener("click", function () {
+            if (scrollPosition > 0) {
+              scrollPosition -= cardWidth;
+              document.querySelector("#carouselExampleControls .carousel-inner").scroll({ left: scrollPosition, behavior: 'smooth' });
+            }
+          });
+        } else {
+          multipleCardCarousel.classList.add("slide");
+        }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+
+
+
+
+</html>
