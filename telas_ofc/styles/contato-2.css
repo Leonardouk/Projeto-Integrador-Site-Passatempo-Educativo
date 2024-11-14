@@ -23,7 +23,7 @@
     border-radius: 20px;
 }
 body{
-    background-color:#8DA5ED ;
+    background-color:#8DA5ED !important ;
     /* background-image: url("../Image/2.png" )!important; */
 }
 .enviar{

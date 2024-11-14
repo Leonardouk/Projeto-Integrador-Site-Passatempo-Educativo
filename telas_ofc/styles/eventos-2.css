@@ -43,3 +43,30 @@ ul.caixa{
     color:white !important;
 
 }
+
+
+/* cards */
+.card_image{
+    border-radius: 7px !important;
+}
+.card{
+    background-color: #F6CC3A !important;
+    box-shadow: 2px 2px 2px 2px #EB6D0B;
+    transition: 0.3s;
+    border-radius: 15px !important;
+}
+.card-text{
+    font-family: 'Ubuntu', sans-serif !important;
+    color: black !important;
+    padding: 20px;
+    text-align: justify !important;
+
+}
+.card-title{
+    font-family:"Luckiest Guy", sans-serif;
+    color: black !important;
+    margin-bottom: 10px !important;
+    margin: 20px !important;
+    padding: 2px;
+
+}
