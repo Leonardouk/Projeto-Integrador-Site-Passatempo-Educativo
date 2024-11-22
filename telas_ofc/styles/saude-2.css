@@ -1,14 +1,19 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     font-family:"Luckiest Guy", sans-serif;
-}
+} */
 
 #principal {
     background-color: #8DA5ED;
 
 }
+.titulo_cabecalho{
+    color: black;
+    font-family:"Luckiest Guy", sans-serif;
+    font-size: 70px;
 
+}
 .saude {
     font-size: 53px;
     color: white;
