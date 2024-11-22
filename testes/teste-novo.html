@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Carousel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+          rel="stylesheet">
+
+   <style>
+        .card_image{
+        border-radius: 7px !important;
+        }
+        .card{
+            background-color: #F6CC3A !important;
+            font-family:"Luckiest Guy", sans-serif !important;
+            border-radius: 10px !important;
+        }
+        .card-text{
+            font-family: 'Ubuntu', sans-serif !important;
+            color: black !important;
+            padding: 20px;
+            text-align: justify !important;
+
+        }
+        h5.card-title{
+            font-family:"Luckiest Guy", sans-serif !important;
+            color: black !important;
+            margin-bottom: 10px !important;
+            margin: 20px !important;
+            padding: 2px;
+
+        }
+
+        .imagem-div {
+    justify-content: center !important;
+    width: 100% !important;
+    height: auto !important;
+}
+
+/* Configuração da imagem no carrossel */
+.carousel-item > .imagem-div div.card{
+    width: auto !important;             /* Ocupa a largura total do container /         / Limite de tamanho para telas grandes */
+    height: 600px !important;
+    object-fit:cover !important;        /* Corta a imagem centralizando sem distorção */
+    border-radius: 20px !important;       /* Deixa a imagem redonda */
+    width: 80% !important;
+    max-height: 600px !important;
+}
+
+#carouselExample {
+    padding: 20px;  
+}
+
+.carousel-control-prev{
+    display: inline-block;
+
+}
+button.carousel-control-next{
+    display: inline-block;
+}
+
+
+/* Ajustes para telas menores */
+/* @media (max-width: 768px) {
+    .carousel-item > .imagem-div img {
+        width: 100%;
+        height: 80%;
+        max-height: 350px;
+        border-radius: 20px; 
+    }
+    #carouselExample {
+        background-color: #210348;
+        padding: 20px;
+        width: auto;
+        display: flex;
+        align-items: center;
+    }
+} */
+.carousel-item {
+    position: relative !important; /* Necessário para o posicionamento absoluto dos botões */
+}
+     
+        
+   </style>
+</head>
+
+<body>
+
+
+    <br>
+    <div class="container">
+        <div id="carouselExampleControls" class="carousel slide borde border-danger" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card text-center img d-block rounded">
+                                <div class="card-body ">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        This is a longer card with supporting text below as a natural lead-in to
+                                        additional content. This content is a little bit longer.
+                                    </p>
+                                </div>
+                                <div class="p-2">
+                                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-bottom card_image"
+                                    alt="Hollywood Sign on The Hill" />
+                                </div>
+                            </div>    
+                        </div>
+                    
+                        <div class="col-lg-4">
+                            <div class="card text-center img d-block rounded">
+                                <div class="card-body ">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        This is a longer card with supporting text below as a natural lead-in to
+                                        additional content. This content is a little bit longer.
+                                    </p>
+                                </div>
+                                <div class="p-2">
+                                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-bottom card_image"
+                                    alt="Hollywood Sign on The Hill" />
+                                </div>
+                            </div>     
+                        </div>
+
+
+                        <div class="col-lg-4">
+                            <div class="card text-center img d-block rounded">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        This is a longer card with supporting text below as a natural lead-in to
+                                        additional content. This content is a little bit longer.
+                                    </p>
+                                </div>
+                                <div class="p-2">
+                                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-bottom card_image"
+                                    alt="Hollywood Sign on The Hill" />
+                                </div>
+                            </div>     
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card h-100 text-center">
+                                <div class="card-body ">
+                                    <h5 class="card-title ">Card title</h5>
+                                    <p class="card-text">
+                                        This is a longer card with supporting text below as a natural lead-in to
+                                        additional content. This content is a little bit longer.
+                                    </p>
+                                </div>
+                                <div class="p-2">
+                                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-bottom card_image"
+                                    alt="Hollywood Sign on The Hill" />
+                                </div>
+                            </div>     
+                        </div>
+                    
+                        <div class="col-lg-4">
+                            <div class="card h-100 text-center">
+                                <div class="card-body ">
+                                    <h5 class="card-title ">Card title</h5>
+                                    <p class="card-text">
+                                    This is a longer card with supporting text below as a natural lead-in to
+                                    additional content. This content is a little bit longer.
+                                    </p>
+                                </div>
+                                <div class="p-2">
+                                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-bottom card_image"
+                                    alt="Hollywood Sign on The Hill" />
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card h-100 text-center">
+                                <div class="card-body ">
+                                    <h5 class="card-title ">Card title</h5>
+                                    <p class="card-text">
+                                        This is a longer card with supporting text below as a natural lead-in to
+                                        additional content. This content is a little bit longer.
+                                    </p>
+                                </div>
+                                <div class="p-2">
+                                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-bottom card_image"
+                                    alt="Hollywood Sign on The Hill" />
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+                             
+            </div>
+
+        
+            <div class="row botoes_carrossel justify-content-between">
+                <button class="carousel-control-prev" 
+                                        type="button" 
+                                        data-bs-target="#carouselExampleControls"
+                                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" 
+                        data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        
+
+
+
+
+
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+      </script>
+
+</body>
+
+</html>

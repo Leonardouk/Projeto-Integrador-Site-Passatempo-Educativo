@@ -3,61 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área Admin</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Footer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <!-- fonte guy -->
+        <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+        <!-- fonte ubuntu -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+            rel="stylesheet">
     <style>
-        body {
-            background-color: #f8f9fa;
+        .carousel-inner {
+        /* padding: 1em; */
+        }
+        .card {
+        margin: 0 0.5em;
+        box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+        border: none;
+        background-color: #F6CC3A ;
+        text-align: center;
+        border-radius: 20px;
+        }
+        div .card{
+            height: 50rem !important;
+        }
+        .card-title{
+            font-family:"Luckiest Guy", sans-serif;
+            font-size: 2rem;
+            color: black;
+            margin: 10px;
+
+        }
+        .card-text{
+            font-family: 'Ubuntu', sans-serif !important;
+            font-size: 1.2rem;
+            color: black;
+            margin: 20px;
+
+        }
+        /* .card-body{
+            align-self: center !important;
+            max-width: 100%; 
+            max-height: 100%; 
+            height: auto; 
+            width: auto;
+        } */
+        .carousel-control-prev,
+        .carousel-control-next {
+        background-color: #3E4096;
+        width: 6vh;
+        height: 6vh;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        }
+
+
+        /* .carousel-item{
+
+            width: 100% !important;
+        } */
+
+        @media (min-width: 992px) {
+        .carousel-item {
+            margin-right: 0;
+            flex: 0 0 33.333333%;
+            display: block;
+        }
+        .carousel-inner {
+            display: flex;
+        }
+        }
+     
+        .card .img-wrapper {
+            max-width: 100%;
+            height: 20em;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            padding: 10px;
         }
-        .container {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
+        .img-wrapper img{
+            max-width: 100%; 
+            max-height: 100%; 
+            height: auto; 
+            width: auto;       
         }
-        .card {
-            text-align: center;
-            padding: 30px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            transition: box-shadow 0.3s;
-            width: 150px;
-            background-color: #fff;
+        .card img {
+            max-height: 100%;
+            border-radius: 10px !important;
+
         }
-        .card:hover {
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        @media (max-width: 767px) {
+        .card .img-wrapper {
+            height: 17em;
         }
-        .icon {
-            font-size: 2rem;
-            color: #007bff;
-            margin-bottom: 10px;
-        }
-        .card-title {
-            font-size: 1.2rem;
-            font-weight: bold;
         }
     </style>
+
+    <!-- fonte guy -->
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+    <!-- fonte ubuntu -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="card">
-            <div class="icon">📄</div>
-            <h5 class="card-title">UX Designer</h5>
+    
+    <div id="carouselExampleControls" class="carousel" data-bs-wrap="true">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Batalha Nerf</h5>
+                        <p class="card-text">
+                            Promover a diversão, o exercício físico, o trabalho em equipe, e o desenvolvimento de habilidades estratégicas e motoras, utilizando as pistolas Nerf em jogos organizados e seguros. Cenário de campo de batalha, equipamentos e regras de segurança.
+
+                        </p>
+                    </div>
+                    <div class="img-wrapper"><img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="d-block w-100" alt="..."> </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Bolhas Gigantes</h5>
+                        <p class="card-text">
+                            Criar bolhas gigantes é uma atividade que encanta pessoas de todas as idades. A mistura perfeita de água, detergente e um toque de mágica transforma simples bolhas de sabão em verdadeiras obras de arte flutuantes. Imagine o brilho nos olhos das crianças ao verem bolhas enormes pairando no ar, refletindo as cores do arco-íris. É um momento de diversão e admiração que ficará gravado na memória de todos os participantes. Deixe a imaginação fluir e embarque nessa jornada de encanto e magia com a nossa oficina de bolhas gigantes.
+
+                        </p>
+                    </div>
+                    <div class="img-wrapper"><img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="d-block w-100" alt="..."> </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Catavento</h5>
+                        <p class="card-text">
+                            Durante a oficina, as crianças terão a oportunidade de aprender sobre o funcionamento dos cataventos, explorando conceitos de aerodinâmica e energia eólica de forma lúdica e interativa. Com materiais simples e muita criatividade, os participantes poderão construir seu próprio cata-vento e experimentar a sensação de ver a força do vento transformada em movimento.
+
+                        </p>
+                    </div>
+                    <div class="img-wrapper"><img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="d-block w-100" alt="..."> </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Culinária</h5>
+                        <p class="card-text">
+                            Elas poderão experimentar pratos deliciosos e se aventurar na cozinha de forma segura e divertida. Com ingredientes coloridos e instruções simples, cada receita foi cuidadosamente planejada para estimular a criatividade e despertar o interesse dos pequenos pela culinária. Cozinhar pode ser uma atividade educativa e prazerosa para as crianças, proporcionando momentos especiais em família e criando memórias afetuosas que serão lembradas com carinho no futuro.
+
+                        </p>
+                    </div>
+                    <div class="img-wrapper"><img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="d-block w-100" alt="..."> </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Pintura em Tela</h5>
+                        <p class="card-text">
+                            Nossa oficina de pintura é um espaço acolhedor e inspirador, onde a criatividade é sempre bem-vinda. Aqui, os artistas podem explorar diferentes técnicas e estilos para dar vida às suas ideias e emoções. Os cavaletes proporcionam a base perfeita para a tela, permitindo que cada pincelada conte uma história única. Cada item na nossa oficina é um convite para a expressão artística e a celebração da beleza que está presente em cada traço e cor. Junte-se a nós e deixe sua imaginação voar, transformando simples tintas em verdadeiras obras de arte.
+
+                        </p>
+                    </div>
+                    <div class="img-wrapper"><img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="d-block w-100" alt="..."> </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Pulseira Macramê</h5>
+                        <p class="card-text">
+                            Com diferentes cores de lã e um molde, podemos dar vida a uma pulseira única e cheia de significado. As crianças vão se encantar com a ideia de poder presentear um amigo com algo feito por elas mesmas, repleto de carinho e dedicação. Além de estimular a criatividade, essa atividade promove a amizade e fortalece os laços entre os pequenos. Juntos, eles vão se divertir criando algo especial que certamente será valorizado e apreciado pelo amigo presenteado.
+
+                        </p>
+                    </div>
+                    <div class="img-wrapper"><img src=" https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="d-block w-100" alt="..."> </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Robótica</h5>
+                        <p class="card-text">
+                            Os participantes são encorajados a criar um carrinho controlado por Bluetooth, com a orientação da nossa equipe, para colaborar na construção de forma criativa. Essa atividade não apenas proporciona aprendizado prático em engenharia e tecnologia, mas também fomenta um ambiente de competição saudável e o orgulho de ver o fruto do esforço em equipe.
+                        </p>
+                    </div>
+                    <div class="img-wrapper"><img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="d-block w-100" alt="..."> </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Slime</h5>
+                        <p class="card-text">
+                            A criatividade e diversão se encontram. Com uma oficina de slime, os participantes têm a oportunidade de soltar a imaginação, misturar cores, texturas e criar algo único e especial. É uma atividade que estimula a coordenação motora, a concentração e a interação em grupo, proporcionando momentos de alegria e aprendizado.
+
+                        </p>
+                    </div>
+                    <div class="img-wrapper"><img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="d-block w-100" alt="..."> </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Teatro</h5>
+                        <p class="card-text">
+                            Você e seus pequenos poderão se divertir juntos enquanto aprendem a cuidar de plantas e criam um ambiente único e especial. Nossa oficina de terrários é uma oportunidade perfeita para estimular a criatividade, promover a conexão com a natureza e fortalecer os laços familiares. Venha se encantar com essa experiência enriquecedora e cheia de cores!
+
+                        </p>
+                    </div>
+                    <div class="img-wrapper"><img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="d-block w-100" alt="..."> </div>
+                </div>
+            </div>
         </div>
-        <div class="card">
-            <div class="icon">✏️</div>
-            <h5 class="card-title">UI Designer</h5>
-        </div>
-        <div class="card">
-            <div class="icon">💻</div>
-            <h5 class="card-title">Developer</h5>
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
+   
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          let multipleCardCarousel = document.querySelector("#carouselExampleControls");
+      
+      
+          if (window.matchMedia("(min-width: 768px)").matches) {
+            let carousel = new bootstrap.Carousel(multipleCardCarousel, {
+              interval: false, // Disable automatic sliding
+              wrap: false, // Prevent wrapping at the end
+            });
+      
+      
+            let carouselWidth = document.querySelector(".carousel-inner").scrollWidth;
+            let cardWidth = document.querySelector(".carousel-item").offsetWidth;
+            let scrollPosition = 0;
+      
+      
+            document.querySelector("#carouselExampleControls .carousel-control-next").addEventListener("click", function () {
+              if (scrollPosition < carouselWidth - cardWidth * 4) {
+                scrollPosition += cardWidth;
+                document.querySelector("#carouselExampleControls .carousel-inner").scroll({ left: scrollPosition, behavior: 'smooth' });
+              }
+            });
+      
+      
+            document.querySelector("#carouselExampleControls .carousel-control-prev").addEventListener("click", function () {
+              if (scrollPosition > 0) {
+                scrollPosition -= cardWidth;
+                document.querySelector("#carouselExampleControls .carousel-inner").scroll({ left: scrollPosition, behavior: 'smooth' });
+              }
+            });
+          } else {
+            multipleCardCarousel.classList.add("slide");
+          }
+        });
+      </script>
+      
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </body>
 </html>

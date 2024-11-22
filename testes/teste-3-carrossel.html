@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Carousel</title>
+    <link href=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+          rel="stylesheet">
+
+    <style>
+        body{
+            background-color: purple;
+        }
+        .carousel-indicators img{
+            width: 70px !important;
+            display: block;
+            border-radius: 5px;
+
+        }
+        .carousel-indicators button{
+            width: max-content !important;
+            bottom: 1000% !important;
+
+
+        }
+        .carousel-indicators{
+            position: unset;
+            
+        }
+
+        .carousel-control-prev{
+            display: inline-block;
+
+        }
+        .carousel-control-next{
+            display: inline-block;
+
+        }
+ 
+        .carousel-indicators button.active img{
+            border: 2px solid red;
+        }
+        .carousel-control-next-icon, .carousel-control-prev-icon{
+            background-color: black!important;
+            width: 40px;
+            height: 40px;
+        }
+        .imagem-div {
+            justify-content: center;
+            width: 100%;
+            height: auto;
+        }
+      
+        .indicator-img{
+        background-color: purple !important;
+        }
+        /* Configuração da imagem no carrossel */
+        .carousel-item > .imagem-div img {
+            height: auto;
+            object-fit:cover;        /* Corta a imagem centralizando sem distorção */
+            border-radius: 20px;       /* Deixa a imagem redonda */
+            width: 80%;
+            max-height: 600px;
+        }
+
+
+    </style>
+</head>
+
+<body >
+
+    <div class="carousel slide " id="carouselDemo" data-bs-wrap="true" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="imagem-div d-flex justify-content-center">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class=" img d-block rounded" alt="img1">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="imagem-div d-flex justify-content-center">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class=" img d-block rounded" alt="img1">
+                </div>           
+            </div>
+            <div class="carousel-item">
+                <div class="imagem-div d-flex justify-content-center">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class=" img d-block rounded" alt="img1">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row botoes_carrossel justify-content-between">
+            <button class="carousel-control-prev" 
+                                    type="button" 
+                                    data-bs-target="#carouselDemo"
+                                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-primary" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" 
+                    data-bs-target="#carouselDemo"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-primary" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="carousel-indicators">
+            <button type="button" class="indicator-img active" data-bs-target="#carouselDemo" data-bs-slide-to="0">
+                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp">
+            </button>
+            <button type="button" class="indicator-img" data-bs-target="#carouselDemo" data-bs-slide-to="1">
+                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp">
+            </button>
+            <button type="button" class="indicator-img" data-bs-target="#carouselDemo" data-bs-slide-to="2">
+                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp">
+            </button>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+      </script>
+
+</body>
+
+</html>

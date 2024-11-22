@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #a3b8ff;
+            text-align: center;
+            color: #000;
+        }
+        .header {
+            margin-top: 20px;
+        }
+        .header h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .tab {
+            background-color: #5a4fcf;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .tab.active {
+            background-color: #3a2fbf;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>NOSSA GALERIA DE FOTOS</h1>
+    </div>
+    <div class="tabs">
+        <div class="tab active" onclick="showGallery('all')">Todas as Fotos</div>
+        <div class="tab" onclick="showGallery('workshops')">Oficinas</div>
+        <div class="tab" onclick="showGallery('events')">Eventos</div>
+        <div class="tab" onclick="showGallery('health')">Saúde e Bem-estar</div>
+    </div>
+    <div class="gallery" id="gallery">
+        <img src="image1.jpg" alt="Foto 1" class="all workshops">
+        <img src="image2.jpg" alt="Foto 2" class="all events">
+        <img src="image3.jpg" alt="Foto 3" class="all health">
+        <img src="image4.jpg" alt="Foto 4" class="all workshops">
+    </div>
+
+    <script>
+        function showGallery(category) {
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.querySelector(`.tab[onclick="showGallery('${category}')"]`).classList.add('active');
+
+            const images = document.querySelectorAll('.gallery img');
+            images.forEach(img => {
+                if (category === 'all' || img.classList.contains(category)) {
+                    img.style.display = 'block';
+                } else {
+                    img.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

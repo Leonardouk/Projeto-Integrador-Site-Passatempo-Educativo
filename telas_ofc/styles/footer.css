@@ -24,6 +24,8 @@
 }
 .rede_footer:hover{
     color: black!important;
+    transform: scale(1.2); /* Aumenta levemente no hover */
+
 }
 
 

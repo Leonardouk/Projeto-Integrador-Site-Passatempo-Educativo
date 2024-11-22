@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+
+        <!-- <link rel="stylesheet" href="styles/navbar-2.css"> -->
+        <!-- fonte guy -->
+        <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+        <!-- fonte ubuntu -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+            rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            background-color: #8DA5ED !important;
+        }
+        input {
+            display: none !important;
+        }
+
+        .container {
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: normal;
+            font-family:"Luckiest Guy", sans-serif;
+            font-size: 35px;
+            position: relative;
+            margin: 40px 0;
+        }
+
+        h1::before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 3px;
+            background-color: crimson;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: animate 4s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                width: 100px;
+            }
+            50% {
+                width: 200px;
+            }
+            100% {
+                width: 100px;
+            }
+        }
+        /* #F6CC3A 
+        #6787E7
+        #3E4096
+        */
+        .top-content {
+            background-color: #3E4096;
+            width: 90%;
+            margin: 0 auto 20px auto;
+            height: 60px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            border-radius: 5px;
+            box-shadow: 3px 3px 5px lightgray;
+            justify-content: space-around;
+        }
+
+        label {
+            display: inline-block;
+            margin: 0 10px;
+            line-height: 60px;
+            font-size: 18px;
+            color: gray;
+            cursor: pointer;
+            transition: color 0.5s;
+        }
+
+        label:hover {
+            color: black;
+        }
+
+        .photo-galery {
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .photo-galery .pic {
+            display: none; /* Oculta todas as imagens inicialmente */
+        }
+
+        .photo-galery .pic img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 2px 2px 4px lightgray;
+            cursor: pointer;
+        }
+
+        input#check1:checked ~ .photo-galery .pic,
+        input#check2:checked ~ .photo-galery .oficinas,
+        input#check3:checked ~ .photo-galery .eventos,
+        input#check4:checked ~ .photo-galery .saude {
+            display: block; /* Exibe as imagens da categoria correspondente */
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        }
+
+        .modal:target {
+            display: flex;
+        }
+
+        .modal a.close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: bold;
+            background: crimson;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .modal a.close:hover {
+            background: darkred;
+            transform: scale(1.1);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+                margin: 20px 0;
+            }
+
+            .top-content {
+                height: auto;
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            label {
+                font-size: 16px;
+                margin: 5px 0;
+            }
+
+            .photo-galery {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            label {
+                font-size: 14px;
+            }
+
+            .photo-galery {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                grid-gap: 10px;
+            }
+
+            .photo-galery .pic img {
+                border-radius: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <header>
+        <nav class="navbar navbar-expand-md fixed">
+            <div class="container-fluid">
+              <div>
+                <img src="img/Logo Passatempo.png" class="passatempo_logo" alt="Logo Passatempo">
+              </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end justify-content-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h2 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h2>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>  
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav barra_navegacao justify-content-around flex-grow-1">
+                    <li class="nav-item text-top">
+                      <a class="nav-link navegacao_link" aria-current="page" href="home-2.html">Home</a>
+                    </li>
+                    <li class="nav-item navegacao_item">
+                      <a class="nav-link navegacao_link" href="oficinas-2.html">Oficinas</a>
+                    </li>
+                    <li class="nav-item navegacao_item">
+                      <a class="nav-link navegacao_link" href="eventos-2.html">Eventos</a>
+                    </li>
+                    <li class="nav-item navegacao_item">
+                      <a class="nav-link navegacao_link" href="saudeBemEstar-2.html">Saúde e Bem-Estar</a>
+                    </li>
+                    <li class="nav-item navegacao_item">
+                      <a class="nav-link navegacao_link" href="galeria.html">Galeria</a>
+                    </li>
+                    <li class="nav-item navegacao_item">
+                      <a class="nav-link navegacao_link active" href="contato-2.html">Contato</a>
+                    </li>
+                    <li class="nav-item navegacao_item">
+                      <a class="nav-link navegacao_link" href="admin-2.html">Admin</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-images" viewBox="0 0 16 16">
+            <path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
+            <path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2M14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1M2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1z"/>
+        </svg>
+        <h1>Nossa Galeria de Fotos</h1>
+        <br>
+        <br>
+        <br>
+        <!-- Inputs para controle das categorias -->
+        <input type="radio" id="check1" name="category" checked>
+        <input type="radio" id="check2" name="category">
+        <input type="radio" id="check3" name="category">
+        <input type="radio" id="check4" name="category">
+
+        <div class="top-content">
+            <label for="check1">Todas as Fotos</label>
+            <label for="check2">Oficinas</label>
+            <label for="check3">Eventos</label>
+            <label for="check4">Saúde e Bem-estar</label>
+        </div>
+
+        <div class="photo-galery">
+            <!-- Todas -->
+            <div class="pic">
+                <a href="#img1">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" alt="Todas">
+                </a>
+            </div>
+            <!-- Oficinas -->
+            <div class="pic oficinas">
+                <a href="#img2">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" alt="Oficinas">
+                </a>
+            </div>
+            <!-- Eventos -->
+            <div class="pic eventos">
+                <a href="#img3">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" alt="Eventos">
+                </a>
+            </div>
+            <!-- Saúde e Bem-estar -->
+            <div class="pic saude">
+                <a href="#img4">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" alt="Saúde e Bem-estar">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modais -->
+    <div class="modal" id="img1">
+        <a href="#" class="close">&times;</a>
+        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" alt="Imagem 1">
+    </div>
+    <div class="modal" id="img2">
+        <a href="#" class="close">&times;</a>
+        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" alt="Imagem 2">
+    </div>
+    <div class="modal" id="img3">
+        <a href="#" class="close">&times;</a>
+        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" alt="Imagem 3">
+    </div>
+    <div class="modal" id="img4">
+        <a href="#" class="close">&times;</a>
+        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" alt="Imagem 4">
+    </div>
+</body>
+</html>
