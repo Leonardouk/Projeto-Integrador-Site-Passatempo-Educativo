@@ -28,7 +28,7 @@
 </head>
 
 <body>
-<!--  começo vlibras  -->
+  <!--  começo vlibras  -->
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
@@ -39,7 +39,7 @@
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
-<!--  fim vlibras  -->
+  <!--  fim vlibras  -->
 
   <header>
     <nav class="navbar navbar-expand-md fixed-top ">
@@ -192,57 +192,61 @@
     let speech; // Variável para armazenar o objeto de fala
     let isReading = false; // Variável para controlar o estado de leitura
     let isMouseReadingEnabled = false; // Variável para controlar se a leitura com o mouse está habilitada
-  
+
     // Função para iniciar a leitura do texto
     function startReading(text) {
       if (isMouseReadingEnabled && !isReading) {
         speech = new SpeechSynthesisUtterance(text); // Cria o objeto para síntese de fala
         speech.lang = "pt-BR"; // Define a língua para português do Brasil
-  
+
         // Escutador de evento para quando a fala terminar
         speech.onend = function () {
           isReading = false; // Resetando o estado para leitura não ativa após terminar
         };
-  
+
         window.speechSynthesis.speak(speech); // Reproduz a fala
         isReading = true; // Marca que a leitura está em andamento
       }
     }
-  
+
     // Função para parar a leitura
     function stopReading() {
       window.speechSynthesis.cancel(); // Para a fala em andamento
       isReading = false; // Garantir que o estado de leitura é falso
     }
-  
-    // Selecionar todos os elementos com texto, incluindo navbar, links e botões
-    const textElements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, a, button, .texto_descricao'); 
-  
+
+    // Selecionar todos os elementos com texto
+    const textElements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, a, button, .texto_descricao, .row, #quantity');
+
     textElements.forEach(element => {
       element.addEventListener('mouseover', function () {
         startReading(this.innerText); // Lê o texto do elemento quando o mouse passar sobre ele
       });
-  
+
       element.addEventListener('mouseout', function () {
         stopReading(); // Para a leitura quando o mouse sair do elemento
       });
     });
-  
-    // Adicionar evento ao botão para parar a leitura quando clicado
+
+    // Adicionar evento ao botão para alternar a leitura quando clicado
     const toggleButton = document.getElementById('toggleReading'); // Seleciona o botão
     toggleButton.addEventListener('click', function () {
       if (isReading) {
         stopReading(); // Para qualquer leitura em andamento
       }
       isMouseReadingEnabled = !isMouseReadingEnabled; // Alterna entre habilitar ou desabilitar a leitura com o mouse
-  
+
       // Mudar o ícone do botão, dependendo do estado
-      const icon = this.querySelector('i');
+      const icon = this.querySelector('i'); // Selecione o ícone dentro do botão
       if (isMouseReadingEnabled) {
-        icon.classList.replace('fa-microphone-slash', 'fa-microphone'); // Ícone de microfone
+        icon.classList.remove('fa-microphone'); // Remove a classe do ícone de microfone
+        icon.classList.add('fa-microphone-slash'); // Adiciona a classe do ícone de microfone com risco
       } else {
-        icon.classList.replace('fa-microphone', 'fa-microphone-slash'); // Ícone de microfone com risco
+        icon.classList.remove('fa-microphone-slash'); // Remove a classe do ícone de microfone com risco
+        icon.classList.add('fa-microphone'); // Adiciona a classe do ícone de microfone
       }
+
+      console.log('isMouseReadingEnabled:', isMouseReadingEnabled); // Log para depuração
     });
   </script>
 
