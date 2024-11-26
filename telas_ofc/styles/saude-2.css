@@ -1,69 +1,35 @@
-/* *{
-    margin: 0;
-    padding: 0;
-    font-family:"Luckiest Guy", sans-serif;
-} */
-
-#principal {
-    background-color: #8DA5ED;
-
+#imagem1{
+    width: 500px;
+    height: 370px;
+    max-width: 100%;
+    max-height: 100%;
 }
+
+.brilho{
+    height: 150px;
+    width:150px ;
+    max-width: 100%;
+    max-height: 100%;
+}
+
 .titulo_cabecalho{
-    color: black;
     font-family:"Luckiest Guy", sans-serif;
     font-size: 70px;
-
-}
-.saude {
-    font-size: 53px;
-    color: white;
-    border-bottom: solid white 3px;   
+    color: black;
 }
 
-p {
-    font-family: 'Ubuntu', sans-serif;
+.titulo_descricao{
+    font-family:"Luckiest Guy", sans-serif;
+    font-size: 40px;
+    color: black;
 }
-
-#saude_col {
-    margin-left: 93px;
+p{
+    font-family: 'Ubuntu', sans-serif !important;
+    font-size: 17px;
 }
-
-#container_amarelo {
+.container_descricao{
     background-color: #F6CC3A;
 }
-
-#texto61, #texto3 {
-    font-size: 30px;
-}
-
-#texto2, #texto4 {
-    font-size: 20px;
-}
-
-#imagem1, #imagem5 {
-    /* transform: rotate(2.92deg); */
-    width: 368.65px;
-    height: 230.8px;
-}
-
-#imagem3, #imagem7 {
-    /* transform: rotate(-9.82deg); */
-    width: 368.65px;
-    height: 230.8px;
-}
-
-#imagem4, #imagem8{
-    width: 105px;
-    height: 106px;
-}
-
-#imagem2, #imagem6 {
-    width: 155px;
-    height: 134px;
-}
-
-
-#purpurina_amarela {
-    width: 247px;
-    height: 243px;
+body{
+    background-color: #8DA5ED !important;
 }

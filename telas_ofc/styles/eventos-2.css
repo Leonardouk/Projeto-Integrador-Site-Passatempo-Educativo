@@ -51,7 +51,7 @@ ul.caixa{
 }
 .card{
     background-color: #F6CC3A !important;
-    box-shadow: 2px 2px 2px 2px #EB6D0B;
+    /* box-shadow: 2px 2px 2px 2px #EB6D0B; */
     transition: 0.3s;
     border-radius: 15px !important;
 }
@@ -60,6 +60,7 @@ ul.caixa{
     color: black !important;
     padding: 20px;
     text-align: justify !important;
+    font-size: 17px;
 
 }
 .card-title{
