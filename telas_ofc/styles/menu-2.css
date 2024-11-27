@@ -1,7 +1,14 @@
 body{
     background-color: #8DA5ED !important;
 }
-
+/* .menu{
+    background-color: #6787E7;
+    width: 90% !important;
+    border-radius: 20px;
+} */
+.conteudo{
+    padding: 0 !important;
+}
 .row_cabecalho {
     background-color: #6787E7;
     border-radius: 20px;
@@ -70,18 +77,30 @@ body{
 }
 
 .texto_descricao {
-    background-color: #F6CC3A;
+    
     padding: 30px;
     border-radius: 20px;
-    font-size: 140%;
+    font-size: 20px;
     font-family: 'Ubuntu', sans-serif !important;
 }
+.car{
+    padding: 0 !important;
+    margin-right: 83px !important;
+}
 
+.carrossel{
+    background-color: #3E4096;
 
+}
+.texto_quemsomos {
+    margin-right: 75px !important;
+    color: white;
+    font-size: 20px;
+}
 /* carrossel */
 
 
-.carousel-indicators img{
+/* .carousel-indicators img{
     width: 70px !important;
     display: block;
     border-radius: 5px;
@@ -122,11 +141,10 @@ body{
 .indicator-img{
 background-color:#8DA5ED  !important;
 }
-/* Configuração da imagem no carrossel */
 .carousel-item > .imagem-div img {
     height: auto;
-    object-fit:cover;        /* Corta a imagem centralizando sem distorção */
-    border-radius: 20px;       /* Deixa a imagem redonda */
+    object-fit:cover;      
+    border-radius: 20px;       
     width: 80%;
     max-height: 600px;
-}
+} */

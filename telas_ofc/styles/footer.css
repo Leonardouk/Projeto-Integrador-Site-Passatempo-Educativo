@@ -4,7 +4,7 @@
 
 /* container fluido */
 .rodape{
-    padding: 20px 20px;
+    padding: 40px 0 !important;
     background-color: #3E4096;
     /* border-radius: 20px; */
 }
@@ -23,8 +23,7 @@
     color: white!important;
 }
 .rede_footer:hover{
-    color: black!important;
-    transform: scale(1.2); /* Aumenta levemente no hover */
+    transform: scale(1.4); /* Aumenta levemente no hover */
 
 }
 
@@ -32,24 +31,28 @@
 
 /* container botao contate */
 .botao_contate_footer{
-    background-color: #6787E7 !important;
+    background-color: white !important;
     font-family:"Luckiest Guy", sans-serif !important;
     border: 1px solid transparent!important;
     border-radius: 15px!important;
     align-items: center!important;
     text-align: center!important;
     justify-content: center!important;
-    color: white !important;
+    color: #261890 !important;
     text-decoration: none !important;
 }
 /* tag <a> com o contate*/
 a.botao_contate_footer{
     padding: 14px;
+    
+    
 }
-.botao_contate_footer:hover{
+/* .botao_contate_footer:hover{
     color: black !important;
+} */
+.texto-botao:hover{
+    transform: scale(1.3); /* Aumenta levemente no hover */
 }
-
 
 
 /* container direitos autorais */
@@ -61,8 +64,8 @@ a.botao_contate_footer{
 }
 div.direitos_footer{
     /* arrumar fonte */
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
-
+    font-family: 'Ubuntu', sans-serif !important;
+    font-size: 20px;
 }
 
 

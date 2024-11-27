@@ -18,7 +18,7 @@
 
 .navbar a {
     text-decoration: none; /* Remove o sublinhado */
-    color: #000000; /* Cor do texto */
+    color: black; /* Cor do texto */
     font-size: 18px; /* Tamanho da fonte */
     padding: 10px 20px; /* Espaçamento em volta dos links */
     margin: 0 10px; /* Espaçamento lateral entre os links */
@@ -30,11 +30,13 @@
     /* background-color: #EB6D0B;  */
     /* Cor de fundo ao passar o mouse */
     border-radius: 5px; /* Bordas arredondadas */
-    color: #000000 !important;
+    color: black !important;
 }
 
 .navegacao_link:hover{
-    color: #0d00ff !important;
+    transform: scale(1.3); /* Aumenta levemente no hover */
+    color: black !important;
+
 }
 
 .offcanvas {
