@@ -1,0 +1,35 @@
+.sponsors-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #3E4096; /* Cor de fundo do container */
+    padding: 20px 0;
+  }
+  
+  .sponsors-marquee {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    animation: scroll 10s linear infinite;
+  }
+  
+  .sponsor-item {
+    flex: 0 0 auto;
+    width: 150px; /* Largura de cada logotipo */
+  }
+  
+  .sponsor-item img {
+    width: 100%;
+    object-fit: contain;
+  }
+  
+  /* Animação contínua */
+  @keyframes scroll {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
