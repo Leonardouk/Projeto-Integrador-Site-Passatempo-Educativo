@@ -1,19 +1,13 @@
 body{
     background-color: #8DA5ED !important;
 }
-/* .menu{
-    background-color: #6787E7;
-    width: 90% !important;
-    border-radius: 20px;
-} */
-.conteudo{
-    padding: 0 !important;
-}
+/* cabecalho */
 .row_cabecalho {
     background-color: #6787E7;
     border-radius: 20px;
     margin: 0 10% !important;
     padding: 2.5%;
+    justify-content: end;
 }
 .row_titulo_cabecalho{
     width: 100%;
@@ -31,7 +25,6 @@ body{
     height: 160px; 
     width: 160px;
 }
-
 .t1_cabecalho {
     width: 100%;
     height: 100%;
@@ -61,7 +54,11 @@ body{
     max-height: 100%;
 }
 
-.t1_descricao {
+
+
+
+/* descricao */
+.h1_descricao {
     width: 100%;
     height: 100% !important;
     font-size: 2.2rem;
@@ -70,37 +67,89 @@ body{
     font-family: "Luckiest Guy", sans-serif;
 }
 
-.titulo_descricao {
+.col_titulo_descricao {
     background-color: #3E4096;
     border-radius: 20px;
     color: white;
 }
-
-.texto_descricao {
+.col_texto_descricao {
     
     padding: 30px;
     border-radius: 20px;
     font-size: 20px;
     font-family: 'Ubuntu', sans-serif !important;
 }
-.car{
-    padding: 0 !important;
-    margin-right: 83px !important;
+
+
+.divider {
+    border-top: 10px dashed #F6CC3A;
+    width: 70%;
+    justify-self: center;
 }
 
-.carrossel{
+.col_espaco{
+    width: 1% !important;
+
+}
+
+/* quem somos */
+.row_quem_somos{
     background-color: #3E4096;
+}
+
+.row_titulo_quem_somos{
+    margin-bottom: 30px;
 
 }
-.texto_quemsomos {
-    margin-right: 75px !important;
-    color: white;
-    font-size: 20px;
+.row_titulo_quem_somos h1{
+    font-family: "Luckiest Guy", sans-serif !important;
 }
+.col_texto_quemsomos {
+    color: white;
+
+}
+.row_texto_quem_somos p{
+    font-family: 'Ubuntu', sans-serif !important;
+    font-size: 1.2vw;
+}
+
+
+/* carrossel */
+.imagem-div {
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.carousel-item > .imagem-div img {
+    height: auto;
+    object-fit:cover;      
+    width: 100%;
+    max-height:100%;
+} 
+.carousel{
+    object-fit: cover !important;
+}
+
+.col_carrossel{
+    padding: 0 !important;
+}
+.row_carrossel{
+    object-fit: cover !important;
+    background-color: #3E4096 !important;
+}
+
+@media (max-width: 768px) {
+    .row_texto_quem_somos p{
+        font-size: 1.0rem;
+    }
+
+}
+
 /* carrossel */
 
 
-/* .carousel-indicators img{
+ /* .carousel-indicators img{
     width: 70px !important;
     display: block;
     border-radius: 5px;
@@ -131,20 +180,6 @@ body{
     background-color: black!important;
     width: 40px;
     height: 40px;
-}
-.imagem-div {
-    justify-content: center;
-    width: 100%;
-    height: auto;
-}
-
-.indicator-img{
-background-color:#8DA5ED  !important;
-}
-.carousel-item > .imagem-div img {
-    height: auto;
-    object-fit:cover;      
-    border-radius: 20px;       
-    width: 80%;
-    max-height: 600px;
 } */
+
+
