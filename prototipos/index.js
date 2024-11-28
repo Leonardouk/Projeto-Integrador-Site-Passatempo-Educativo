@@ -93,11 +93,13 @@ app.post("/remover", async (req, res) => {
     }
 })
 
+let itemAdicionado = ""
 const multerConfig = require("./config/multer")
 app.post("/upload", multer(multerConfig).any(), async (req, res) => {
     const srcImagem = path.join('../img', `${req.files[0].filename}`)
     try {
         cadastrarImagem(srcImagem)
+        itemAdicionado = await Imagem.findOne({src: srcImagem})
     }
     catch (err) {
         console.error(err.message)

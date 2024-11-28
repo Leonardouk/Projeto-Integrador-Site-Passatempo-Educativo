@@ -293,18 +293,16 @@ function eventoInput() {
         })
     })
 }
+
 async function uploadImagem() {
-    let URLCompleta = conectarEndpoint('/upload')
+    const URLCompleta = conectarEndpoint('/upload')
     formdata = await eventoInput()
     
     await axios.post(URLCompleta, formdata, {
         headers: {
-          'Content-Type': 'multipart/form-data'
+            'Content-Type': 'multipart/form-data'
         }
-    }).catch(error => {
-        console.error(error)
     })
-
 }
 const botaoUpload = document.querySelector('#botaoUpload')
 botaoUpload.addEventListener('click', uploadImagem)
@@ -313,16 +311,19 @@ async function removerImagem() {
     let URLCompleta = conectarEndpoint('/teste')
     const arrayElementos = ((await axios.get(URLCompleta)).data)
     const arrayTodasImagens = arrayElementos[1]
-
-    arrayTodasImagens.forEach(element => {
-        if (element.src == elementoClicado.getAttribute('src')) {
-            id = element._id
-        }
-    })
-
-    URLCompleta = conectarEndpoint('/remover')
-    await axios.post(URLCompleta, {_id: id, src: elementoClicado.getAttribute('src')})
-
+    
+    if (elementoClicado) {
+        console.log(elementoClicado)
+        arrayTodasImagens.forEach(element => {
+            if (element.src == elementoClicado.getAttribute('src')) {
+                id = element._id
+            }
+        })
+        URLCompleta = conectarEndpoint('/remover')
+        elementoClicado.remove()
+        await axios.post(URLCompleta, {_id: id, src: elementoClicado.getAttribute('src')})
+        elementoClicado = ""
+    }
 }
 
 //Códigos para o botão custom de upload
