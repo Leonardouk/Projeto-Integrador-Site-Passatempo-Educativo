@@ -10,6 +10,7 @@ body {
 
 h1 {
     font-family: "Luckiest Guy", sans-serif;
+    color: black !important;
 }
 
 table {
@@ -26,11 +27,22 @@ th, td {
 
 tr:nth-child(even) {
     background-color: #f2f2f2;
+    border: 1px solid black !important;
+
+
 }
 
+table{
+    background-color: rgb(204, 204, 204);
+}
+td{
+    border: 1px solid black !important;
+
+}
 
 th {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
+    border: 1px solid black !important;
     
 }

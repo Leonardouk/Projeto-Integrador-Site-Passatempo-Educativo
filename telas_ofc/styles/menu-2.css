@@ -2,8 +2,125 @@ body{
     background-color: #8DA5ED !important;
 }
 /* cabecalho */
-.row_cabecalho {
+.cabecalho{
     background-color: #6787E7;
+}
+
+/* dividers */
+.h-divider {
+    margin: auto;
+    margin-top: 80px;
+    width: 60% !important;
+    position: relative;
+  }
+  
+  .h-divider .shadow {
+    overflow: hidden;
+    height: 5px;
+  }
+  
+  .h-divider .shadow:after {
+    content: '';
+    display: block;
+    margin: -25px auto 0;
+    width: 100%;
+    height: 25px;
+    border-radius: 125px/12px;
+    box-shadow: 8px 8px 8px #F6CC3A;
+  }
+  
+  
+  .h-divider .text2 {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    bottom: 100%;
+    margin-bottom: -35px;
+    left: 50%;
+    margin-left: -25px;
+    border-radius: 100%;
+  }
+  
+  .h-divider img {
+    position: absolute;
+    margin: 4px;
+    max-width: 100px;
+    border-radius: 100%;
+    left: -40%;
+    top: -20%;
+
+  }
+
+  .fancy {
+    --b: 6px;   /* control the border thickness */
+    --w: 80px;  /* control the width of the line*/
+    --g: 15px;  /* control the gap */
+    --c: #0B486B;
+   
+    width: fit-content;
+    padding: 0 1em;
+    line-height: 1.6em;
+    border: 1px solid;
+    color: #fff;
+    background: 
+      conic-gradient(from   45deg at left ,var(--c) 25%,#0000 0) 0,
+      conic-gradient(from -135deg at right,var(--c) 25%,#0000 0) 100%;
+    background-size: 51% 100%;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    border-image: 
+       linear-gradient(
+         #0000      calc(50% - var(--b)/2),
+         var(--c) 0 calc(50% + var(--b)/2),
+         #0000    0) 
+      1/0 var(--w)/calc(var(--w) + var(--g));
+    margin-inline: auto;
+  }
+  
+
+  /* cabecalho dividers */
+
+
+/* .triangle {
+    position: relative;
+    background: #8DA5ED;
+    height: 25vh;
+  }
+  
+  .triangle::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height:0;
+    border-style: solid;
+    border-width: 100px 100px 0 100px;
+    border-color: #8DA5ED transparent transparent transparent;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+  } */
+
+  .triangle {
+    position: relative;
+    background: white;
+    height: 2vh;
+  }
+  
+  .triangle::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 45px 45px 0 45px;
+    border-color: white transparent transparent transparent;
+    left: 21%;
+    transform: translateX(-50%) translateY(100%);
+  }
+
+.row_cabecalho {
+    /* background-color: #6787E7; */
     border-radius: 20px;
     margin: 0 10% !important;
     padding: 2.5%;
@@ -59,21 +176,19 @@ body{
 
 /* descricao */
 .h1_descricao {
-    width: 100%;
-    height: 100% !important;
     font-size: 2.2rem;
-    margin-top: 1%;
-    padding: 5px;
     font-family: "Luckiest Guy", sans-serif;
 }
-
-.col_titulo_descricao {
+/* .row_titulo_descricao{
     background-color: #3E4096;
+
+} */
+.col_titulo_descricao {
     border-radius: 20px;
-    color: white;
+    color: black;
 }
 .col_texto_descricao {
-    
+    color: black!important;
     padding: 30px;
     border-radius: 20px;
     font-size: 20px;
@@ -88,13 +203,21 @@ body{
 }
 
 .col_espaco{
-    width: 1% !important;
+    width: 0.1px !important;
+    padding: 0 !important;
+    margin: 0 !important;
 
 }
 
 /* quem somos */
+/* .quem_somos{
+    background-color: #3E4096;
+
+} */
 .row_quem_somos{
     background-color: #3E4096;
+    justify-content: space-between;
+    padding: 0;
 }
 
 .row_titulo_quem_somos{
@@ -104,15 +227,18 @@ body{
 .row_titulo_quem_somos h1{
     font-family: "Luckiest Guy", sans-serif !important;
 }
-.col_texto_quemsomos {
+.col_texto_quem_somos {
     color: white;
+    text-align: start;
 
 }
 .row_texto_quem_somos p{
     font-family: 'Ubuntu', sans-serif !important;
     font-size: 1.2vw;
 }
-
+.quem_somos{
+    padding: 0 !important;
+}
 
 /* carrossel */
 .imagem-div {
@@ -139,11 +265,27 @@ body{
     background-color: #3E4096 !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .row_texto_quem_somos p{
-        font-size: 1.0rem;
+        font-size: 1.1rem;
     }
+    .col_texto_quem_somos{
+        text-align: center !important;
+        padding: 20px !important;
+        margin: 20px !important;
 
+    }
+    .row_quem_somos{
+        justify-content: center !important;
+        
+    }
+  
+    div.col_texto_quem_somos{
+        padding: 20px !important;
+    }
+    .row_titulo_quem_somos{
+        margin-top: 40px !important;
+    }
 }
 
 /* carrossel */
