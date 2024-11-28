@@ -15,7 +15,7 @@ async function obterTexto() {
     
     //Posiciona todos os textos ao seu lado e cria espaços para as imagens que podem os acompanhar
     arrayTodosTextos.forEach(element => { 
-        if (element.pagina == "teste") {
+        if (element.pagina.includes("teste")) {
             let paragrafo = document.querySelector(`#texto${element.ordem}`)
             paragrafo.innerHTML = element.texto
             const qtdElementos = arrayTodosTextos.length
@@ -26,7 +26,7 @@ async function obterTexto() {
         }
     })
     arrayTodasImagens.forEach(element => {
-        if (element.pagina == "teste") {
+        if (element.pagina.includes("teste")) {
             if (element.ordem != 999) {
                 div = document.createElement('div')
                 document.querySelector(`#linha${element.ordem}`).insertAdjacentElement("beforeend", div)
@@ -50,27 +50,31 @@ async function trocarModoAdmin() {
 
     //Confore em qual estado se encontra o Modo Admin e troca para o oposto ao apertar do botão
     modoAdmin ? modoAdmin = false : modoAdmin = true;
-    console.log(`o modo admin está ligado: ${modoAdmin}`)
 
     //Caso o modo admin esteja ativo, todos os elementos são buscados no array e colocados em seus respectivos espaços no arquivo html e os torna editáveis
     if (modoAdmin == true) {
         let botaoCadastro = document.querySelector("#botaoCadastro")
         botaoCadastro.classList.remove("d-none") //Torna o botão de cadastro visível
 
+        //Transforma todos elementos de texto em editáveis e também cria as opções de escolha de imagem se uma imagem não ter sido salva anteriormente
         arrayTodosTextos.forEach(element => {
-            if (element.pagina == "teste") {
+            if (element.pagina.includes("teste")) {
                 let paragrafo = document.querySelector(`#texto${element.ordem}`)
                 let texto = paragrafo.innerHTML
                 paragrafo.outerHTML = `<textarea class=\"form-control\" name=\"test\" id=\"texto${element.ordem}\" style=\"height: 300px;\"></textarea>`
                 paragrafo = document.querySelector(`#texto${element.ordem}`)
                 paragrafo.innerHTML = texto
                 
-                div = document.querySelector(`#ordem${element.ordem}`)
-                svg = document.createElement('svg')
-                div.insertAdjacentElement('beforeend', svg)
-                svg.outerHTML = `<svg onclick=\"obterImagens()\" xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" fill=\"currentColor\" class=\"bi bi-camera-fill btn btn-light border-dark\" viewBox=\"0 0 16 16\" data-bs-toggle=\"modal\" data-bs-target=\"#modalFotos\" id=\"imagem${element.ordem}\"><path d=\"M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0\"/><path d=\"M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0\"/></svg>`
+                img = document.querySelector(`#imagem${element.ordem}`)
+                if (!img) {
+                    div = document.querySelector(`#ordem${element.ordem}`)
+                    svg = document.createElement('svg')
+                    div.insertAdjacentElement('beforeend', svg)
+                    svg.outerHTML = `<svg onclick=\"obterImagens()\" xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" fill=\"currentColor\" class=\"bi bi-camera-fill btn btn-light border-dark\" viewBox=\"0 0 16 16\" data-bs-toggle=\"modal\" data-bs-target=\"#modalFotos\" id=\"imagem${element.ordem}\"><path d=\"M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0\"/><path d=\"M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0\"/></svg>`   
+                }
             }
         });
+        //Confere se há imagens que já foram posicionadas e as transforma em editáveis
         arrayTodasImagens.forEach(element => {
             if (element.ordem != 999) {
                 img = document.querySelector(`#imagem${element.ordem}`)
@@ -87,7 +91,7 @@ async function trocarModoAdmin() {
         botaoCadastro.classList.add("d-none") ////Torna o botão de cadastro invisível
 
         arrayTodosTextos.forEach(element => {
-            if (element.pagina == "teste") {
+            if (element.pagina.includes("teste")) {
                 let paragrafo = document.querySelector(`#texto${element.ordem}`)
                 let texto = paragrafo.value
                 paragrafo.outerHTML = `<p style=\"text-indent: 1em;\" id=\"texto${element.ordem}\"></p>`
@@ -100,6 +104,15 @@ async function trocarModoAdmin() {
                 }
             }
         });
+        arrayTodasImagens.forEach(element => {
+            if (element.ordem != 999) {
+                img = document.querySelector(`#imagem${element.ordem}`)
+                img.classList.remove("btn", "btn-link")
+                img.removeAttribute("onclick")
+                img.removeAttribute("data-bs-toggle")
+                img.removeAttribute("data-bs-target")
+            }
+        })
     }
 }
 
@@ -125,11 +138,11 @@ async function salvarMudancas() {
         }
         
         arrayTodasImagens.forEach(element => {
-            if (element.pagina == "teste" && element.src == imagem.getAttribute('src')) {
+            if (element.pagina.includes("teste") && element.src == imagem.getAttribute('src')) {
                 id = element._id
             }
         })
-        console.log(imagem, id)
+        
         if (imagem.nodeName == 'IMG') {
             arrayImagensParaSalvar.push({_id: id, ordem: element.ordem})
         }
@@ -138,7 +151,7 @@ async function salvarMudancas() {
     if (!stringVazia) {
         let botaoCadastro = document.querySelector("#botaoCadastro")
         botaoCadastro.outerHTML = "<button class=\"btn btn-success w-100 \" id=\"botaoCadastro\" onclick=\"salvarMudancas()\" disabled=\"\"><div class=\"spinner-border spinner-border-sm text-light\"></div></button>"
-        console.log(arrayImagensParaSalvar)
+
         await axios.post(URLCompleta, [arrayTodosTextos, arrayImagensParaSalvar]).data
         
         setTimeout(() => {
@@ -177,7 +190,7 @@ async function obterImagens() {
         idImagemSelecionada = elemento.id
     })
     
-    //Puxa o array de elementos de texto e imagem do back, define a variável de imagens e um contador
+    //Puxa o array de elementos de texto e imagem do back, define a variável de imagens
     const URLCompleta = conectarEndpoint('/teste')
     const arrayElementos = ((await axios.get(URLCompleta)).data)
     const imagens = arrayElementos[1]
@@ -255,7 +268,70 @@ async function selecionarImagem() {
         
         let modal = bootstrap.Modal.getInstance(document.querySelector('#modalFotos'))
         modal.hide()
+        dropImagens()
     }
-    dropImagens()
 }
-//Falta tornar a imagem selecionada definitva
+
+//Funções para adicionar as interações de remover e adicionar conteúdo ao modal
+function eventoInput() {
+    const input = document.querySelector('#file')
+    const formData = new FormData()
+    return new Promise((resolve) => {
+        input.addEventListener('change', event => {
+            formData.delete('arquivo')
+            if (input.files.length > 0) {
+                const type = input.files[0].type
+                const formats = ["image/jpeg", "image/png", "image/jpg"]
+                if (!formats.includes(type)) {
+                    console.log("Selecione um tipo de arquivo compatível: png, jpeg, jpg")
+                }
+                else {
+                    formData.append('arquivo', input.files[0])
+                    resolve(formData)
+                }
+            }
+        })
+    })
+}
+async function uploadImagem() {
+    let URLCompleta = conectarEndpoint('/upload')
+    formdata = await eventoInput()
+    
+    await axios.post(URLCompleta, formdata, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+    }).catch(error => {
+        console.error(error)
+    })
+
+}
+const botaoUpload = document.querySelector('#botaoUpload')
+botaoUpload.addEventListener('click', uploadImagem)
+
+async function removerImagem() {
+    let URLCompleta = conectarEndpoint('/teste')
+    const arrayElementos = ((await axios.get(URLCompleta)).data)
+    const arrayTodasImagens = arrayElementos[1]
+
+    arrayTodasImagens.forEach(element => {
+        if (element.src == elementoClicado.getAttribute('src')) {
+            id = element._id
+        }
+    })
+
+    URLCompleta = conectarEndpoint('/remover')
+    await axios.post(URLCompleta, {_id: id, src: elementoClicado.getAttribute('src')})
+
+}
+
+//Códigos para o botão custom de upload
+const label = document.querySelector('.custom-file-button')
+function onEnter() {
+    label.classList.add("hover")
+}
+function onLeave() {
+    label.classList.remove("hover")
+}
+label.addEventListener("mouseover", onEnter)
+label.addEventListener("mouseleave", onLeave)

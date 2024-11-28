@@ -6,3 +6,21 @@
 .imagemPagina {
     width: 75%;
 }
+
+input[type="file"] {
+    display: none;
+}
+.custom-file-button {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: large;
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #198754;
+    color: white;
+    transition: background 300ms;
+}
+.hover {
+    background-color: #157347;
+}
