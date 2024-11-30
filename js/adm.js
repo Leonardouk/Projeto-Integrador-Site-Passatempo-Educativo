@@ -1,3 +1,5 @@
+let modoAdmin = false
+
 function conectarEndpoint(endpoint) {
     const Protocolo = "http://"
     const URL = "localhost:3000"
@@ -6,14 +8,33 @@ function conectarEndpoint(endpoint) {
     return URLCompleta
 }
 
+function exibirAlerta(seletor, innerHTML, classesToAdd, classesToRemove, timeout) {
+    let alert = document.querySelector(seletor)
+    alert.innerHTML = innerHTML
+    alert.classList.add(...classesToAdd)
+    alert.classList.remove(...classesToRemove)
+    setTimeout(() => {
+    alert.classList.remove('show')
+    alert.classList.add('d-none')
+    }, timeout)
+}
+
 async function checarStatusLogin() {
+    const URLCompleta = conectarEndpoint("/checarLogin")
+    const token = localStorage.getItem("token")
+
     try {
-        const URLCompleta= conectarEndpoint("/login")
-        const token = (await axios.get(URLCompleta)).data
-        console.log(token)
+        if (token) {
+            const resposta = await axios.post(URLCompleta, {token: token})
+            
+            if (resposta) {
+                window.location.href = "area_admin_teste.html"
+            }
+        }
     }
-    catch {
-        return 0
+    catch (err) {
+        localStorage.clear()
+        exibirAlerta(".alert-login", "Login expirado", ["show", "alert-danger"], ["d-none", "alert-success"], 2000)
     }
 }
 
@@ -22,19 +43,21 @@ async function validarLogin() {
     const login = document.getElementById("login").value
     const senha = document.getElementById("senha_login").value
     try {
-        const resposta = await axios.post(URLCompleta, {login: login, senha: senha})
-        document.getElementById("login").value = ""
-        document.getElementById("senha_login").value = ""
-        
-        console.log("Login Bem-Sucedido:", resposta.data)
+        if (login && senha) {
+            const resposta = await axios.post(URLCompleta, {login: login, senha: senha})
+            document.getElementById("login").value = ""
+            document.getElementById("senha_login").value = ""
+            
+            exibirAlerta(".alert-login", "Login Bem-Sucedido", ["show", "alert-success"], ["d-none", "alert-danger"], 2000)
+            
+            localStorage.setItem("token", resposta.data.token)
+            checarStatusLogin()
+        }
+        else {
+            exibirAlerta(".alert-login", "Preenhca todos os campos", ["show", "alert-danger"], ["d-none", "alert-success"], 2000)
+        }
     }
     catch {
-        const alert = document.querySelector(".alert-login")
-        alert.classList.remove("d-none")
-        alert.classList.add("show")
-        setTimeout(() => {
-            alert.classList.add('d-none')
-            alert.classList.remove('show')
-        }, 2000)
+        exibirAlerta(".alert-login", "Preencha um login válido", ["show", "alert-danger"], ["d-none", "alert-success"], 2000)
     }
 }
