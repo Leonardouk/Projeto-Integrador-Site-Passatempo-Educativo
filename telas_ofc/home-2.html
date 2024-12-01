@@ -23,7 +23,7 @@
 
 </head>
 
-<body>
+<body onload="obterDados()">
 
     <!--  começo vlibras  -->
     <div vw class="enabled">
@@ -167,7 +167,7 @@
         </div>
         <div class="row align-items-center justify-content-evenly row_texto_descricao text-start">
             <div class="col-sm-12 col-12 col-md-6 text-start col_texto_descricao">
-                <p>A Passatempo Educativo é uma organização,
+                <p id="texto0">A Passatempo Educativo é uma organização,
                     dedicada a projetos educacionais, culturais, de
                     preservação ambiental e de promoção do
                     turismo sustentável.
@@ -203,13 +203,13 @@
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="d-block w-100" alt="...">
+                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="d-block w-100" alt="..." id="imagem0">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="d-block w-100 " alt="...">
+                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="d-block w-100 " alt="..." id="imagem0">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="d-block w-100 " alt="...">
+                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="d-block w-100 " alt="..." id="imagem0">
                     </div>
                     </div>
                 </div>
@@ -394,7 +394,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
+    <script src="../js/home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 </body>
 

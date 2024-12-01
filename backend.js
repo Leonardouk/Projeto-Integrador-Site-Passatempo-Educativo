@@ -1,6 +1,6 @@
-const express = require ('express')
-const multer = require ('multer')
-const cors = require ('cors')
+const express = require('express')
+const multer = require('multer')
+const cors = require('cors')
 const mongoose = require('mongoose')
 const uniqueValidator = require('mongoose-unique-validator')
 const fs = require('fs')
@@ -17,6 +17,15 @@ const adminSchema = mongoose.Schema({
 })
 adminSchema.plugin(uniqueValidator)
 const Admin = mongoose.model("Admin", adminSchema)
+const Texto = mongoose.model("Texto", mongoose.Schema({
+    pagina: {type: Object, "default": [{type: Object, "default": [{type: Number}]}]},
+    texto: {type: String}
+}))
+const Imagem = mongoose.model("Imagen", mongoose.Schema({
+    pagina: {type: Object, "default": [{type: Object, "default": [{type: Number}]}]},
+    alt: {type: String},
+    src: {type: String}
+}))
 
 // app.post("/signup", async(req, res) => {
 //     try {
@@ -33,6 +42,36 @@ const Admin = mongoose.model("Admin", adminSchema)
 //         res.status(409).end()
 //     }
 // })
+
+app.get("/dados", async(req, res) => {
+    const textos = await Texto.find()
+    const imagens = await Imagem.find()
+    let arrayElementos = [textos, imagens]
+    res.json(arrayElementos)
+})
+
+app.post("/dados", async (req, res) => {
+    const arrayTextos = req.body[0]
+    const arrayImagens = req.body[1]
+
+    try{
+        arrayTextos.forEach(element => {
+            atualizarTexto(element._id, element.texto)
+        });
+        arrayImagens.forEach(element => {
+            atualizarImagem(element._id, element.ordem)
+        })
+    }
+    catch (e) {
+        console.error(e)
+        res.status(404).end()
+    }
+
+    const textos = await Texto.find()
+    const imagens = await Imagem.find()
+    let arrayElementos = [textos, imagens]
+    res.json(arrayElementos)
+})
 
 app.post("/checarLogin", async(req, res) => {
     const token = req.body

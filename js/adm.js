@@ -1,5 +1,3 @@
-let modoAdmin = false
-
 function conectarEndpoint(endpoint) {
     const Protocolo = "http://"
     const URL = "localhost:3000"
@@ -19,13 +17,13 @@ function exibirAlerta(seletor, innerHTML, classesToAdd, classesToRemove, timeout
     }, timeout)
 }
 
-async function checarStatusLogin() {
+function checarStatusLogin() {
     const URLCompleta = conectarEndpoint("/checarLogin")
     const token = localStorage.getItem("token")
 
     try {
         if (token) {
-            const resposta = await axios.post(URLCompleta, {token: token})
+            const resposta = axios.post(URLCompleta, {token: token})
             
             if (resposta) {
                 window.location.href = "area_admin_teste.html"
