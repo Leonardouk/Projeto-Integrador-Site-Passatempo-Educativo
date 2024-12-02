@@ -11,7 +11,7 @@
 }
 /* Estilos para a barra de navegação */
 .navbar {
-    background-color: #F6CC3A; /* Cor de fundo */
+    background-color: #fbd445; /* Cor de fundo */
     padding: 0;
     font-family:"Luckiest Guy", sans-serif;
 }
@@ -45,6 +45,7 @@
 
 div .offcanvas-body {
     padding: 0;
+    margin: 0;
 }
 
 .offcanvas-body {
@@ -63,4 +64,15 @@ a.navegacao_link {
     /* text-decoration: underline solid  #EB6D0B 3px; */
     background-color: #EB6D0B !important;
     border-radius: 5px;
+}
+
+.dropdown-item{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.sair{
+    margin: 10px !important;
+}
+.dropdown-menu{
+    padding: 0 !important;
 }
