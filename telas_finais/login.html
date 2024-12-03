@@ -103,39 +103,9 @@
                     </div>
                     <button type="button" class="btn btn-primary w-100 botao" onclick="validarLogin()">Entrar</button>
                 </form>
-
-                <!-- Link para Modal -->
-                <div class="text-center mt-3">
-                    <small><a href="#" class="link_senha" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">Esqueceu sua senha?</a></small>
-                </div>
             </div>
         </div>
     </article>
-
-    <!-- Modal para "Esqueceu sua senha?" -->
-    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="forgotPasswordModalLabel">Recuperar Senha</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Por favor, insira o seu email para receber as instruções de recuperação de senha.</p>
-                    <form>
-                        <div class="mb-3">
-                            <label for="recoveryEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="recoveryEmail" placeholder="Digite seu email">
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">Enviar</button>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <footer class="fixed">
         <div class="container-fluid rodape">
@@ -194,5 +164,7 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="../js/login.js"></script>
 </body>
 </html>

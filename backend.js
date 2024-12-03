@@ -3,6 +3,10 @@ const multer = require('multer')
 const cors = require('cors')
 const mongoose = require('mongoose')
 const uniqueValidator = require('mongoose-unique-validator')
+const pino = require('pino')
+const logger = pino({
+    transport: {target: 'pino-pretty'}
+})
 const fs = require('fs')
 const path = require('path')
 const bcrypt = require('bcrypt')
@@ -25,6 +29,16 @@ const Imagem = mongoose.model("Imagen", mongoose.Schema({
     pagina: {type: Object, "default": [{type: Object, "default": [{type: Number}]}]},
     alt: {type: String},
     src: {type: String}
+}))
+const Session = mongoose.model("Session", mongoose.Schema({
+    sessionID: {type: String},
+    startTime: {type: String}, 
+    endTime: {type: String},   
+    sessionDuration: {type: String}, 
+    userAgent: {type: String},
+    ipAddress: {type: String},
+    url: {type: String},
+    referrer: {type: String}
 }))
 
 async function atualizarTexto(idElemento, textoElemento) {
@@ -150,6 +164,67 @@ app.post("/upload", multer(multerConfig).any(), async (req, res) => {
         console.error(err.message)
     }
 })
+
+app.post('/log-sessao', (req, res) => {
+    logger.info('Requisição POST recebida!')
+    const { startTime, endTime, sessionDuration, referrer } = req.body
+
+    const origin = req.get('Origin')
+    const referer = req.get('Referer')
+    const url = origin || referer || 'URL desconhecida'
+
+    const session = new Session({
+        sessionId: uuidv4(),
+        startTime: formatDate(startTime),        
+        endTime: formatDate(endTime),            
+        sessionDuration: formatDuration(sessionDuration), 
+        userAgent: req.get('User-Agent'),
+        ipAddress: req.ip,
+        url,
+        referrer
+    })
+
+    session.save()
+        .then(() => {
+            res.status(201).json({
+                message: 'Sessão salva com sucesso!',
+                sessionDetails: session
+            })
+        })
+        .catch(err => {
+            logger.error('Erro ao salvar sessão:', err.message)
+            res.status(500).send('Erro ao salvar sessão.')
+        })
+});
+function formatDate(timestamp) {
+    const date = new Date(timestamp)
+    return date.toLocaleString()
+}
+function formatDuration(duration) {
+    return `${(duration / 1000).toFixed(2)} segundos`
+}
+
+app.get('/log-sessao', (req, res) => {
+    Session.find({})
+        .then(sessions => {
+            const formattedSessions = sessions.map(session => ({
+                sessionId: session.sessionId,
+                startTime: formatDate(session.startTime),
+                endTime: formatDate(session.endTime),
+                sessionDuration: formatDuration(session.sessionDuration),
+                userAgent: session.userAgent,
+                ipAddress: session.ipAddress,
+                url: session.url,
+                referrer: session.referrer
+            }));
+
+            res.status(200).json(formattedSessions);  // Responde com os dados formatados
+        })
+        .catch(err => {
+            logger.error('Erro ao buscar sessões:', err.message);
+            res.status(500).send('Erro ao buscar sessões.');
+        });
+});
 
 async function conectarAoMongoDB() {
     await mongoose.connect(`mongodb+srv://pipassatempoeducativo:NEpraSmrLvJA0Yde@cluster0.3xws5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
