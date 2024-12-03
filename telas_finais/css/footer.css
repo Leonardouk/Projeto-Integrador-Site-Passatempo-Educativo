@@ -4,12 +4,16 @@
     padding: 40px 0 !important;
     background-color: #3E4096;
 }
+.row_rodape{
+    margin: 0 !important;
+}
 /* container redes */
 .redes_footer{
     align-items: center !important;
     text-align: center !important;
     justify-content: space-between !important;
     border-radius: 20px !important;
+    margin-top: 0 !important;
 }
 
 /* icones redes */
@@ -20,7 +24,10 @@
     transform: scale(1.4); /* Aumenta levemente no hover */
 
 }
-
+.div_redes{
+    align-self: center !important;
+    margin: 10px;
+}
 /* container botao contate */
 .botao_contate_footer{
     background-color: white !important;
@@ -32,6 +39,10 @@
     justify-content: center!important;
     color: #383992 !important;
     text-decoration: none !important;
+    margin-top: 0 !important;
+}
+.div_contate{
+    margin-top: 0 !important;
 }
 /* tag <a> com o contate*/
 a.botao_contate_footer{
@@ -48,10 +59,10 @@ a.botao_contate_footer{
     border-radius: 20px!important;
     color: white !important;
     align-items: center!important;
+    margin-top: 0 !important;
 }
 div.direitos_footer{
     font-family: 'Ubuntu', sans-serif !important;
-    font-size: 20px;
+    font-size: 1rem;
 }
-
 
