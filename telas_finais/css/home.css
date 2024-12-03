@@ -327,40 +327,5 @@ body{
     }
 }
 
-/* carrossel */
-
-
- /* .carousel-indicators img{
-    width: 70px !important;
-    display: block;
-    border-radius: 5px;
-
-}
-.carousel-indicators button{
-    width: max-content !important;
-
-}
-.carousel-indicators{
-    position: unset;
-    
-}
-
-.carousel-control-prev{
-    display: inline-block;
-
-}
-.carousel-control-next{
-    display: inline-block;
-
-}
-
-.carousel-indicators button.active img{
-    border: 2px solid red;
-}
-.carousel-control-next-icon, .carousel-control-prev-icon{
-    background-color: black!important;
-    width: 40px;
-    height: 40px;
-} */
 
 
