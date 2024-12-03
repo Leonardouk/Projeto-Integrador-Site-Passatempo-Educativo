@@ -31,7 +31,9 @@ color: black !important;
   border-radius: 20px!important;
   }
   div .card{
-      height: 50rem !important;
+      /* height: 50rem !important; */
+      height: 100% !important;
+
   }
   .card-title{
       font-family:"Luckiest Guy", sans-serif!important;
