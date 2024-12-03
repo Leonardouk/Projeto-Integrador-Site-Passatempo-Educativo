@@ -27,6 +27,19 @@ const Imagem = mongoose.model("Imagen", mongoose.Schema({
     src: {type: String}
 }))
 
+async function atualizarTexto(idElemento, textoElemento) {
+    await Texto.updateOne({_id: idElemento}, {texto: textoElemento})
+}
+
+async function atualizarImagem(idElemento, ordemElemento, paginaElemento) {
+    await Imagem.updateOne({_id: idElemento}, {pagina: {[paginaElemento]: ordemElemento}})
+}
+
+async function cadastrarImagem(srcImagem) {
+    const imagem = new Imagem({pagina: [], src: srcImagem, alt: srcImagem})
+    await imagem.save()
+}
+
 // app.post("/signup", async(req, res) => {
 //     try {
 //         const login = req.body.login
@@ -59,7 +72,7 @@ app.post("/dados", async (req, res) => {
             atualizarTexto(element._id, element.texto)
         });
         arrayImagens.forEach(element => {
-            atualizarImagem(element._id, element.ordem)
+            atualizarImagem(element._id, element.ordem, element.pagina)
         })
     }
     catch (e) {
@@ -108,6 +121,34 @@ app.post("/login", async(req, res) => {
     )
 
     res.status(200).json({token: token}).end()
+})
+
+app.post("/remover", async (req, res) => {
+    const idImagem = req.body._id
+    const srcImagem = req.body.src
+    const filePath = path.join(__dirname, '/img')
+    console.log(idImagem, srcImagem)
+    try {
+        await Imagem.deleteOne({_id: req.body})
+        fs.unlink(path.join(filePath, `/${srcImagem}`), (err) => err && console.error(err))
+        console.log('Imagem deletada com sucesso')
+    }
+    catch (err) {
+        console.error(err.message)
+    }
+})
+
+let itemAdicionado = ""
+const multerConfig = require("./config/multer")
+app.post("/upload", multer(multerConfig).any(), async (req, res) => {
+    const srcImagem = path.join('../img', `${req.files[0].filename}`)
+    try {
+        cadastrarImagem(srcImagem)
+        itemAdicionado = await Imagem.findOne({src: srcImagem})
+    }
+    catch (err) {
+        console.error(err.message)
+    }
 })
 
 async function conectarAoMongoDB() {

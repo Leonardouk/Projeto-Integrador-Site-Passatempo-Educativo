@@ -27,7 +27,7 @@ async function checarStatusLogin() {
                     //Transforma todos elementos de texto em editáveis e também cria as opções de escolha de imagem se uma imagem não ter sido salva anteriormente
                     arrayTodosTextos.forEach(element => {
                         const texto = element.texto
-                        element.pagina.home.forEach(ordem => {
+                        element.pagina.oficinas.forEach(ordem => {
                             let paragrafo = document.querySelector(`#texto${ordem}`)
                             paragrafo.outerHTML = `<textarea class=\"form-control\" name=\"test\" id=\"texto${ordem}\" style=\"height: 300px;\"></textarea>`
                             paragrafo = document.querySelector(`#texto${ordem}`)
@@ -38,7 +38,7 @@ async function checarStatusLogin() {
                     arrayTodasImagens.forEach(element => {
                         const src = element.src
                         const alt = element.alt
-                        element.pagina.home.forEach(ordem => {
+                        element.pagina.oficinas.forEach(ordem => {
                             img = document.querySelector(`#imagem${ordem}`)
                             if (!src) {
                                 div = document.querySelector(`#ordem${ordem}`)
@@ -74,7 +74,7 @@ async function obterDados() {
     //Posiciona todos os textos ao seu lado e cria espaços para as imagens que podem os acompanhar
     arrayTodosTextos.forEach(element => { 
         const texto = element.texto
-        element.pagina.home.forEach(ordem => {
+        element.pagina.oficinas.forEach(ordem => {
             let paragrafo = document.querySelector(`#texto${ordem}`)
             paragrafo.innerHTML = texto
         })
@@ -83,7 +83,7 @@ async function obterDados() {
         const src = element.src
         const alt = element.alt
         
-        element.pagina.home.forEach(ordem => {
+        element.pagina.oficinas.forEach(ordem => {
             const img = document.querySelector(`#imagem${ordem}`)
             img.outerHTML = `<img class="d-block w-100 imagemPagina" src="${src}" alt="${alt}" id="imagem${ordem}">`
         })
@@ -103,7 +103,7 @@ async function salvarMudancas() {
 
     arrayTodosTextos.forEach(element => {
         let paragrafo = ""
-        element.pagina.home.forEach(ordem => {
+        element.pagina.oficinas.forEach(ordem => {
             paragrafo = document.querySelector(`#texto${ordem}`)
         })
         let texto = paragrafo.value
@@ -119,15 +119,15 @@ async function salvarMudancas() {
         let imagem = ""
         let ordemImagem = []
         
-        element.pagina.home.forEach(ordem => {
+        element.pagina.oficinas.forEach(ordem => {
             imagem = document.querySelector(`#imagem${ordem}`)
             ordemImagem.push(ordem)
         })
-        if (element.pagina.hasOwnProperty("home") && element.src == imagem.getAttribute('src')) {
+        if (element.pagina.hasOwnProperty("oficinas") && element.src == imagem.getAttribute('src')) {
             id = element._id
         }
         if (imagem.nodeName == 'IMG') {
-            arrayImagensParaSalvar.push({_id: id, ordem: ordemImagem, pagina: "home"})
+            arrayImagensParaSalvar.push({_id: id, ordem: ordemImagem, pagina: "oficinas"})
         }
         
     })

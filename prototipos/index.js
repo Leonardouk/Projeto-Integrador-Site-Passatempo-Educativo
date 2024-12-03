@@ -94,7 +94,7 @@ app.post("/remover", async (req, res) => {
 })
 
 let itemAdicionado = ""
-const multerConfig = require("./config/multer")
+const multerConfig = require("../config/multer")
 app.post("/upload", multer(multerConfig).any(), async (req, res) => {
     const srcImagem = path.join('../img', `${req.files[0].filename}`)
     try {
