@@ -1,28 +1,59 @@
-body{
+body {
     background-color: #8DA5ED !important;
-    font-family:"Luckiest Guy", sans-serif;
+    font-family: "Luckiest Guy", sans-serif;
 }
-.tutorial{
+.dados{
     margin-top: 70px !important;
 }
-
 #logo2 {
     width: 150px;
     height: auto;
     max-width: 100%;
     max-height: 100%;
 }
-
-.titulo{
-    font-family:"Luckiest Guy", sans-serif;
+.titulo {
+    font-family: "Luckiest Guy", sans-serif;
     color: black !important;
-    font-size: 50px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #000000;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+    border: 1px solid black !important;
+
+
+}
+
+table{
+    background-color: rgb(204, 204, 204);
+}
+td{
+    border: 1px solid black !important;
+
+}
+
+th {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 1px solid black !important;
+    
 }
 
 .back-button {
     position: absolute;
     top: 150px; 
-    left: 5%; 
+    left: 10px; 
     width: 50px;
     height: 50px;
     background-color: black;
