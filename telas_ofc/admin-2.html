@@ -72,7 +72,44 @@
   <br>
   <br>
   <br>
- 
+  <article>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card p-4 shadow" style="max-width: 400px; width: 100%;">
+        
+    
+        <div class="text-center mb-4">
+            <img src="image/logo_passatempo_digital.png" alt="Logo do Passatempo Educativo" class="img-fluid" style="width: 100px;">
+        </div>
+    
+        <h4 class="text-center mb-4 texto_login">Login Admin</h4>
+    
+        <div class="text-center mb-3">
+            <p class="text-muted texto_obs">O login é exclusivo para membros da ONG ou administradores.</p>
+        </div>
+        <form>
+            <div class="d-none alert alert-danger alert-dismissible fade alert-login" role="alert">
+                Preencha corretamente todos os campos
+                
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+            </div>
+            <div class="mb-3">
+            <label for="email" class="form-label label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Digite seu email">
+            </div>
+            <div class="mb-3">
+            <label for="password" class="form-label label">Senha</label>
+            <input type="password" class="form-control" id="password" placeholder="Digite sua senha">
+            </div>
+            <button type="button" class="btn btn-primary w-100 botao" onclick="validarLogin()">Entrar</button>
+        </form>
+    
+        <div class="text-center mt-3 ">
+            <small><a href="#" class="link_senha">Esqueceu sua senha?</a></small>
+        </div>
+        </div>
+    </div>
+</article>
+
 
   <article>
     <div class="container-fluid tudo">
@@ -84,7 +121,7 @@
             <h1 class="titulo_cabecalho">Login</h1>
         </div>
     <div class="d-none alert alert-danger alert-dismissible fade alert-login" role="alert">
-      Preencha todos os campos corretamente
+        Preencha corretamente todos os campos 
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
     </div>
     </div>

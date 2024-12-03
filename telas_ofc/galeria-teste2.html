@@ -2,8 +2,10 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles/navbar-2.css">
+
 <style>
-* {
+.tudo *{
   box-sizing: border-box;
 }
 
@@ -123,94 +125,142 @@ h1 {
 </head>
 <body>
 
+
+  <header>
+    <nav class="navbar navbar-expand-lg fixed">
+      <div class="container-fluid">
+        <div>
+          <img src="img/Logo Passatempo.png" class="passatempo_logo" alt="Logo Passatempo">
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end justify-content-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h2 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>  
+          <div class="offcanvas-body">
+            <ul class="navbar-nav barra_navegacao justify-content-around flex-grow-1 text-center">
+              <li class="nav-item  navegacao_item">
+                <a class="nav-link active navegacao_link" aria-current="page" href="home-2.html">Home</a>
+              </li>
+              <li class="nav-item navegacao_item">
+                <a class="nav-link navegacao_link" href="oficinas-2.html">Oficinas</a>
+              </li>
+              <li class="nav-item navegacao_item">
+                <a class="nav-link navegacao_link" href="eventos-2.html">Eventos</a>
+              </li>
+              <li class="nav-item navegacao_item">
+                <a class="nav-link navegacao_link" href="saudeBemEstar-2.html">Saúde e Bem-Estar</a>
+              </li>
+              <li class="nav-item navegacao_item">
+                <a class="nav-link navegacao_link" href="galeria-2.html">Galeria</a>
+              </li>
+              <li class="nav-item navegacao_item">
+                <a class="nav-link navegacao_link" href="contato-2.html">Contato</a>
+              </li>
+              <li class="nav-item navegacao_item">
+                <a class="nav-link navegacao_link" href="admin-2.html">Admin</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
 <!-- MAIN (Center website) -->
-<div class="main">
+<div class="container-fluid tudo">
+  <div class="main">
 
-<h1>MYLOGO.COM</h1>
-<hr>
-
-<h2>PORTFOLIO</h2>
-
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('nature')"> Nature</button>
-  <button class="btn" onclick="filterSelection('cars')"> Cars</button>
-  <button class="btn" onclick="filterSelection('people')"> People</button>
+    <h1>Nossa Galeria</h1>
+    <hr>
+    
+    
+    
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+      <button class="btn" onclick="filterSelection('nature')"> Nature</button>
+      <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+      <button class="btn" onclick="filterSelection('people')"> People</button>
+    </div>
+    
+    <!-- Portfolio Gallery Grid -->
+    <div class="row">
+      <div class="column nature">
+        <div class="content">
+          <img src="img/coloque_imagem.PNG" alt="Mountains" style="width:100%"  onclick="openModal(this.src)">
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+      <div class="column nature">
+        <div class="content">
+          <img src="img/coloque_imagem.PNG" alt="Mountains" style="width:100%"  onclick="openModal(this.src)">
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+      <div class="column nature">
+        <div class="content">
+          <img src="img/coloque_imagem.PNG" alt="Mountains" style="width:100%"  onclick="openModal(this.src)">
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+      
+      <div class="column cars">
+        <div class="content">
+          <img src="/w3images/cars1.jpg" alt="Car" style="width:100%">
+          <h4>Retro</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+      <div class="column cars">
+        <div class="content">
+        <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
+          <h4>Fast</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+      <div class="column cars">
+        <div class="content">
+        <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
+          <h4>Classic</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+    
+      <div class="column people">
+        <div class="content">
+          <img src="/w3images/people1.jpg" alt="Car" style="width:100%">
+          <h4>Girl</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+      <div class="column people">
+        <div class="content">
+        <img src="/w3images/people2.jpg" alt="Car" style="width:100%">
+          <h4>Man</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+      <div class="column people">
+        <div class="content">
+        <img src="/w3images/people3.jpg" alt="Car" style="width:100%">
+          <h4>Woman</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+    <!-- END GRID -->
+    </div>
+    <div id="imageModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modalImage" src="" alt="Imagem Ampliada">
+    </div>
+    
+    <!-- END MAIN -->
+    </div>
 </div>
 
-<!-- Portfolio Gallery Grid -->
-<div class="row">
-  <div class="column nature">
-    <div class="content">
-      <img src="img/coloque_imagem.PNG" alt="Mountains" style="width:100%"  onclick="openModal(this.src)">
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column nature">
-    <div class="content">
-      <img src="img/coloque_imagem.PNG" alt="Mountains" style="width:100%"  onclick="openModal(this.src)">
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column nature">
-    <div class="content">
-      <img src="img/coloque_imagem.PNG" alt="Mountains" style="width:100%"  onclick="openModal(this.src)">
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  
-  <div class="column cars">
-    <div class="content">
-      <img src="/w3images/cars1.jpg" alt="Car" style="width:100%">
-      <h4>Retro</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column cars">
-    <div class="content">
-    <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
-      <h4>Fast</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column cars">
-    <div class="content">
-    <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
-      <h4>Classic</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-
-  <div class="column people">
-    <div class="content">
-      <img src="/w3images/people1.jpg" alt="Car" style="width:100%">
-      <h4>Girl</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column people">
-    <div class="content">
-    <img src="/w3images/people2.jpg" alt="Car" style="width:100%">
-      <h4>Man</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column people">
-    <div class="content">
-    <img src="/w3images/people3.jpg" alt="Car" style="width:100%">
-      <h4>Woman</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-<!-- END GRID -->
-</div>
-<div id="imageModal" class="modal">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <img id="modalImage" src="" alt="Imagem Ampliada">
-</div>
-
-<!-- END MAIN -->
-</div>
 
 <script>
 filterSelection("all")

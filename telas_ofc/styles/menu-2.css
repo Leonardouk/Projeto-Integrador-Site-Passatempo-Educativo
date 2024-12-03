@@ -3,14 +3,18 @@ body{
 }
 /* cabecalho */
 .cabecalho{
-    background-color: #6787E7;
+    background-color: #8DA5ED;
 }
+/* .comeco{
+    background-color: #3E4096;
+} */
+
 
 /* dividers */
 .h-divider {
     margin: auto;
     margin-top: 80px;
-    width: 60% !important;
+    width: 40% !important;
     position: relative;
   }
   
@@ -46,16 +50,45 @@ body{
     margin: 4px;
     max-width: 100px;
     border-radius: 100%;
-    left: -40%;
+    left: -30%;
     top: -20%;
 
+  }
+
+
+  /* scalop */
+  /*----------------*/
+/*  SCALLOP down  */
+/*----------------*/
+.scallop-down{
+    height:100px;
+    width:100%;
+    background: -webkit-gradient(radial, 50% 0, 10, 50% 0, 40, from(#8DA5ED), color-stop(0.49, #8DA5ED), color-stop(0.51, #3E4096), to(#8DA5ED));
+  -webkit-background-size: 49px 100%;
+  }
+  
+  .white-block{
+    background-color: #6787E7;
+  }
+  .white-block p{
+    margin: 0 !important;
+  }
+  
+  /*----------------*/
+  /*  SCALLOP up    */
+  /*----------------*/
+  .scallop-up{
+    height:100px;
+    width:100%;
+    background: -webkit-gradient(radial, 50% 100%, 10, 50% 100%, 40, from(#8DA5ED), color-stop(0.49, #8DA5ED), color-stop(0.51, #3E4096), to(#8DA5ED));
+  -webkit-background-size: 49px 100%;
   }
 
   .fancy {
     --b: 6px;   /* control the border thickness */
     --w: 80px;  /* control the width of the line*/
     --g: 15px;  /* control the gap */
-    --c: #0B486B;
+    --c: #3E4096;
    
     width: fit-content;
     padding: 0 1em;
@@ -102,7 +135,7 @@ body{
 
   .triangle {
     position: relative;
-    background: white;
+    background: #8DA5ED ;
     height: 2vh;
   }
   
@@ -114,7 +147,7 @@ body{
     height: 0;
     border-style: solid;
     border-width: 45px 45px 0 45px;
-    border-color: white transparent transparent transparent;
+    border-color: #8DA5ED  transparent transparent transparent;
     left: 21%;
     transform: translateX(-50%) translateY(100%);
   }
@@ -195,7 +228,11 @@ body{
     font-family: 'Ubuntu', sans-serif !important;
 }
 
-
+.descricao{
+    background-color: #8DA5ED;
+    width: 60% !important;
+    border-radius: 40px;
+}
 .divider {
     border-top: 10px dashed #F6CC3A;
     width: 70%;
@@ -238,6 +275,8 @@ body{
 }
 .quem_somos{
     padding: 0 !important;
+    width: 90% !important;
+    border-radius: 20px !important;
 }
 
 /* carrossel */
