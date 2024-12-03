@@ -1,0 +1,40 @@
+/* Cor de fundo da página */
+body {
+    background-color: #8DA5ED !important; /* Azul suave */
+    color: #373535; /* Cor do texto geral (preto escuro) */
+  }
+  
+  /* Estilo do cartão */
+  .card {
+    border: none;
+    border-radius: 12px;
+    background-color: #FFF; /* Fundo branco para contraste */
+  }
+  .texto_obs{
+    font-style: italic;
+  }
+  .texto_login{
+    color: black;
+    font-family:"Luckiest Guy", sans-serif;
+    font-size: 2.5rem;
+
+  }
+  /* Botão primário */
+  .botao{
+    background-color: rgb(0, 159, 0) !important; /* Azul médio */
+    border: none !important;
+    color: #FFF; /* Texto branco no botão */
+  }
+  
+  .botao:hover {
+    background-color: rgb(0, 104, 0) !important; /* Azul mais escuro ao passar o mouse */
+  }
+  
+  .link_senha{
+    color: black !important;
+  }
+
+  .link_senha:hover{
+    color: blue !important;
+  }
+
