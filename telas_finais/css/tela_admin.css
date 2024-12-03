@@ -1,0 +1,34 @@
+body{
+    background-color: #8DA5ED !important;
+}
+
+
+.texto_modoA{
+    font-family: 'Ubuntu', sans-serif !important;
+    font-size: 2.5rem;
+}
+.texto_bemV{
+    font-family: 'Ubuntu', sans-serif !important;
+    font-size: 3rem;
+    margin: 50px !important;
+
+}
+
+
+
+.col_card3, .col_card2, .col_card1{
+    margin: 0 !important;
+    padding: 5rem;
+    align-items: stretch !important;
+}
+
+.botao{
+    background-color: white !important;
+    border: none !important;
+    padding: 20% !important;    
+    color: #3E4096 !important;
+    font-family: 'Ubuntu', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 1.5rem !important;
+    text-align: center !important;
+}

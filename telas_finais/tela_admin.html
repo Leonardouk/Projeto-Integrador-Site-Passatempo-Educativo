@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Login</title>
-    <link rel="stylesheet" href="css/">
+    <link rel="stylesheet" href="css/tela_admin.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
 
@@ -86,51 +86,60 @@
         </nav>
     </header>
     
+<br><br><br>
 
-    <br><br><br><br><br><br><br>
-    <article>
-        <div class="container-fluid area-admin bg-secondary text-center py-4">
-            
-                <h1>Você está no Modo Administrador</h1>  
-                <br><br> 
-                <h2>Bem Vindo Admin</h2>
 
-            
-            <br><br><br><br>
-            <div class="row justify-content-center g-3">
+    <article class="container-fluid area-admin text-center py-4">
+
+        <header class="row justify-content-center">
+            <div class="col-sm-12 col-md-10 border bg-secondary">
+                <h1 class="texto_bemV">Bem Vindo Admin </h1>
+
+                <h2 class="texto_modoA">Você está no Modo Administrador</h2>  
+            </div>
+        </header>
+
+        <main>
+            <div class="row d-flex justify-content-between row_cards g-3">
                 <!-- Tutorial Admin Button -->
-                <div class="col-sm-12 col-lg-3">
-                    <a href="tutorial.html" class="btn btn-primary btn-lg d-flex flex-column align-items-center border border-dark" role="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-map mb-2" viewBox="0 0 16 16">
+                <div class="col-1"></div>
+                <div class="col-sm-12 col-lg-3 col_card1">
+                    <a href="tutorial.html" class="btn btn-primary btn-lg d-flex flex-column align-items-center botao" role="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-map mb-4" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.5.5 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103M10 1.91l-4-.8v12.98l4 .8zm1 12.98 4-.8V1.11l-4 .8zm-6-.8V1.11l-4 .8v12.98z"/>
                         </svg>
                         Tutorial Admin
                     </a>
                 </div>
                 <!-- Consulta Dados Button -->
-                <div class="col-sm-12 col-lg-3">
-                    <a href="consultaDados.html" class="btn btn-primary btn-lg d-flex flex-column align-items-center border border-dark" role="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-database mb-2" viewBox="0 0 16 16">
+                <div class="col-sm-12 col-lg-3 col_card2">
+                    <a href="consultaDados.html" class="btn btn-primary btn-lg d-flex flex-column align-items-center botao" role="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-database mb-4" viewBox="0 0 16 16">
                             <path d="M4.318 2.687C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4c0-.374.356-.875 1.318-1.313M13 5.698V7c0 .374-.356.875-1.318 1.313C10.766 8.729 9.464 9 8 9s-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777A5 5 0 0 0 13 5.698M14 4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13zm-1 4.698V10c0 .374-.356.875-1.318 1.313C10.766 11.729 9.464 12 8 12s-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777A5 5 0 0 0 13 8.698m0 3V13c0 .374-.356.875-1.318 1.313C10.766 14.729 9.464 15 8 15s-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13s3.022-.289 4.096-.777c.324-.147.633-.323.904-.525"/>
                         </svg>
                         Consulta Dados
                     </a>
                 </div>
                 <!-- Adiciona Imagem Button -->
-                <div class="col-sm-12 col-lg-3">
-                    <a href="addImg.html" class="btn btn-primary btn-lg d-flex flex-column align-items-center border border-dark" role="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-image mb-2" viewBox="0 0 16 16">
+                <div class="col-sm-12 col-lg-3 col_card3">
+                    <a href="addImg.html" class="btn btn-primary btn-lg d-flex flex-column align-items-center botao" role="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-image mb-4" viewBox="0 0 16 16">
                             <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
                             <path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"/>
                         </svg>
                         Adiciona Imagem
                     </a>
                 </div>
+                <div class="col-1"></div>
             </div>
-        </div>
+        </main>
     </article>
+
+
+
+
     <br><br><br><br>
-    <br><br><br><br><br>
+    
     <footer class="fixed">
         <div class="container-fluid rodape">
             <div class="row justify-content-around align-items-center row_rodape g-3">
