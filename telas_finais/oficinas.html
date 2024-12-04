@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oficinas</title>
+    <link rel="stylesheet" href="css/oficinas.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="styles/modal.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+    <!-- fonte guy -->
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+    <!-- fonte ubuntu -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <style></style>
+</head>
+
+<body onload="obterDados()">
+
+    <!--  começo vlibras  -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!--  fim vlibras  -->
+    
+    <header>
+        <nav class="navbar navbar-expand-lg fixed">
+            <div class="container-fluid">
+                <div>
+                    <img src="image/Logo Passatempo.png" class="passatempo_logo" alt="Logo do Passatempo Educativo">
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end justify-content-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h2 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>  
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav barra_navegacao justify-content-around flex-grow-1 text-center">
+                            <li class="nav-item  navegacao_item">
+                                <a class="nav-link active navegacao_link" aria-current="page" href="home-2.html">Home</a>
+                            </li>
+                            <li class="nav-item navegacao_item">
+                                <a class="nav-link navegacao_link" href="oficinas-2.html">Oficinas</a>
+                            </li>
+                            <li class="nav-item navegacao_item">
+                                <a class="nav-link navegacao_link" href="eventos-2.html">Eventos</a>
+                            </li>
+                            <li class="nav-item navegacao_item">
+                                <a class="nav-link navegacao_link" href="saudeBemEstar-2.html">Saúde e Bem-Estar</a>
+                            </li>
+                            <li class="nav-item navegacao_item">
+                                <a class="nav-link navegacao_link" href="galeria-2.html">Galeria</a>
+                            </li>
+                            <li class="nav-item navegacao_item">
+                                <a class="nav-link navegacao_link" href="contato-2.html">Contato</a>
+                            </li>
+                            <li class="nav-item navegacao_item">
+                                <a class="nav-link navegacao_link" href="admin-2.html">Admin</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <br>
+    <br>
+    <br>
+
+    <!-- conteúdo da página -->
+
+
+    <!-- titulo da página -->
+    <div class="container-fluid">
+        <div class="row  justify-content-start">
+            <div class="col-12 text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="black" class="bi bi-tools" viewBox="0 0 16 16">
+                    <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3q0-.405-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
+                  </svg>
+            </div>
+            <div class="col-12 align-self-center text-center mt-4">
+                <h1 class="titulo_cabecalho">Oficinas</h1>
+            </div>
+        </div>
+    </div>
+
+ <br>
+
+    <div class="container-fluid container_descricao">
+        <!-- <div class="row align-items-center justify-content-around row_descricao p-4 ">
+            <div class="col-sm-12 col-md-12 col-lg-4 col_imagem_descricao text-center">
+                <img src="https://via.placeholder.com/400x300" alt="imagem descrição" class="img_descricao" id="imagem0" 
+                style="max-width: 100%; 
+                max-height: 100%; 
+                height: auto; 
+                width: auto;">
+            </div>
+        </div> -->
+        <div class="row align-items-center justify-content-around row_descricao p-4 ">
+            <div class="col-sm-12 col-md-12 col-lg-6 text-center col_texto_descricao">
+                <p class="texto_descricao p-4">
+                    Com uma variedade de materiais coloridos e ferramentas divertidas, nossas oficinas proporcionam um ambiente estimulante e acolhedor para que as crianças possam se expressar livremente. Valorizamos a diversidade de ideias e incentivamos a experimentação, sempre celebrando a singularidade de cada pequeno artista. Aqui, o aprendizado acontece de forma lúdica e significativa, promovendo o desenvolvimento criativo e emocional de forma encantadora.
+                </p>
+                <a class="btn btn-light  botao_oficinas" href="#"> Descubra as Oficinas</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="slide-container swiper">
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <div class="card-image">
+                            <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" alt="" class="card-img">                            
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Mohamed Yousef 3</h2>
+                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <div class="card-image">
+                            <img src="image/coloque_imagem.PNG" alt="" class="card-img">                            
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Mohamed Yousef 2</h2>
+                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <div class="card-image">
+                            <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" alt="" class="card-img">                            
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Mohamed Yousef 3</h2>
+                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" alt="" class="card-img">                            
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Mohamed Yousef 4</h2>
+                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" alt="" class="card-img">                            
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Mohamed Yousef 5</h2>
+                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" alt="" class="card-img">                            
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Mohamed Yousef 6</h2>
+                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" alt="" class="card-img">                            
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Mohamed Yousef 7</h2>
+                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" alt="" class="card-img">                            
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Mohamed Yousef 8</h2>
+                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" alt="" class="card-img">                            
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Mohamed Yousef 9</h2>
+                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <br>
+    <br>
+
+      
+    <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
+
+    <!-- JavaScript -->
+      <!--Uncomment this line-->
+    <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
+    <script>
+        var swiper = new Swiper(".slide-content", {
+        slidesPerView: 3,
+        spaceBetween: 25,
+        loop: true,
+        centerSlide: 'true',
+        fade: 'true',
+        grabCursor: 'true',
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+        },
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+        },
+
+        breakpoints:{
+            0: {
+                slidesPerView: 1,
+            },
+            520: {
+                slidesPerView: 2,
+            },
+            950: {
+                slidesPerView: 3,
+            },
+        },
+    });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../js/oficinas.js"></script>
+    <script src="../js/modal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</body>
+
+</html>
