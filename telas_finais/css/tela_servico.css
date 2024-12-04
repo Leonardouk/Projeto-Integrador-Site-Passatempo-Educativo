@@ -1,0 +1,51 @@
+body {
+    background-color: #FFBD57 !important;
+}
+
+.nav-link {
+    font-family: "Luckiest Guy", sans-serif;
+    color: black !important;
+}
+
+.nav-link.active {
+    /* text-decoration: underline solid  #EB6D0B 3px; */
+    background-color: #EB6D0B !important;
+
+}
+
+.nav-link:hover {
+    color: white !important;
+
+}
+
+h1,h2,h3,h4 {
+    font-family: "Luckiest Guy", sans-serif;
+}
+
+p, button {
+    font-family: 'Ubuntu', sans-serif !important;
+
+
+}
+
+#botao_contato {
+    background-color: rgb(62, 64, 150);
+    width: 250px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease ease-in-out, background-color 0.3s ease ease-in-out;
+    font-family: 'Ubuntu', sans-serif !important;
+}
+
+#botao_contato:hover {
+    background-color: rgb(50, 52, 120);
+    transform: scale(1.2);
+}
+
