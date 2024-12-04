@@ -73,3 +73,37 @@ body {
     margin-left: 140px;
     margin-right: 140px;
 }
+
+#arco_iris {
+    position: absolute;
+    top: 120px;
+    right: -90px;
+    width: 500px;
+    height: auto;
+    text-align: center;
+    z-index: -1;
+    rotate: 265deg;
+}
+
+#ameba_verm {
+    position: absolute;
+    top: 600px;
+    left: -430px;
+    width: 800px;
+    height: auto;
+    text-align: center;
+    z-index: -1;
+    rotate: -90deg;
+}
+
+#canto_amar {
+    position: absolute;
+    bottom: -600px;
+    right: -100px;
+    width: 400px;
+    height: auto;
+    text-align: center;
+    z-index: -1;
+    image-rendering: optimizeQuality auto;
+    
+}

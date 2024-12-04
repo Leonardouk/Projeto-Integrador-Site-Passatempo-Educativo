@@ -44,3 +44,14 @@ ul.caixa{
 
 }
 
+#canto_laranja {
+    position: absolute;
+    top: 450px;
+    left: 0px;
+    width: 1000px;
+    height: auto;
+    text-align: center;
+    z-index: -1;
+    rotate: 360deg;
+    image-rendering: optimizeQuality auto;
+}

@@ -57,8 +57,122 @@ p {
     height: 134px;
 }
 
+#purpurina_laranja {
+    position: absolute;
+    top: 420px;
+    right: 280px;
+    width: 100px;
+    height: auto;
+    text-align: center;
+    z-index: 2;
+    rotate: 360deg;
+    image-rendering: optimizeQuality auto;
+}
+
+#purpurina_laranja2 {
+    position: absolute;
+    bottom: -370px;
+    right: 280px;
+    width: 100px;
+    height: auto;
+    text-align: center;
+    z-index: 2;
+    rotate: 360deg;
+    image-rendering: optimizeQuality auto;
+}
+
+#purpurina_azul {
+    position: absolute;
+    top: 420px;
+    right: 900px;
+    width: 100px;
+    height: auto;
+    text-align: center;
+    z-index: 2;
+    rotate: 360deg;
+    image-rendering: optimizeQuality auto;
+}
+
+#purpurina_azul2 {
+    position: absolute;
+    bottom: -420px;
+    right: 900px;
+    width: 100px;
+    height: auto;
+    text-align: center;
+    z-index: 2;
+    rotate: 360deg;
+    image-rendering: optimizeQuality auto;
+}
 
 #purpurina_amarela {
-    width: 247px;
-    height: 243px;
+    position: absolute;
+    top: 620px;
+    right: 750px;
+    width: 100px;
+    height: auto;
+    text-align: center;
+    z-index: 2;
+    rotate: 360deg;
+    image-rendering: optimizeQuality auto;
+}
+
+#purpurina_amarela2 {
+    position: absolute;
+    bottom: -620px;
+    right: 750px;
+    width: 100px;
+    height: auto;
+    text-align: center;
+    z-index: 2;
+    rotate: 360deg;
+    image-rendering: optimizeQuality auto;
+}
+
+#purpurina_laranja3 {
+    position: absolute;
+    top: 970px;
+    right: 850px;
+    width: 100px;
+    height: auto;
+    text-align: center;
+    z-index: 2;
+    rotate: 360deg;
+    image-rendering: optimizeQuality auto;
+}
+
+#purpurina_azul3 {
+    position: absolute;
+    top: 900px;
+    right: 750px;
+    width: 100px;
+    height: auto;
+    text-align: center;
+    z-index: 2;
+    rotate: 360deg;
+    image-rendering: optimizeQuality auto;
+}
+
+#purpurina_laranja4 {
+    position: absolute;
+    bottom: -970px;
+    right: 850px;
+    width: 100px;
+    height: auto;
+    text-align: center;
+    z-index: 2;
+    rotate: 360deg;
+    image-rendering: optimizeQuality auto;
+}
+
+#purpurina_azul4 {
+    position: absolute;
+    bottom: -900px;
+    right: 750px;
+    width: 100px;
+    height: auto;
+    text-align: center;
+    z-index: 2;
+    rotate: 360deg;
+    image-rendering: optimizeQuality auto;
 }
