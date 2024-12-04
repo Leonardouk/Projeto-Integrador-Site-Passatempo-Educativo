@@ -22,11 +22,11 @@ ul.caixa{
     background-color: #6787E7;
 }
 
-.img_descricao{
+  .img_descricao{
     max-width: 100% !important; 
     max-height: 100% !important; 
     height: auto !important; 
-    width: auto !important;
+    width: 100px !important;
   }
   .col_imagem_descricao{
     object-fit: cover !important;
