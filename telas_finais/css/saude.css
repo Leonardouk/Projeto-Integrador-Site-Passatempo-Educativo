@@ -29,7 +29,9 @@
     font-size: 70px;
     color: black !important;
 }
-
+.col_texto_descricao{
+    padding: 20px !important;
+}
 .titulo_descricao{
     font-family:"Luckiest Guy", sans-serif;
     font-size: 40px;
@@ -39,6 +41,7 @@ p{
     font-family: 'Ubuntu', sans-serif !important;
     font-size: 17px;
     color: white !important;
+    padding: 10px !important;
 
 }
 .container_descricao{
