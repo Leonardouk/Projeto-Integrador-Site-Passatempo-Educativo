@@ -65,13 +65,10 @@ body{
     position: relative;
     height: 250px !important;
     width: 100% !important;
-  }
-  .card-image .card-img{
-    height: 100% !important;
-    width: 100% !important;
     object-fit: cover !important;
 
   }
+ 
   .name{
     font-size: 18px;
     font-weight: 500;
