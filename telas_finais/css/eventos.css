@@ -26,7 +26,7 @@ ul.caixa{
     max-width: 100% !important; 
     max-height: 100% !important; 
     height: auto !important; 
-    width: 100px !important;
+    width: auto !important;
   }
   .col_imagem_descricao{
     object-fit: cover !important;
