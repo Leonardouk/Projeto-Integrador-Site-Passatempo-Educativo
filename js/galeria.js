@@ -6,6 +6,12 @@ function conectarEndpoint(endpoint) {
     return URLCompleta
 }
 
+function sair() {
+    const token = localStorage.getItem("token")
+    localStorage.clear()
+    window.location.href = "login.html"
+}
+
 async function obterDados() {
     //Define o arrayTodosTextos e arrayTodasImagens por meio da comunicação com o DB
     const URLCompleta = conectarEndpoint('/dados')

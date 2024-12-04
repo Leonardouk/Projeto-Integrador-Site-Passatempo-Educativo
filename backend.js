@@ -3,10 +3,6 @@ const multer = require('multer')
 const cors = require('cors')
 const mongoose = require('mongoose')
 const uniqueValidator = require('mongoose-unique-validator')
-const pino = require('pino')
-const logger = pino({
-    transport: {target: 'pino-pretty'}
-})
 const fs = require('fs')
 const path = require('path')
 const bcrypt = require('bcrypt')
@@ -166,7 +162,7 @@ app.post("/upload", multer(multerConfig).any(), async (req, res) => {
 })
 
 app.post('/log-sessao', (req, res) => {
-    logger.info('Requisição POST recebida!')
+    console.info('Requisição POST recebida!')
     const { startTime, endTime, sessionDuration, referrer } = req.body
 
     const origin = req.get('Origin')
@@ -192,7 +188,7 @@ app.post('/log-sessao', (req, res) => {
             })
         })
         .catch(err => {
-            logger.error('Erro ao salvar sessão:', err.message)
+            console.error('Erro ao salvar sessão:', err.message)
             res.status(500).send('Erro ao salvar sessão.')
         })
 });
@@ -221,7 +217,7 @@ app.get('/log-sessao', (req, res) => {
             res.status(200).json(formattedSessions);  // Responde com os dados formatados
         })
         .catch(err => {
-            logger.error('Erro ao buscar sessões:', err.message);
+            console.error('Erro ao buscar sessões:', err.message);
             res.status(500).send('Erro ao buscar sessões.');
         });
 });
