@@ -1,0 +1,96 @@
+.titulo_cabecalho {
+    font-family: "Luckiest Guy", sans-serif;
+    font-size: 70px;
+    color: black;
+}
+
+/* style pagina contato*/
+
+
+.formulario {
+    background-color: #6787E7;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #8DA5ED !important;
+}
+
+/* background-image: url("../Image/2.png" )!important; */
+form label, form input, form select, form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form input, form select, form button {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+#enviar {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#enviar:hover {
+    background-color: #0fc10c;
+}
+
+.insta {
+    background: radial-gradient(circle at 30% 140%, #fdf497 0%, #fdf497 5%,
+            #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+    display: flex;
+    align-items: center;
+
+}
+
+@media (min-width: 576px) {
+    .container-fluid.formulario {
+        width: 100%;
+        padding: 3%;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .container-fluid.formulario {
+        width: 50%;
+        padding: 3%;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .container-fluid.formulario {
+        width: 40%;
+        padding: 3%;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container-fluid.formulario {
+        width: 40%;
+        padding: 3%;
+    }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .container-fluid.formulario {
+        width: 40%;
+        padding:3%;
+    }
+}
