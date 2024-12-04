@@ -23,12 +23,15 @@ ul.caixa{
 }
 
 .img_descricao{
-    max-width: 100%; 
-    max-height: 100%; 
-    height: auto; 
-    width: auto;
-}
-
+    max-width: 100% !important; 
+    max-height: 100% !important; 
+    height: auto !important; 
+    width: 100px !important;
+  }
+  .col_imagem_descricao{
+    object-fit: cover !important;
+    padding: 0 !important;
+  }
 .nav-link{
     font-family:"Luckiest Guy", sans-serif;
     color: black !important;
