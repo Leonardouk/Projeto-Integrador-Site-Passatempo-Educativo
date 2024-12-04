@@ -122,17 +122,21 @@
             </div>
         </div> -->
         <div class="row align-items-center justify-content-around row_descricao p-4 ">
-            <div class="col-sm-12 col-md-12 col-lg-6 text-center col_texto_descricao">
-                <p class="texto_descricao p-4">
+            <div class="col-sm-12 col-md-10 col-lg-10 col-xl-6 text-center col_texto_descricao">
+                <p class="texto_descricao">
                     Com uma variedade de materiais coloridos e ferramentas divertidas, nossas oficinas proporcionam um ambiente estimulante e acolhedor para que as crianças possam se expressar livremente. Valorizamos a diversidade de ideias e incentivamos a experimentação, sempre celebrando a singularidade de cada pequeno artista. Aqui, o aprendizado acontece de forma lúdica e significativa, promovendo o desenvolvimento criativo e emocional de forma encantadora.
                 </p>
-                <a class="btn btn-light  botao_oficinas" href="#"> Descubra as Oficinas</a>
+                <a class="btn btn-light  botao_oficinas" href="#ofc"> Descubra as Oficinas</a>
             </div>
         </div>
     </div>
 
+    <br>
+    <br>
+    <br>
+    <br><br><br><br><br>
 
-    <div class="slide-container swiper">
+    <div class="slide-container swiper" id="ofc">
         <div class="slide-content">
             <div class="card-wrapper swiper-wrapper">
                 <div class="card swiper-slide">
@@ -142,7 +146,7 @@
                         </div>
                     </div>
                     <div class="card-content">
-                        <h2 class="name">Mohamed Yousef 3</h2>
+                        <h2 class="name">Mohamed Yousef 1</h2>
                         <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
                         <button class="button">View More</button>
                     </div>
@@ -150,7 +154,7 @@
                 <div class="card swiper-slide">
                     <div class="image-content">
                         <div class="card-image">
-                            <img src="image/coloque_imagem.PNG" alt="" class="card-img">                            
+                            <img src="image/coloque_imagem.PNG" alt="" class="card-img ">                            
                         </div>
                     </div>
                     <div class="card-content">
@@ -173,7 +177,6 @@
                 </div>
                 <div class="card swiper-slide">
                     <div class="image-content">
-                        <span class="overlay"></span>
                         <div class="card-image">
                             <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" alt="" class="card-img">                            
                         </div>
@@ -186,7 +189,6 @@
                 </div>
                 <div class="card swiper-slide">
                     <div class="image-content">
-                        <span class="overlay"></span>
                         <div class="card-image">
                             <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" alt="" class="card-img">                            
                         </div>
@@ -199,7 +201,6 @@
                 </div>
                 <div class="card swiper-slide">
                     <div class="image-content">
-                        <span class="overlay"></span>
                         <div class="card-image">
                             <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" alt="" class="card-img">                            
                         </div>
@@ -212,7 +213,6 @@
                 </div>
                 <div class="card swiper-slide">
                     <div class="image-content">
-                        <span class="overlay"></span>
                         <div class="card-image">
                             <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" alt="" class="card-img">                            
                         </div>
@@ -225,7 +225,6 @@
                 </div>
                 <div class="card swiper-slide">
                     <div class="image-content">
-                        <span class="overlay"></span>
                         <div class="card-image">
                             <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" alt="" class="card-img">                            
                         </div>
@@ -238,7 +237,6 @@
                 </div>
                 <div class="card swiper-slide">
                     <div class="image-content">
-                        <span class="overlay"></span>
                         <div class="card-image">
                             <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" alt="" class="card-img">                            
                         </div>
@@ -254,7 +252,7 @@
 
         <div class="swiper-button-next swiper-navBtn"></div>
         <div class="swiper-button-prev swiper-navBtn"></div>
-        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-pagination"></div> -->
     </div>
     <br>
     <br>
@@ -266,7 +264,7 @@
       <!--Uncomment this line-->
     <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
     <script>
-        var swiper = new Swiper(".slide-content", {
+        let swiper = new Swiper(".slide-content", {
         slidesPerView: 3,
         spaceBetween: 25,
         loop: true,

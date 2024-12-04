@@ -17,10 +17,8 @@ body{
   font-family: 'Ubuntu', sans-serif !important;
   font-size: 1.2rem;
   color: black !important;
-  font-weight: 400;
-
   }
-  /* .img_descricao{
+  .img_descricao{
     max-width: 100% !important; 
     max-height: 100% !important; 
     height: auto !important; 
@@ -30,14 +28,12 @@ body{
     object-fit: cover !important;
     padding: 0 !important;
   }
-   */
+  
 
-.card-img{
-    border-radius: 0 !important;
-    
-}
-   .slide-container{
-    max-width: 1120px;
+
+
+  .slide-container{
+    max-width: 95%;
     width: 100%;
     padding: 40px 0;
   }
@@ -46,38 +42,58 @@ body{
     overflow: hidden;
   }
   .card{
+    border-radius: 25px;
     background-color: #FFF;
   }
-  .image-content,
+ 
   .card-content{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px 14px;
+    margin: 20px !important;
   }
   .image-content{
     position: relative;
     row-gap: 5px;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .card-image{
-    position: relative;
-    height: 250px !important;
-    width: 100% !important;
-    object-fit: cover !important;
-
+  .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0 !important;
   }
- 
+  
+  .card-image {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+
   .name{
-    font-size: 18px;
+    font-size: 25px !important;
+    margin-bottom: 20px !important;
+    margin-top: 8px !important;
     font-weight: 500;
-    color: #333;
+    color: black !important;
+    text-align: center !important;
+    font-family:"Luckiest Guy", sans-serif !important;
+
   }
   .description{
-    font-size: 14px;
-    color: #707070;
-    text-align: center;
+    font-size: 18px !important;
+    color: black !important;
+    text-align: center !important;
+    font-family: 'Ubuntu', sans-serif !important;
+
   }
   .button{
     border: none;
@@ -95,30 +111,32 @@ body{
   }
   
   .swiper-navBtn{
-    color: #6E93f7;
+    color: black !important;
     transition: color 0.3s ease;
+    background-color: #ffffff;
+
   }
-  .swiper-navBtn:hover{
-    color: #4070F4;
-  }
+  /* .swiper-navBtn:hover{
+    color: #4070F4 !important;
+  } */
   .swiper-navBtn::before,
   .swiper-navBtn::after{
-    font-size: 35px;
+    font-size: 35px !important;
   }
   .swiper-button-next{
-    right: 0;
+    right: 0 !important ;
   }
   .swiper-button-prev{
-    left: 0;
+    left: 0 !important;
   }
-  .swiper-pagination-bullet{
+  /* .swiper-pagination-bullet{
     background-color: #6E93f7;
     opacity: 1;
   }
   .swiper-pagination-bullet-active{
     background-color: #4070F4;
   }
-  
+   */
   @media screen and (max-width: 768px) {
     .slide-content{
       margin: 0 10px;
@@ -126,4 +144,6 @@ body{
     .swiper-navBtn{
       display: none;
     }
+
   }
+  
