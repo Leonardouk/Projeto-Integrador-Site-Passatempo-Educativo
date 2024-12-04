@@ -27,9 +27,11 @@ img.img_carrossel{
 
 
 .col_texto_carrossel{
-    padding: 0px !important;
+    padding: 10px !important;
 }
-
+#texto1{
+    margin-top: 15px;
+}
 #texto1, #texto2{
     font-size: 2.8vw;
     font-family: "Luckiest Guy", sans-serif;
@@ -40,6 +42,10 @@ img.img_carrossel{
     padding: 15px !important;
     margin-bottom: 0 !important;
     word-spacing: 3px;
+
+}
+#texto4{
+    font-family: 'Ubuntu', sans-serif !important;
 
 }
 .botao_carrossel{

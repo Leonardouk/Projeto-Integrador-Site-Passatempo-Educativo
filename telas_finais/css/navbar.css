@@ -5,7 +5,7 @@
 }
 /* Estilos para a barra de navegação */
 .navbar {
-    background-color:aliceblue; /* Cor de fundo */
+    background-color:white; /* Cor de fundo */
     padding: 0;
     font-family:"Luckiest Guy", sans-serif;
 }
@@ -18,6 +18,9 @@
     margin: 0 10px; /* Espaçamento lateral entre os links */
     /* transition: background-color 0.3s ease; */
      /* Transição suave ao passar o mouse */
+    letter-spacing: 1px !important;
+    font-weight: 500 !important;
+
 }
 
 .navbar li:hover {
@@ -46,7 +49,7 @@ div .offcanvas-body {
 }
 
 .offcanvas-header {
-    color: #000000;
+    color: white !important;
 }
 
 a.navegacao_link {
