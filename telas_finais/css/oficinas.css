@@ -17,7 +17,10 @@ body{
   font-family: 'Ubuntu', sans-serif !important;
   font-size: 1.2rem;
   color: black !important;
+  font-weight: 430;
+  letter-spacing: 1px;
   }
+
   .img_descricao{
     max-width: 100% !important; 
     max-height: 100% !important; 
@@ -29,9 +32,39 @@ body{
     padding: 0 !important;
   }
   
+a.botao_oficinas{
+    margin: 40px !important;
+    padding: 15px !important;
+    font-family: 'Ubuntu', sans-serif !important;
+    border:2px solid #3e4096;
+    background-color: #3e4096;
+    color: white !important;
+    width: 300px;
+    font-size: 20px;
+}
+a.botao_oficinas:hover{
+    background-color: #343579;
+    border:2px solid #343579;
+    transform: scale(1.1);
 
+}
 
+button.botao_oficinas{
+    margin: 40px !important;
+    padding: 15px !important;
+    font-family: 'Ubuntu', sans-serif !important;
+    border:2px solid #3e4096;
+    background-color: #3e4096;
+    color: white !important;
+    width: 300px;
+    font-size: 20px;
+}
+button.botao_oficinas:hover{
+    background-color: #343579;
+    border:2px solid #343579;
+    transform: scale(1.1);
 
+}
   .slide-container{
     max-width: 95%;
     width: 100%;
@@ -44,6 +77,8 @@ body{
   .card{
     border-radius: 25px;
     background-color: #FFF;
+    border-radius: 20px !important;
+
   }
  
   .card-content{
@@ -65,7 +100,7 @@ body{
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: 0 !important;
+    border-radius: 20px 20px 0 0!important;
   }
   
   .card-image {
@@ -111,9 +146,9 @@ body{
   }
   
   .swiper-navBtn{
-    color: black !important;
+    color: white!important;
     transition: color 0.3s ease;
-    background-color: #ffffff;
+    background-color: black;
 
   }
   /* .swiper-navBtn:hover{
@@ -147,3 +182,92 @@ body{
 
   }
   
+
+  
+  .fancy {
+    --b: 6px;   /* control the border thickness */
+    --w: 80px;  /* control the width of the line*/
+    --g: 15px;  /* control the gap */
+    --c: #3E4096;
+   
+    width: fit-content;
+    padding: 0 1em;
+    line-height: 1.6em;
+    border: 1px solid;
+    color: #fff;
+    background: 
+      conic-gradient(from   45deg at left ,var(--c) 25%,#0000 0) 0,
+      conic-gradient(from -135deg at right,var(--c) 25%,#0000 0) 100%;
+    background-size: 51% 100%;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    border-image: 
+       linear-gradient(
+         #0000      calc(50% - var(--b)/2),
+         var(--c) 0 calc(50% + var(--b)/2),
+         #0000    0) 
+      1/0 var(--w)/calc(var(--w) + var(--g));
+    margin-inline: auto;
+  }
+  
+  .h-divider {
+    margin: auto;
+    margin-top: 80px;
+    width: 40% !important;
+    position: relative;
+  }
+  
+  .h-divider .shadow {
+    overflow: hidden;
+    height: 5px;
+  }
+  
+  .h-divider .shadow:after {
+    content: '';
+    display: block;
+    margin: -25px auto 0;
+    width: 100%;
+    height: 25px;
+    border-radius: 125px/12px;
+    box-shadow: 8px 8px 8px #3e4096;
+  }
+  
+  
+  .h-divider .divisor_img {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    bottom: 100%;
+    margin-bottom: -35px;
+    left: 50%;
+    margin-left: -25px;
+    border-radius: 100%;
+  }
+  
+  .h-divider img {
+    position: absolute;
+    margin: 4px;
+    max-width: 100px;
+    border-radius: 100%;
+    left: -30%;
+    top: -20%;
+
+  }
+
+
+  a.botao_oficina{
+    margin: 40px !important;
+    padding: 8px !important;
+    font-family: 'Ubuntu', sans-serif !important;
+    border:2px solid #3e4096;
+    background-color: #3e4096;
+    color: white !important;
+    width: 200px;
+    font-size: 20px;
+}
+a.botao_oficina:hover{
+    background-color: #343579;
+    border:2px solid #343579;
+    transform: scale(1.1);
+
+}

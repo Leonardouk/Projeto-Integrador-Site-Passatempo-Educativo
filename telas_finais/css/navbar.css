@@ -36,7 +36,7 @@
 }
 
 .offcanvas {
-    background-color: #F6CC3A !important;
+    background-color: white!important;
 }
 
 div .offcanvas-body {
@@ -49,7 +49,7 @@ div .offcanvas-body {
 }
 
 .offcanvas-header {
-    color: white !important;
+    color: black !important;
 }
 
 a.navegacao_link {
