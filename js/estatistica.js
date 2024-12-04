@@ -6,6 +6,12 @@ function conectarEndpoint(endpoint) {
     return URLCompleta
 }
 
+function sair() {
+    const token = localStorage.getItem("token")
+    localStorage.clear()
+    window.location.href = "login.html"
+}
+
 function obterDados() {
     const URLCompleta = conectarEndpoint('/log-sessao')
     let tabela = document.querySelector('.dados')

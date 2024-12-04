@@ -6,6 +6,12 @@ function conectarEndpoint(endpoint) {
     return URLCompleta
 }
 
+function sair() {
+    const token = localStorage.getItem("token")
+    localStorage.clear()
+    window.location.reload()
+}
+
 function alternarNavbar() {
     //Alterna navbar parão para a navbar de administrador
     const barraNavegacao = document.querySelector('.barra_navegacao')
