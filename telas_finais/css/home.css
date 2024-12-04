@@ -1,167 +1,52 @@
 body{
-    background-color: #8DA5ED !important;
+    background-color: #FFBD57 !important;
 }
-/* cabecalho */
-.cabecalho{
-    background-color: #8DA5ED;
-}
-/* .comeco{
-    background-color: #3E4096;
-} */
 
 
-
-.row_cabecalho {
-    /* background-color: #6787E7; */
-    border-radius: 20px;
-    margin: 0 10% !important;
-    padding: 2.5%;
-    justify-content: end;
-}
-.row_titulo_cabecalho{
-    width: 100%;
-    height: 100%;
-}
-.col_titulo_cabecalho {
-    color: black;
-    text-align: center;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-}
 .imagem_cabecalho{
-    max-width: 100%; 
-    max-height: 100%; 
-    height: 160px; 
-    width: 160px;
+    max-width: 100% !important; 
+    max-height: 100% !important; 
+    height: auto !important; 
+    width: 80px !important;
 }
-.t1_cabecalho {
-    width: 100%;
-    height: 100%;
-    font-size: 4.0rem;
-    font-family: "Luckiest Guy", sans-serif;
-    word-wrap: break-word;
-}
-
-.t2_cabecalho {
-    width: 100%;
-    height: 100% !important;
-    font-size: 2.3rem;
-    font-family: "Luckiest Guy", sans-serif;
-    word-wrap: break-word;
-}
-
-.col_imagem_cabecalho {
-    padding: 0 !important;
-    margin: 0 !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.imagem_cabecalho {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-
-
-
-/* descricao */
-.h1_descricao {
-    font-size: 2.2rem;
-    font-family: "Luckiest Guy", sans-serif;
-}
-/* .row_titulo_descricao{
+.row_carrossel{
     background-color: #3E4096;
-
-} */
-.col_titulo_descricao {
-    border-radius: 20px;
-    color: black;
-}
-.col_texto_descricao {
-    color: black!important;
-    padding: 30px;
-    border-radius: 20px;
-    font-size: 20px;
-    font-family: 'Ubuntu', sans-serif !important;
-}
-
-.descricao{
-    background-color: #8DA5ED;
-    width: 60% !important;
-    border-radius: 40px;
-}
-.divider {
-    border-top: 10px dashed #F6CC3A;
-    width: 70%;
-    justify-self: center;
-}
-
-.col_espaco{
-    width: 0.1px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-
-}
-
-/* quem somos */
-/* .quem_somos{
-    background-color: #3E4096;
-
-} */
-.row_quem_somos{
-    background-color: #3E4096;
-    justify-content: space-between;
-    padding: 0;
-}
-
-.row_titulo_quem_somos{
-    margin-bottom: 30px;
-
-}
-.row_titulo_quem_somos h1{
-    font-family: "Luckiest Guy", sans-serif !important;
-}
-.col_texto_quem_somos {
     color: white;
-    text-align: start;
-
 }
-.row_texto_quem_somos p{
-    font-family: 'Ubuntu', sans-serif !important;
-    font-size: 1.2vw;
-}
-.quem_somos{
-    padding: 0 !important;
-    width: 90% !important;
-    border-radius: 20px !important;
-}
-
-/* carrossel */
-.imagem-div {
-    justify-content: center;
-    width: 100%;
-    height: auto;
-}
-
-.carousel-item > .imagem-div img {
-    height: auto;
-    object-fit:cover;      
-    width: 100%;
-    max-height:100%;
-} 
-.carousel{
-    object-fit: cover !important;
-}
-
 .col_carrossel{
     padding: 0 !important;
 }
-.row_carrossel{
-    object-fit: cover !important;
-    background-color: #3E4096 !important;
+.img_carrossel{
+    width: 200px !important;
+    height: auto;
+    max-width: 100%;
+    max-height: 100% ;
 }
+
+.col_texto_carrossel{
+    padding: 0px !important;
+}
+#texto1, #texto2{
+    font-size: 2.8vw;
+    font-family: "Luckiest Guy", sans-serif;
+}
+#texto3{
+    font-family: 'Ubuntu', sans-serif !important;
+    font-size: 1.2vw;
+    padding: 15px !important;
+    margin-bottom: 0 !important;
+    word-spacing: 3px;
+
+}
+.botao_carrossel{
+    margin: 10px !important;
+    font-family: 'Ubuntu', sans-serif !important;
+    font-size: 1.2vw !important;
+    padding: 10px !important;
+
+}
+
+
 
 @media (max-width: 1200px) {
     .row_texto_quem_somos p{
@@ -184,9 +69,43 @@ body{
     .row_titulo_quem_somos{
         margin-top: 40px !important;
     }
+    .botao_carrossel{
+        font-family: 'Ubuntu', sans-serif !important;
+
+    }
+}
+@media (max-width: 992px) {
+    .col_texto_carrossel{
+        padding: 20px !important;
+    }
+    #texto1, #texto2{
+        font-size: 30px;
+        font-family: "Luckiest Guy", sans-serif;
+    }
+    #texto2{
+        margin-bottom: 20px !important;
+    }
+    #texto3{
+        font-family: 'Ubuntu', sans-serif !important;
+        font-size: 15px;
+        padding: 0!important;
+        margin: 20px !important;
+    }
+    #texto1{
+        margin-top: 20px !important;
+    }
+    .botao_carrossel{
+        margin: 25px !important;
+        font-family: 'Ubuntu', sans-serif !important;
+        font-size: 15px !important;
+    }
 }
 
 
+#texto6, #texto8, #texto10{
+    font-family: 'Ubuntu', sans-serif !important;
+    font-size: 17px !important;
+}
 
 .card-title{
     font-family: "Luckiest Guy", sans-serif !important;
@@ -202,14 +121,62 @@ body{
     color: black !important;
     box-shadow: 0px 0px 25px -3px #117;
 }
-
+.botao_card{
+    font-family: 'Ubuntu', sans-serif !important;
+    padding: 10px !important;
+    word-spacing: 5px;
+    font-size: 18px !important;
+}
 .card-header{
     height: 100% !important;
     color: #3E4096 !important;
 }
-
+.card-text{
+    font-family: 'Ubuntu', sans-serif !important;
+    word-spacing: 3px;
+    margin-bottom: 20px !important;
+}
 .btn-secondary{
     background-color: #3E4096 !important;
     color: white !important;
 }
 
+.botao_card:hover{
+    /* background-color: #1a1c70 !important; */
+    transform: scale(1.1) !important;
+}
+
+.botao_carrossel:hover{
+    transform: scale(1.1) !important;
+}
+
+
+
+
+
+  .fancy {
+    --b: 6px;   /* control the border thickness */
+    --w: 80px;  /* control the width of the line*/
+    --g: 15px;  /* control the gap */
+    --c: #3E4096;
+   
+    width: fit-content;
+    padding: 0 1em;
+    line-height: 1.6em;
+    border: 1px solid;
+    color: #fff;
+    background: 
+      conic-gradient(from   45deg at left ,var(--c) 25%,#0000 0) 0,
+      conic-gradient(from -135deg at right,var(--c) 25%,#0000 0) 100%;
+    background-size: 51% 100%;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    border-image: 
+       linear-gradient(
+         #0000      calc(50% - var(--b)/2),
+         var(--c) 0 calc(50% + var(--b)/2),
+         #0000    0) 
+      1/0 var(--w)/calc(var(--w) + var(--g));
+    margin-inline: auto;
+  }
+  
