@@ -132,17 +132,17 @@ async function salvarMudancas() {
             element.pagina.home.forEach(ordem => {
                 paragrafo = document.querySelector(`#texto${ordem}`)
             })
-        }
-        let texto = paragrafo.value
-        element.texto = paragrafo.value
-        
-        if (!texto) {
-            stringVazia = true
+            let texto = paragrafo.value
+            element.texto = paragrafo.value
+            
+            if (!texto) {
+                stringVazia = true
+            }
         }
     })
 
     arrayTodasImagens.forEach(element => {
-        let id = ""
+        let id = 0
         let imagem = ""
         let ordemImagem = []
         
@@ -152,12 +152,19 @@ async function salvarMudancas() {
                 ordemImagem.push(ordem)
             })
         }
-        if (element.pagina.hasOwnProperty("home") && element.src == imagem.getAttribute('src')) {
-            id = element._id
+        if (ordemImagem.length > 0) {
+            imagem = document.querySelector(`#imagem${ordemImagem[0]}`)
         }
-        if (imagem.nodeName == 'IMG') {
-            arrayImagensParaSalvar.push({_id: id, ordem: ordemImagem, pagina: "home"})
-        }
+        
+        // if (imagem) {
+        //     if (element.src == imagem.getAttribute('src')) {
+        //         id = Number(element._id)
+        //     }
+            
+        //     if (imagem.nodeName == 'IMG') {
+        //         arrayImagensParaSalvar.push({_id: id, ordem: ordemImagem, pagina: "home"})
+        //     }
+        // }
     })
 
     if (!stringVazia) {
@@ -173,5 +180,28 @@ async function salvarMudancas() {
     }
     else {
         console.log("Nenhum texto pode estar em branco")
+    }
+}
+
+//Confere se alguma imagem já foi clicada, caso seja este o caso, substitui o elemento svg por imagem
+async function selecionarImagem() {
+    if (!elementoClicado) {
+        console.log("clica em uma imagem primeiro")
+    }
+    else {
+        const imagem = document.querySelector(`#${idImagemSelecionada}`)
+        const cloneElementoClicado = elementoClicado.cloneNode(true)
+        
+        cloneElementoClicado.classList.remove("border", "border-primary", "border-3", "imagemModal")
+        cloneElementoClicado.classList.add("imagemPagina", "d-block", "w-100", "img_carrossel")
+        cloneElementoClicado.setAttribute('id', `${idImagemSelecionada}`)
+        cloneElementoClicado.setAttribute('onclick', 'obterImagens()')
+        cloneElementoClicado.setAttribute('data-bs-toggle', 'modal')
+        cloneElementoClicado.setAttribute('data-bs-target', '#modalFotos')
+        imagem.outerHTML = cloneElementoClicado.outerHTML
+        
+        let modal = bootstrap.Modal.getInstance(document.querySelector('#modalFotos'))
+        modal.hide()
+        dropImagens()
     }
 }

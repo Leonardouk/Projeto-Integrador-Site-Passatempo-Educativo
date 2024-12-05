@@ -89,28 +89,28 @@ async function escolherImagem() {
     }
 }
 
-//Confere se alguma imagem já foi clicada, caso seja este o caso, substitui o elemento svg por imagem
-async function selecionarImagem() {
-    if (!elementoClicado) {
-        console.log("clica em uma imagem primeiro")
-    }
-    else {
-        const imagem = document.querySelector(`#${idImagemSelecionada}`)
-        const cloneElementoClicado = elementoClicado.cloneNode(true)
+// //Confere se alguma imagem já foi clicada, caso seja este o caso, substitui o elemento svg por imagem
+// async function selecionarImagem() {
+//     if (!elementoClicado) {
+//         console.log("clica em uma imagem primeiro")
+//     }
+//     else {
+//         const imagem = document.querySelector(`#${idImagemSelecionada}`)
+//         const cloneElementoClicado = elementoClicado.cloneNode(true)
         
-        cloneElementoClicado.classList.remove("border", "border-primary", "border-3", "imagemModal")
-        cloneElementoClicado.classList.add("imagemPagina")
-        cloneElementoClicado.setAttribute('id', `${idImagemSelecionada}`)
-        cloneElementoClicado.setAttribute('onclick', 'obterImagens()')
-        cloneElementoClicado.setAttribute('data-bs-toggle', 'modal')
-        cloneElementoClicado.setAttribute('data-bs-target', '#modalFotos')
-        imagem.outerHTML = cloneElementoClicado.outerHTML
+//         cloneElementoClicado.classList.remove("border", "border-primary", "border-3", "imagemModal")
+//         cloneElementoClicado.classList.add("imagemPagina")
+//         cloneElementoClicado.setAttribute('id', `${idImagemSelecionada}`)
+//         cloneElementoClicado.setAttribute('onclick', 'obterImagens()')
+//         cloneElementoClicado.setAttribute('data-bs-toggle', 'modal')
+//         cloneElementoClicado.setAttribute('data-bs-target', '#modalFotos')
+//         imagem.outerHTML = cloneElementoClicado.outerHTML
         
-        let modal = bootstrap.Modal.getInstance(document.querySelector('#modalFotos'))
-        modal.hide()
-        dropImagens()
-    }
-}
+//         let modal = bootstrap.Modal.getInstance(document.querySelector('#modalFotos'))
+//         modal.hide()
+//         dropImagens()
+//     }
+// }
 
 //Funções para adicionar as interações de remover e adicionar conteúdo ao modal
 function eventoInput() {
