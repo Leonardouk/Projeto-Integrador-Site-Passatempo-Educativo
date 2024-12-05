@@ -65,9 +65,10 @@ a.botao_oficinas:hover{
     border-radius: 25px;
     background-color: #FFF;
     border-radius: 20px !important;
-
+    height: 100% !important;
   }
  
+  
   .card-content{
     display: flex;
     flex-direction: column;
@@ -75,6 +76,8 @@ a.botao_oficinas:hover{
     padding: 10px 14px;
     margin: 20px !important;
     height: 350px !important;
+    object-fit: cover !important;
+    max-height: 100% !important;
   }
   .image-content{
     position: relative;

@@ -31,14 +31,20 @@ ul.caixa{
 }
 
 
-
+/* img.img_descricao{
+        height: 100% !important;
+    max-height:600px !important; 
+    object-fit: cover !important;
+} */
 
 
 .img_descricao{
     max-width: 100% !important; 
-    max-height: 100% !important; 
+    max-height: 500px !important; 
+    min-height: 500px !important;
     height: auto !important; 
     width: 100px !important;
+    object-fit: cover !important;
     box-shadow: 0px 0px 15px -3px #117;
 
 
