@@ -149,6 +149,11 @@ body{
     position: absolute;
     top: 1100px;
     right: 10px;
-
-
 } 
+
+
+@media (max-width: 1480px) {
+    #purp_azul, #purp_azul2, #purp_azul3, #purp_laranja, #purp_laranja2, #purp_laranja3,#purp_amarela, #purp_amarela2, #purp_amarela3 {
+      display: none;
+    }
+  }

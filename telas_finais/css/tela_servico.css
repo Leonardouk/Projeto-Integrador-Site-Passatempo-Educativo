@@ -46,6 +46,32 @@ p, button {
 
 #botao_contato:hover {
     background-color: rgb(50, 52, 120);
-    transform: scale(1.2);
+    transform: scale(1.05);
 }
 
+#imagem0 {
+    width: 1200px;
+    height: auto;
+    max-width: 100%;
+    max-height: 90%;
+}
+
+#botao_oficinas{
+    background-color: rgb(62, 64, 150);
+    width: 250px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease ease-in-out, background-color 0.3s ease ease-in-out;
+    font-family: 'Ubuntu', sans-serif !important;
+}
+
+#botao_oficinas:hover {
+    background-color: rgb(50, 52, 120);
+    transform: scale(1.05);
+}
