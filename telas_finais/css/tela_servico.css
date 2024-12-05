@@ -20,9 +20,11 @@ body {
 
 h1,
 h2,
-h3,
 h4 {
     font-family: "Luckiest Guy", sans-serif;
+}
+h3 {
+    font-family: 'Ubuntu', sans-serif !important;
 }
 
 p,button {
@@ -32,6 +34,7 @@ p,button {
 }
 p {
     font-size: 22px;
+    color: black;
 }
 
 #botao_contato {
@@ -39,6 +42,7 @@ p {
     padding: 8px !important;
     font-family: 'Ubuntu', sans-serif !important;
     border:2px solid #3e4096;
+    border-radius: 16px;
     background-color: #3e4096;
     color: white !important;
     width: 200px;
