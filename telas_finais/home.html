@@ -31,6 +31,11 @@
 </head>
 
 <body onload="obterDados()">
+    <div id="cookiePopup" class="cookie-popup">
+        <p>Usamos cookies para melhorar a experiência do usuário. Para mais informações, veja nossos <a href="Termos de Uso - Passatempo Educativo.pdf">Termos de Uso</a>.</p>
+        <button onclick="acceptCookies()">Concordo</button>
+        <button onclick="declineCookies()">Recusar</button>
+    </div>
     
     <div class="modal modal-lg fade" id="modalFotos" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="modalFotos" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
@@ -160,7 +165,7 @@
         <div class="row justify-content-evenly g-4">
             <div class="col-sm-10 col-md-4 col-lg-4 col-xl-3">
                 <div class="card text-center">
-                    <div class="card-header">
+                    <div class="card-header ">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-tools m-2" viewBox="0 0 16 16">
                             <title>Ícone de uma chave de fenda e uma chave combinada cruzadas formando um "X" </title>
                             <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3q0-.405-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
@@ -169,8 +174,8 @@
                     </div>
                     <div class="card-body">
                         <p class="card-text" id="texto6">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis nemo voluptatum fugit earum saepe sed odio possimus hic atque magni dignissimos architecto, sit aut ducimus, non placeat provident sequi cum?</p>
-                        <a href="oficinas.html" class="btn btn-secondary botao_card w-100">Conhecer Oficinas</a>
                     </div>
+                    <a href="oficinas.html" class="btn btn-secondary botao_card w-100">Conhecer Oficinas</a>
                 </div>
             </div>
             <div class="col-sm-10 col-md-4 col-lg-4 col-xl-3">
@@ -185,8 +190,8 @@
                     </div>
                     <div class="card-body">
                         <p class="card-text" id="texto8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, quae accusantium omnis recusandae accusamus voluptatem saepe dolorem tempora tempore voluptatum in veritatis unde ratione, quam, nihil quod laudantium blanditiis nesciunt.</p>
-                        <a href="eventos.html" class="btn btn-secondary botao_card w-100">Conhecer Eventos</a>
                     </div>
+                    <a href="eventos.html" class="btn btn-secondary botao_card w-100">Conhecer Eventos</a>
                 </div>
             </div>
             <div class="col-sm-10 col-md-4 col-lg-4 col-xl-3">
@@ -201,8 +206,8 @@
                     </div>
                     <div class="card-body">
                         <p class="card-text" id="texto10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos ipsa id error ratione mollitia optio corporis architecto officiis minima voluptatem dolore, distinctio accusantium accusamus sunt cum nihil, dignissimos nam doloribus!</p>
-                        <a href="saude.html" class="btn btn-secondary botao_card w-100">Conhecer  Saúde</a>
                     </div>
+                    <a href="saude.html" class="btn btn-secondary botao_card w-100">Conhecer  Saúde</a>
                 </div>
             </div>
         </div>
@@ -221,11 +226,7 @@
 
 
 
-    <div id="cookiePopup" class="cookie-popup">
-        <p>Usamos cookies para melhorar a experiência do usuário. Para mais informações, veja nossos <a href="Termos de Uso - Passatempo Educativo.pdf" style="color: #FFD700;">Termos de Uso</a>.</p>
-        <button onclick="acceptCookies()">Concordo</button>
-        <button onclick="declineCookies()">Recusar</button>
-    </div>
+    
 
     <footer class="fixed">
         <div class="container-fluid rodape">
