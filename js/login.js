@@ -39,12 +39,12 @@ function checarStatusLogin() {
 async function validarLogin() {
     const URLCompleta = conectarEndpoint("/login")
     const login = document.getElementById("login").value
-    const senha = document.getElementById("senha_login").value
+    const senha = document.getElementById("password").value
     try {
         if (login && senha) {
             const resposta = await axios.post(URLCompleta, {login: login, senha: senha})
             document.getElementById("login").value = ""
-            document.getElementById("senha_login").value = ""
+            document.getElementById("password").value = ""
             
             exibirAlerta(".alert-login", "Login Bem-Sucedido", ["show", "alert-success"], ["d-none", "alert-danger"], 2000)
             
@@ -55,7 +55,8 @@ async function validarLogin() {
             exibirAlerta(".alert-login", "Preenhca todos os campos", ["show", "alert-danger"], ["d-none", "alert-success"], 2000)
         }
     }
-    catch {
+    catch (err) {
+        console.error(err.message)
         exibirAlerta(".alert-login", "Preencha um login válido", ["show", "alert-danger"], ["d-none", "alert-success"], 2000)
     }
 }
