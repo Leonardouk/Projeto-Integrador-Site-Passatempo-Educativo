@@ -30,16 +30,49 @@ ul.caixa{
     background-color: #6787E7;
 }
 
-  .img_descricao{
+
+/* img.img_descricao{
+        height: 100% !important;
+    max-height:600px !important; 
+    object-fit: cover !important;
+} */
+
+
+.img_descricao{
     max-width: 100% !important; 
-    max-height: 100% !important; 
+    max-height: 400px !important; 
+    min-height: 400px !important;
     height: auto !important; 
     width: 100px !important;
+    object-fit: cover !important;
+    box-shadow: 0px 0px 15px -3px #117;
   }
-  .col_imagem_descricao{
+  
+.col_imagem_descricao{
     object-fit: cover !important;
     padding: 0 !important;
-  }
+}
+
+
+
+
+
+.titulo_descricao{
+    font-family:"Luckiest Guy", sans-serif;
+    font-size: 35px;
+    color: black;
+    margin: 20px 0 !important;
+}
+.texto_descricao{
+    font-family: 'Ubuntu', sans-serif !important;
+    font-size: 18px;
+    color: black;
+    margin: 20px 0 !important;
+}
+.col_texto_descricao{
+    text-align: start !important;
+}
+
 .nav-link{
     font-family:"Luckiest Guy", sans-serif;
     color: black !important;
@@ -55,34 +88,23 @@ ul.caixa{
 }
 
 
-/* cards */
-.card_image{
-    border-radius: 7px !important;
-}
-.card{
-    background-color: #F6CC3A !important;
-    /* box-shadow: 2px 2px 2px 2px #EB6D0B; */
-    transition: 0.3s;
-    border-radius: 15px !important;
-}
-.card-text{
+a.botao_evento{
+    margin: 10px 0 !important;
+    padding: 8px 0 !important;
     font-family: 'Ubuntu', sans-serif !important;
-    color: black !important;
-    padding: 20px;
-    text-align: justify !important;
-    font-size: 17px;
+    border:2px solid #3e4096;
+    background-color: #3e4096;
+    color: white !important;
+    width: 200px;
+    font-size: 20px;
+    box-shadow: 0px 0px 15px -3px #117;
 
 }
-.card-title{
-    font-family:"Luckiest Guy", sans-serif;
-    color: black !important;
-    margin-bottom: 10px !important;
-    margin: 20px !important;
-    padding: 2px;
-
+a.botao_evento:hover{
+    background-color: #343579;
+    border:2px solid #343579;
+    transform: scale(1.1);
 }
-
-
 
 .divisoria {
     width: 100%;
@@ -108,3 +130,9 @@ ul.nav-pills{
     box-shadow: 0px 0px 15px -3px #117;
 }
 
+
+@media (max-width: 992px) {
+    .col_texto_descricao{
+        text-align: center !important;
+    }
+  }

@@ -41,6 +41,8 @@ a.botao_oficinas{
     color: white !important;
     width: 300px;
     font-size: 20px;
+    box-shadow: 0px 0px 15px -3px #117;
+
 }
 a.botao_oficinas:hover{
     background-color: #343579;
@@ -49,22 +51,7 @@ a.botao_oficinas:hover{
 
 }
 
-button.botao_oficinas{
-    margin: 40px !important;
-    padding: 15px !important;
-    font-family: 'Ubuntu', sans-serif !important;
-    border:2px solid #3e4096;
-    background-color: #3e4096;
-    color: white !important;
-    width: 300px;
-    font-size: 20px;
-}
-button.botao_oficinas:hover{
-    background-color: #343579;
-    border:2px solid #343579;
-    transform: scale(1.1);
 
-}
   .slide-container{
     max-width: 95%;
     width: 100%;
@@ -78,15 +65,19 @@ button.botao_oficinas:hover{
     border-radius: 25px;
     background-color: #FFF;
     border-radius: 20px !important;
-
+    height: 100% !important;
   }
  
+  
   .card-content{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px 14px;
     margin: 20px !important;
+    height: 350px !important;
+    object-fit: cover !important;
+    max-height: 100% !important;
   }
   .image-content{
     position: relative;
@@ -264,6 +255,8 @@ button.botao_oficinas:hover{
     color: white !important;
     width: 200px;
     font-size: 20px;
+    box-shadow: 0px 0px 15px -3px #117;
+
 }
 a.botao_oficina:hover{
     background-color: #343579;

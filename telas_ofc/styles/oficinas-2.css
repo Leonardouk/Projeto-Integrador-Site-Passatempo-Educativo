@@ -30,16 +30,12 @@ color: black !important;
   text-align: center!important;
   border-radius: 20px!important;
   }
-  div .card{
-      /* height: 50rem !important; */
-      height: 100% !important;
 
-  }
   .card-title{
       font-family:"Luckiest Guy", sans-serif!important;
       font-size: 2rem!important;
       color: black!important;
-      margin: 10px!important;
+      margin: 25px 0!important;
 
   }
   .card-text{
@@ -50,40 +46,6 @@ color: black !important;
 
   }
 
-    /* scalop */
-  /*----------------*/
-/*  SCALLOP down  */
-/*----------------*/
-.scallop-down{
-    height:100px;
-    width:100%;
-    background: -webkit-gradient(radial, 50% 0, 10, 50% 0, 40, from(#8DA5ED), color-stop(0.49, #8DA5ED), color-stop(0.51, #3E4096), to(#8DA5ED));
-  -webkit-background-size: 49px 100%;
-  }
-  
-  .white-block{
-    background-color: #8DA5ED;
-  }
-  .white-block p{
-    margin: 0 !important;
-  }
-  
-  /*----------------*/
-  /*  SCALLOP up    */
-  /*----------------*/
-  .scallop-up{
-    height:100px;
-    width:100%;
-    background: -webkit-gradient(radial, 50% 100%, 10, 50% 100%, 40, from(#8DA5ED), color-stop(0.49, #8DA5ED), color-stop(0.51, #3E4096), to(#8DA5ED));
-  -webkit-background-size: 49px 100%;
-  }
-  /* .card-body{
-      align-self: center !important;
-      max-width: 100%; 
-      max-height: 100%; 
-      height: auto; 
-      width: auto;
-  } */
     .carousel-control-prev,
     .carousel-control-next {
     background-color: #3E4096!important;
@@ -111,26 +73,70 @@ color: black !important;
   }
   }
 
-  .card .img-wrapper {
+  /* .card .img-wrapper {
       max-width: 100%!important;
       height: 20em!important;
       display: flex!important;
       justify-content: center!important;
       align-items: center !important;
-      padding: 10px !important;
-  }
-  .img-wrapper img{
-      border-radius: 10px!important;
+  } */
+  /* .img-wrapper img{
       max-width: 100% !important; 
       max-height: 100% !important; 
       height: auto !important; 
       width: auto !important;       
-  }
-  .card img {
-      max-height: 100% !important;
-  }
-  @media (max-width: 767px) {
+  } */
+   
+
+  /* @media (max-width: 767px) {
   .card .img-wrapper {
       height: 17em !important;
   }
+  } */
+
+
+
+
+
+
+
+
+
+
+
+  /* ysejfhjksadhf */
+
+
+  .card-body{
+    padding: 0 !important;
   }
+
+  .img_card{
+    max-width: 100% !important; 
+    max-height: 400px !important; 
+    min-height: 400px !important;
+    height: auto !important; 
+    width: 100px !important;
+    object-fit: cover !important;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  a.botao_oficina{
+    margin-bottom: 40px  !important;
+    padding: 8px !important;
+    font-family: 'Ubuntu', sans-serif !important;
+    border:2px solid #3e4096;
+    background-color: #3e4096;
+    color: white !important;
+    width: 200px;
+    font-size: 20px;
+    box-shadow: 0px 0px 15px -3px #117;
+
+}
+a.botao_oficina:hover{
+    background-color: #343579;
+    border:2px solid #343579;
+    transform: scale(1.1);
+
+}
