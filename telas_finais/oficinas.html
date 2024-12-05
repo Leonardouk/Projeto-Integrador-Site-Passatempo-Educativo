@@ -31,6 +31,28 @@
 
 <body onload="obterDados()">
 
+    <div class="modal modal-lg fade" id="modalFotos" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="modalFotos" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-4">Fotos</h1>
+                </div>
+                <div class="modal-body" id="corpoModalFotos">
+                    
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary btn-lg" data-bs-dismiss="modal" aria-label="close" onclick="dropImagens()">Fechar</button>
+                    <button class="btn btn-primary btn-lg" onclick="selecionarImagem()">Selecionar</button>
+                    <button class="btn btn-danger btn-lg" onclick="removerImagem()">Remover</button>
+                    <form id="form">
+                        <label for="file" class="custom-file-button" id="botaoUpload">Upload</label>
+                        <input type="file" id="file">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--  começo vlibras  -->
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
