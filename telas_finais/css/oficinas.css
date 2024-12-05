@@ -77,10 +77,10 @@ a.botao_oficinas:hover{
       }
   
   
-    /* .carousel-item{
+    .carousel-item{
   
         width: 100% !important;
-    } */
+    }
   
     @media (min-width: 992px) {
     .carousel-item {
@@ -136,7 +136,6 @@ a.botao_oficinas:hover{
       max-height: 400px !important; 
       min-height: 400px !important;
       height: auto !important; 
-      width: 100px !important;
       object-fit: cover !important;
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
