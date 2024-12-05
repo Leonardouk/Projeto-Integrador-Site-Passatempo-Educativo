@@ -312,18 +312,18 @@
         // Função para aceitar cookies
         function acceptCookies() {
             document.getElementById("cookiePopup").style.display = "none";
-            localStorage.setItem("cookiesAccepted", "true");
+            sessionStorage.setItem("cookiesAccepted", "true");
         }
 
         // Função para recusar cookies
         function declineCookies() {
             document.getElementById("cookiePopup").style.display = "none";
-            localStorage.setItem("cookiesAccepted", "false");
+            sessionStorage.setItem("cookiesAccepted", "false");
         }
 
         // Verificação de preferência armazenada
         window.onload = function() {
-            if (localStorage.getItem("cookiesAccepted") === "true" || localStorage.getItem("cookiesAccepted") === "false") {
+            if (sessionStorage.getItem("cookiesAccepted") === "true" || sessionStorage.getItem("cookiesAccepted") === "false") {
                 document.getElementById("cookiePopup").style.display = "none";
             }
         }
