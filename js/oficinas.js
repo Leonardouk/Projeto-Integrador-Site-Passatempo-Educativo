@@ -109,12 +109,7 @@ async function obterDados() {
         if (element.pagina.hasOwnProperty("oficinas")) {
             element.pagina.oficinas.forEach(ordem => {
                 const img = document.querySelector(`#imagem${ordem}`)
-                if (ordem == 1) {
-                    img.outerHTML = `<img class="imagemPagina card-img round" src="${src}" alt="${alt}" id="imagem${ordem}">`
-                }
-                else {
-                    img.outerHTML = `<img class="imagemPagina card-img" src="${src}" alt="${alt}" id="imagem${ordem}">`
-                }
+                img.outerHTML = `<img class="imagemPagina img_card" src="${src}" alt="${alt}" id="imagem${ordem}">`
             })
         }
     })
