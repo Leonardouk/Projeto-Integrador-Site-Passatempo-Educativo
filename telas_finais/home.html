@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/pop-up.css">
 
 
 
@@ -219,7 +220,11 @@
 
 
 
-  
+    <div id="cookiePopup" class="cookie-popup">
+        <p>Usamos cookies para melhorar a experiência do usuário. Para mais informações, veja nossos <a href="Termos de Uso - Passatempo Educativo.pdf" style="color: #FFD700;">Termos de Uso</a>.</p>
+        <button onclick="acceptCookies()">Concordo</button>
+        <button onclick="declineCookies()">Recusar</button>
+    </div>
 
     <footer class="fixed">
         <div class="container-fluid rodape">
@@ -302,6 +307,26 @@
     <script src="../js/home.js"></script>
     <script src="../js/modal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        // Função para aceitar cookies
+        function acceptCookies() {
+            document.getElementById("cookiePopup").style.display = "none";
+            localStorage.setItem("cookiesAccepted", "true");
+        }
+
+        // Função para recusar cookies
+        function declineCookies() {
+            document.getElementById("cookiePopup").style.display = "none";
+            localStorage.setItem("cookiesAccepted", "false");
+        }
+
+        // Verificação de preferência armazenada
+        window.onload = function() {
+            if (localStorage.getItem("cookiesAccepted") === "true" || localStorage.getItem("cookiesAccepted") === "false") {
+                document.getElementById("cookiePopup").style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 
