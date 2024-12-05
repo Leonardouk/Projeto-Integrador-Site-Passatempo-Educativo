@@ -40,8 +40,8 @@ ul.caixa{
 
 .img_descricao{
     max-width: 100% !important; 
-    max-height: 500px !important; 
-    min-height: 500px !important;
+    max-height: 400px !important; 
+    min-height: 400px !important;
     height: auto !important; 
     width: 100px !important;
     object-fit: cover !important;
@@ -60,7 +60,7 @@ ul.caixa{
 
 .titulo_descricao{
     font-family:"Luckiest Guy", sans-serif;
-    font-size: 30px;
+    font-size: 35px;
     color: black;
     margin: 20px 0 !important;
 }
