@@ -106,5 +106,14 @@ form input, form select, form button {
     max-height: 400px !important; 
     min-height: 400px !important;
     height: auto !important; 
+    width: 500px !important;
     object-fit: cover !important;
+}
+
+.teste_col{
+    padding: 0 !important;
+}
+
+.teste2_col{
+    width: 30% !important;
 }
