@@ -59,6 +59,26 @@ form input, form select, form button {
 .row{
     margin-top: 30px;
 }
+.form{
+    font-size: 20px !important;
+    color: black;
+    font-weight: 500;
+}
+.t_ctt{
+    color: black;
+}
+.texto_ctt1{
+    font-size: 20px !important;
+    color: black;
+    font-weight: 500;
+    margin-top: 20px !important;
+}
+.texto_ctt2{
+    font-size: 20px !important;
+    color: black;
+    font-weight: 500;
+    margin-bottom: 20px !important;
+}
 
 @media (min-width: 576px) {
     .container-fluid.formulario {
