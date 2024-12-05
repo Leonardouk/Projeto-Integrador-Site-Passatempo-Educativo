@@ -18,11 +18,15 @@ body {
 
 }
 
-h1,h2,h3,h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: "Luckiest Guy", sans-serif;
 }
 
-p, button {
+p,
+button {
     font-family: 'Ubuntu', sans-serif !important;
 
 
@@ -42,6 +46,8 @@ p, button {
     cursor: pointer;
     transition: transform 0.3s ease ease-in-out, background-color 0.3s ease ease-in-out;
     font-family: 'Ubuntu', sans-serif !important;
+    position: relative;
+    
 }
 
 #botao_contato:hover {
@@ -50,28 +56,11 @@ p, button {
 }
 
 #imagem0 {
-    width: 1200px;
-    height: auto;
-    max-width: 100%;
-    max-height: 90%;
-}
+    max-width: 100% !important;
+    max-height: 100% !important;
+    min-height: 100% !important;
+    height: auto !important;
+    width: 900px !important;
+    object-fit: cover !important;
 
-#botao_oficinas{
-    background-color: rgb(62, 64, 150);
-    width: 250px;
-    color: rgb(255, 255, 255);
-    font-size: 16px;
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    transition: transform 0.3s ease ease-in-out, background-color 0.3s ease ease-in-out;
-    font-family: 'Ubuntu', sans-serif !important;
-}
-
-#botao_oficinas:hover {
-    background-color: rgb(50, 52, 120);
-    transform: scale(1.05);
 }
