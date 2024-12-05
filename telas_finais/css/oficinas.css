@@ -77,10 +77,9 @@ a.botao_oficinas:hover{
       }
   
   
-    /* .carousel-item{
-  
+    .carousel-item{
         width: 100% !important;
-    } */
+    }
   
     @media (min-width: 992px) {
     .carousel-item {
