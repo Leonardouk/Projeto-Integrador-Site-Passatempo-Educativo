@@ -18,21 +18,34 @@ body {
 
 }
 
-h1,
-h2,
-h4 {
+h1
+ {
     font-family: "Luckiest Guy", sans-serif;
+    color: black !important;
+    font-size: 50px !important;
 }
-h3 {
+h3{
     font-family: 'Ubuntu', sans-serif !important;
+    color: black !important ;
+    font-size: 25px !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
+h4{
+    font-family: 'Ubuntu', sans-serif !important;
+    color: black !important ;
+    font-size: 25px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
 p,button {
     font-family: 'Ubuntu', sans-serif !important;
 
 
 }
 p {
+    font-family: 'Ubuntu', sans-serif !important;
     font-size: 22px;
     color: black;
 }
