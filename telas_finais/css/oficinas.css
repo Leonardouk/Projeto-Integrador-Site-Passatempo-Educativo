@@ -132,6 +132,7 @@ a.botao_oficinas:hover{
   
     .img_card{
       max-width: 100% !important; 
+      min-width: 500px !important;
       max-height: 400px !important; 
       min-height: 400px !important;
       height: auto !important; 
