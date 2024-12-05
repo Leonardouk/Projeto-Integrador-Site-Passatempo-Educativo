@@ -38,12 +38,12 @@ function checarStatusLogin() {
 
 async function validarLogin() {
     const URLCompleta = conectarEndpoint("/login")
-    const login = document.getElementById("login").value
+    const login = document.getElementById("email").value
     const senha = document.getElementById("password").value
     try {
         if (login && senha) {
             const resposta = await axios.post(URLCompleta, {login: login, senha: senha})
-            document.getElementById("login").value = ""
+            document.getElementById("email").value = ""
             document.getElementById("password").value = ""
             
             exibirAlerta(".alert-login", "Login Bem-Sucedido", ["show", "alert-success"], ["d-none", "alert-danger"], 2000)
