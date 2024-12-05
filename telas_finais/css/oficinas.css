@@ -74,6 +74,7 @@ a.botao_oficinas:hover{
     align-items: center;
     padding: 10px 14px;
     margin: 20px !important;
+    height: 350px !important;
   }
   .image-content{
     position: relative;
