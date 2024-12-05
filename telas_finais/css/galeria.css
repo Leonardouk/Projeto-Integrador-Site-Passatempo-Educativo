@@ -1,0 +1,123 @@
+.header {
+    text-align: center;
+    color: black;
+}
+body{
+    background-color: #8DA5ED !important;
+    
+
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.titulo_cabecalho{
+    font-family:"Luckiest Guy", sans-serif !important;
+    font-size: 70px;
+}
+.gallery img:hover {
+    transform: scale(1.1);
+}
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+.tab {
+    /* background-color: #5a4fcf; */
+    color: white;
+    padding: 15px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Ubuntu', sans-serif !important;
+    font-size: 20px;
+}
+div.tabs{
+    background-color: #5a4fcf;
+
+}
+.tab.active {
+    background-color: #3a2fbf;
+    border-radius: 20px;
+}
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    width: 70%;
+    height: auto;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+
+.modal .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+        align-items: center; 
+        gap: 10px; 
+    }
+
+    .tab {
+        width: 100%; 
+        text-align: center; 
+        padding: 15px 0; 
+     }
+
+    .modal img {
+    max-width: 90%;
+    max-height: 90%;
+    width: 100%;
+    height: auto;
+    border: 3px solid white;
+    border-radius: 10px;
+    }
+    .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+}
