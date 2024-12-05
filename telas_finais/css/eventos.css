@@ -4,6 +4,14 @@
     color: black;
 }
 
+.titulo_eventos{
+    font-family:"Luckiest Guy", sans-serif;
+    font-size: 30px;
+    color: black;
+}
+.texto_eventos{
+    margin: 20px !important;
+}
 .row_descricao{
     background-color: #F6CC3A !important;
    }
@@ -43,8 +51,7 @@ ul.caixa{
 
 }
 .nav-link:hover{
-    color:white !important;
-
+    transform: scale(1.1);
 }
 
 
@@ -75,13 +82,6 @@ ul.caixa{
 
 }
 
-th {
-    background-color: #000000 !important; /* Cor de fundo preta */
-    color: #FFFFFF; /* Cor do texto branca para boa legibilidade */
-    padding: 10px; /* Adiciona espaçamento interno para melhor aparência */
-    text-align: center; /* Centraliza o texto */
-    border: 5px solid #000000 !important; /* Adiciona uma borda preta para definir claramente a divisória */
-}
 
 
 .divisoria {
@@ -90,3 +90,21 @@ th {
     background: #000000; /* Cor preta */
     margin: 20px 0; /* Espaçamento superior e inferior */
 }
+
+.col_pills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px !important;
+
+}
+
+ul.nav-pills{
+    margin: 0 !important;
+    padding: 0;
+    background-color: #6787e7;
+    width: 40%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px -3px #117;
+}
+
