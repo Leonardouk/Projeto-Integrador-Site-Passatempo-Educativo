@@ -38,6 +38,7 @@
     color: white;
 }
 p{
+    /* troca o p e add algum nome de classe la onde tá o paragrafo é só pra n dar comflito com alguma outra tag p */
     font-family: 'Ubuntu', sans-serif !important;
     font-size: 17px;
     color: white !important;
