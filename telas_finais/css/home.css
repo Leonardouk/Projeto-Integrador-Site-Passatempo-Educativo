@@ -171,7 +171,13 @@ img.img_carrossel{
 }
 
 
-
+.card-text {
+    overflow: hidden; /* Esconde o texto que ultrapassar o limite */
+    text-overflow: ellipsis; /* Adiciona "..." ao final do texto longo */
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Limita o texto a 4 linhas */
+    -webkit-box-orient: vertical;
+}
 
 
   .fancy {
