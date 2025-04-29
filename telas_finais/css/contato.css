@@ -80,6 +80,9 @@ form input, form select, form button {
     margin-bottom: 20px !important;
 }
 
+
+
+
 @media (min-width: 576px) {
     .container-fluid.formulario {
         width: 100%;

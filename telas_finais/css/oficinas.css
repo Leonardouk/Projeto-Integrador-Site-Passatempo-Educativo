@@ -118,7 +118,18 @@ a.botao_oficinas:hover{
   
   
   
+    .img-wrapper {
+      width: 100%; /* Garante que o contêiner da imagem ocupe toda a largura do card */
+      height: 400px; /* Define uma altura fixa para o contêiner da imagem */
+      overflow: hidden; /* Garante que o conteúdo extra da imagem seja cortado */
+  }
   
+  .img_card {
+      width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
+      height: 100%; /* Faz a imagem ocupar toda a altura do contêiner */
+      object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorção */
+      display: block; /* Remove espaços extras ao redor da imagem */
+  }
   
   
   
