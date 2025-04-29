@@ -37,8 +37,28 @@ ul.caixa{
     object-fit: cover !important;
 } */
 
+.img_descricao {
+    display: block; /* Garante que a imagem seja tratada como um bloco */
+    width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
+    height: 100%; /* Ajusta a altura para ocupar todo o espaço disponível */
+    object-fit: fill; /* Faz a imagem preencher o contêiner, mesmo que isso distorça */
+    border-radius: 10px; /* Adiciona bordas arredondadas (opcional) */
+    box-shadow: 0px 0px 15px -3px #117; /* Adiciona sombra */
+}
 
-.img_descricao{
+.col_imagem_descricao {
+    display: flex; /* Garante que o contêiner seja flexível */
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center; /* Centraliza a imagem verticalmente */
+    padding: 0 !important; /* Remove o espaçamento interno */
+    overflow: hidden; /* Garante que o conteúdo extra seja cortado */
+    width: 100%; /* Ajusta a largura do contêiner */
+    max-width: 400px; /* Limita a largura máxima do contêiner */
+    height: 533px; /* Define a altura fixa para manter a proporção 3:4 */
+    background-color: transparent; /* Remove o fundo branco */
+}
+
+/* .img_descricao{
     max-width: 100% !important; 
     max-height: 400px !important; 
     min-height: 400px !important;
@@ -46,7 +66,7 @@ ul.caixa{
     width: 100px !important;
     object-fit: cover !important;
     box-shadow: 0px 0px 15px -3px #117;
-  }
+  } */
   
 .col_imagem_descricao{
     object-fit: cover !important;
