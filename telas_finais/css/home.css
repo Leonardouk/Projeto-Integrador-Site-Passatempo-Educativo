@@ -176,6 +176,7 @@ img.img_carrossel{
     text-overflow: ellipsis; /* Adiciona "..." ao final do texto longo */
     display: -webkit-box;
     -webkit-line-clamp: 4; /* Limita o texto a 4 linhas */
+    line-clamp: 4; /* Standard property for compatibility */
     -webkit-box-orient: vertical;
 }
 
