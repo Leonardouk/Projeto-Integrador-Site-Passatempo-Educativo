@@ -7,9 +7,11 @@ const fs = require('fs')
 const path = require('path')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
+const dotenv = require('dotenv')
 const app = express()
 app.use(express.json())
 app.use(cors())
+dotenv.config()
 
 const adminSchema = mongoose.Schema({
     login: {type: String, required: true, unique: true},
@@ -50,6 +52,51 @@ async function cadastrarImagem(srcImagem) {
     await imagem.save()
 }
 
+app.get("/dados", async(req, res) => {
+    const textos = await Texto.find()
+    const imagens = await Imagem.find()
+    let arrayElementos = [textos, imagens]
+    res.json(arrayElementos)
+})
+
+app.post("/dados", async (req, res) => {
+    const token = req.body.token
+    try {
+        const tokenDecrypt = jwt.verify(token, process.env.JWT_KEY)
+        const usuarioExiste = await Admin.findOne({login: tokenDecrypt.login})
+        if (usuarioExiste) {
+            const arrayTextos = req.body[0]
+            const arrayImagens = req.body[1]
+
+            try{
+                arrayTextos.forEach(element => {
+                    atualizarTexto(element._id, element.texto)
+                });
+                arrayImagens.forEach(element => {
+                    atualizarImagem(element._id, element.ordem, element.pagina)
+                })
+            }
+            catch (e) {
+                console.error(e)
+                res.status(404).end()
+            }
+
+            const textos = await Texto.find()
+            const imagens = await Imagem.find()
+            let arrayElementos = [textos, imagens]
+            res.json(arrayElementos)
+            res.status(200).end()
+        }
+        else {
+            return res.status(401)    
+        }
+    }
+    catch (err) {
+        console.error("Erro ao verificar o token:", err)
+        res.status(400).json({login: false})
+    }
+})
+
 // app.post("/signup", async(req, res) => {
 //     try {
 //         const login = req.body.login
@@ -66,47 +113,22 @@ async function cadastrarImagem(srcImagem) {
 //     }
 // })
 
-app.get("/dados", async(req, res) => {
-    const textos = await Texto.find()
-    const imagens = await Imagem.find()
-    let arrayElementos = [textos, imagens]
-    res.json(arrayElementos)
-})
-
-app.post("/dados", async (req, res) => {
-    const arrayTextos = req.body[0]
-    const arrayImagens = req.body[1]
-
-    try{
-        arrayTextos.forEach(element => {
-            atualizarTexto(element._id, element.texto)
-        });
-        arrayImagens.forEach(element => {
-            atualizarImagem(element._id, element.ordem, element.pagina)
-        })
-    }
-    catch (e) {
-        console.error(e)
-        res.status(404).end()
-    }
-
-    const textos = await Texto.find()
-    const imagens = await Imagem.find()
-    let arrayElementos = [textos, imagens]
-    res.json(arrayElementos)
-})
-
 app.post("/checarLogin", async(req, res) => {
-    const token = req.body
-    
+    const token = req.body.token
     try {
-        const tokenDecrypt = jwt.verify(token.token, "chave-secreta")
-        if (tokenDecrypt.login == "admin") {
+        const tokenDecrypt = jwt.verify(token, process.env.JWT_KEY)
+        const usuarioExiste = await Admin.findOne({login: tokenDecrypt.login})
+        if (usuarioExiste) {
+            console.log("Token válido: ", token)
             res.status(200).json({login: true})
-            console.log(token)
+        }
+        else {
+            console.log("Token não é de admin: ", token)
+            return res.status(401).json({login: false})        
         }
     }
     catch (err) {
+        console.error("Erro ao verificar o token:", err)
         res.status(400).json({login: false})
     }
 })
@@ -125,7 +147,7 @@ app.post("/login", async(req, res) => {
 
     const token = jwt.sign(
         {login: login},
-        "chave-secreta",
+        process.env.JWT_KEY,
         {expiresIn: "3h"}
     )
 
@@ -160,69 +182,74 @@ app.post("/upload", multer(multerConfig).any(), async (req, res) => {
     }
 })
 
-app.post('/log-sessao', (req, res) => {
-    console.info('Requisição POST recebida!')
-    const { startTime, endTime, sessionDuration, referrer } = req.body
+/**
+ * Códigos referentes à estatica.js e consulta_dados.html
+ * Eles estão comentados até eu confirmar se eles devem ser deletados ou não.
+ */
 
-    const origin = req.get('Origin')
-    const referer = req.get('Referer')
-    const url = origin || referer || 'URL desconhecida'
+// app.post('/log-sessao', (req, res) => {
+//     console.info('Requisição POST recebida!')
+//     const { startTime, endTime, sessionDuration, referrer } = req.body
 
-    const session = new Session({
-        sessionId: uuidv4(),
-        startTime: formatDate(startTime),        
-        endTime: formatDate(endTime),            
-        sessionDuration: formatDuration(sessionDuration), 
-        userAgent: req.get('User-Agent'),
-        ipAddress: req.ip,
-        url,
-        referrer
-    })
+//     const origin = req.get('Origin')
+//     const referer = req.get('Referer')
+//     const url = origin || referer || 'URL desconhecida'
 
-    session.save()
-        .then(() => {
-            res.status(201).json({
-                message: 'Sessão salva com sucesso!',
-                sessionDetails: session
-            })
-        })
-        .catch(err => {
-            console.error('Erro ao salvar sessão:', err.message)
-            res.status(500).send('Erro ao salvar sessão.')
-        })
-});
-function formatDate(timestamp) {
-    const date = new Date(timestamp)
-    return date.toLocaleString()
-}
-function formatDuration(duration) {
-    return `${(duration / 1000).toFixed(2)} segundos`
-}
+//     const session = new Session({
+//         sessionId: uuidv4(),
+//         startTime: formatDate(startTime),        
+//         endTime: formatDate(endTime),            
+//         sessionDuration: formatDuration(sessionDuration), 
+//         userAgent: req.get('User-Agent'),
+//         ipAddress: req.ip,
+//         url,
+//         referrer
+//     })
 
-app.get('/log-sessao', (req, res) => {
-    Session.find({})
-        .then(sessions => {
-            const formattedSessions = sessions.map(session => ({
-                sessionId: session.sessionId,
-                startTime: formatDate(session.startTime),
-                endTime: formatDate(session.endTime),
-                sessionDuration: formatDuration(session.sessionDuration),
-                userAgent: session.userAgent,
-                ipAddress: session.ipAddress,
-                url: session.url,
-                referrer: session.referrer
-            }));
+//     session.save()
+//         .then(() => {
+//             res.status(201).json({
+//                 message: 'Sessão salva com sucesso!',
+//                 sessionDetails: session
+//             })
+//         })
+//         .catch(err => {
+//             console.error('Erro ao salvar sessão:', err.message)
+//             res.status(500).send('Erro ao salvar sessão.')
+//         })
+// });
+// function formatDate(timestamp) {
+//     const date = new Date(timestamp)
+//     return date.toLocaleString()
+// }
+// function formatDuration(duration) {
+//     return `${(duration / 1000).toFixed(2)} segundos`
+// }
 
-            res.status(200).json(formattedSessions);  // Responde com os dados formatados
-        })
-        .catch(err => {
-            console.error('Erro ao buscar sessões:', err.message);
-            res.status(500).send('Erro ao buscar sessões.');
-        });
-});
+// app.get('/log-sessao', (req, res) => {
+//     Session.find({})
+//         .then(sessions => {
+//             const formattedSessions = sessions.map(session => ({
+//                 sessionId: session.sessionId,
+//                 startTime: formatDate(session.startTime),
+//                 endTime: formatDate(session.endTime),
+//                 sessionDuration: formatDuration(session.sessionDuration),
+//                 userAgent: session.userAgent,
+//                 ipAddress: session.ipAddress,
+//                 url: session.url,
+//                 referrer: session.referrer
+//             }));
+
+//             res.status(200).json(formattedSessions);  // Responde com os dados formatados
+//         })
+//         .catch(err => {
+//             console.error('Erro ao buscar sessões:', err.message);
+//             res.status(500).send('Erro ao buscar sessões.');
+//         });
+// });
 
 async function conectarAoMongoDB() {
-    await mongoose.connect(`mongodb+srv://pipassatempoeducativo:NEpraSmrLvJA0Yde@cluster0.3xws5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
+    await mongoose.connect(process.env.MONGODB_KEY)
 }
 
 app.listen(3000, () => {

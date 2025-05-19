@@ -17,22 +17,9 @@ function exibirAlerta(seletor, innerHTML, classesToAdd, classesToRemove, timeout
     }, timeout)
 }
 
-function checarStatusLogin() {
-    const URLCompleta = conectarEndpoint("/checarLogin")
-    const token = localStorage.getItem("token")
-
-    try {
-        if (token) {
-            const resposta = axios.post(URLCompleta, {token: token})
-            
-            if (resposta) {
-                window.location.href = "tela_admin.html"
-            }
-        }
-    }
-    catch (err) {
-        localStorage.clear()
-        exibirAlerta(".alert-login", "Login expirado", ["show", "alert-danger"], ["d-none", "alert-success"], 2000)
+async function alternarPagina() {
+    if (await checarStatusLogin() == true) {
+        window.location.href = "tela_admin.html"
     }
 }
 
@@ -49,7 +36,7 @@ async function validarLogin() {
             exibirAlerta(".alert-login", "Login Bem-Sucedido", ["show", "alert-success"], ["d-none", "alert-danger"], 2000)
             
             localStorage.setItem("token", resposta.data.token)
-            checarStatusLogin()
+            alternarPagina()
         }
         else {
             exibirAlerta(".alert-login", "Preenhca todos os campos", ["show", "alert-danger"], ["d-none", "alert-success"], 2000)
