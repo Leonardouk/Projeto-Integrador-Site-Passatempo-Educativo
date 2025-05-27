@@ -252,7 +252,7 @@ async function conectarAoMongoDB() {
     await mongoose.connect(process.env.MONGODB_KEY)
 }
 
-app.listen(3000, () => {
+app.listen(process.env.PORT | 5050, () => {
     try {
         conectarAoMongoDB()
         console.log("Up and Running")
